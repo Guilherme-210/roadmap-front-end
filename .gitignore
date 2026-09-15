@@ -1,0 +1,21 @@
+# Dependências e arquivos gerados
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Configuração local
+.env*
+!.env.example
+*.pem
+.vercel/
+.DS_Store
+Thumbs.db
+npm-debug.log*
+
+# Estado local da interface do Obsidian
+obsidian/.obsidian/workspace*.json
+obsidian/.trash/
