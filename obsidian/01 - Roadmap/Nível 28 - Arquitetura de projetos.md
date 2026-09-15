@@ -1,6 +1,7 @@
 ---
 nivel: 28
 tipo: nivel
+status: proposto
 ---
 
 # Nível 28 — Arquitetura de projetos
@@ -9,12 +10,12 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 organização por components, features, hooks, services, utils, schemas, types, constants, providers e config
-- [ ]  🔴 Separação de responsabilidades
-- [ ]  🟡 Composition, Container/Presentation, Custom Hooks, Service Layer, Repository, Adapter, Factory e Provider
-- [ ]  🟡 Dependency Inversion e Feature-based Architecture
-- [ ]  🔴 DRY, KISS e YAGNI
-- [ ]  🟡 SOLID, Separation of Concerns e Clean Code
+- [ ] 🔴 organização por components, features, hooks, services, utils, schemas, types, constants, providers e config
+- [ ] 🔴 Separação de responsabilidades
+- [ ] 🟡 Composition, Container/Presentation, Custom Hooks, Service Layer, Repository, Adapter, Factory e Provider
+- [ ] 🟡 Dependency Inversion e Feature-based Architecture
+- [ ] 🔴 DRY, KISS e YAGNI
+- [ ] 🟡 SOLID, Separation of Concerns e Clean Code
 
 ---
 
@@ -29,4 +30,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

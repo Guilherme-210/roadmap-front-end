@@ -1,6 +1,7 @@
 ---
 nivel: 12
 tipo: nivel
+status: proposto
 ---
 
 # Nível 12 — Rendering
@@ -9,12 +10,12 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 CSR
-- [ ]  🔴 SSR
-- [ ]  🔴 SSG
-- [ ]  🔴 Dynamic Rendering
-- [ ]  🔴 ISR e Revalidation
-- [ ]  🔴 Saber escolher entre Static, Dynamic, Cached, Uncached, ISR e Streaming
+- [ ] 🔴 CSR
+- [ ] 🔴 SSR
+- [ ] 🔴 SSG
+- [ ] 🔴 Dynamic Rendering
+- [ ] 🔴 ISR e Revalidation
+- [ ] 🔴 Saber escolher entre Static, Dynamic, Cached, Uncached, ISR e Streaming
 
 ---
 
@@ -29,4 +30,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

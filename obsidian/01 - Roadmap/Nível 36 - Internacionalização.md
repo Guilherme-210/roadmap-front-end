@@ -1,6 +1,7 @@
 ---
 nivel: 36
 tipo: nivel
+status: proposto
 ---
 
 # Nível 36 — Internacionalização
@@ -9,9 +10,9 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🟡 i18n, Locales, Tradução, moedas, datas e Timezone
-- [ ]  🟡 Routing internacionalizado
-- [ ]  🔵 next-intl
+- [ ] 🟡 i18n, Locales, Tradução, moedas, datas e Timezone
+- [ ] 🟡 Routing internacionalizado
+- [ ] 🔵 next-intl
 
 ---
 
@@ -26,4 +27,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

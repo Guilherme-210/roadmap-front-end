@@ -1,6 +1,7 @@
 ---
 nivel: 5
 tipo: nivel
+status: proposto
 ---
 
 # Nível 5 — Git e GitHub/Azure DevOps

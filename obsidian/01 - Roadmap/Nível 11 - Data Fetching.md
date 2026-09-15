@@ -1,6 +1,7 @@
 ---
 nivel: 11
 tipo: nivel
+status: proposto
 ---
 
 # Nível 11 — Data Fetching
@@ -9,12 +10,12 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 Fetch no servidor com async Server Components
-- [ ]  🔴 Requests paralelas, sequenciais, waterfall e `Promise.all`
-- [ ]  🔴 Fetch no cliente, Loading, Error, Refetch e Race Conditions
-- [ ]  🟡 Server State com TanStack Query e SWR
-- [ ]  🟡 TanStack Query: QueryClient, useQuery, useMutation, queryKey, staleTime, gcTime, invalidation, optimistic updates, retries e paginação
-- [ ]  🟣 Hydration/Dehydration
+- [ ] 🔴 Fetch no servidor com async Server Components
+- [ ] 🔴 Requests paralelas, sequenciais, waterfall e `Promise.all`
+- [ ] 🔴 Fetch no cliente, Loading, Error, Refetch e Race Conditions
+- [ ] 🟡 Server State com TanStack Query e SWR
+- [ ] 🟡 TanStack Query: QueryClient, useQuery, useMutation, queryKey, staleTime, gcTime, invalidation, optimistic updates, retries e paginação
+- [ ] 🟣 Hydration/Dehydration
 
 ---
 
@@ -29,4 +30,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

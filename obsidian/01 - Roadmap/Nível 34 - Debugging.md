@@ -1,6 +1,7 @@
 ---
 nivel: 34
 tipo: nivel
+status: proposto
 ---
 
 # Nível 34 — Debugging
@@ -9,11 +10,11 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 Browser DevTools: Console, Network, Elements, Application e Sources
-- [ ]  🔴 React DevTools e Components
-- [ ]  🟡 Profiler
-- [ ]  🔴 Logs server/client, Build Errors, Hydration Errors, Boundary Errors e Cache Problems
-- [ ]  🟡 Source Maps
+- [ ] 🔴 Browser DevTools: Console, Network, Elements, Application e Sources
+- [ ] 🔴 React DevTools e Components
+- [ ] 🟡 Profiler
+- [ ] 🔴 Logs server/client, Build Errors, Hydration Errors, Boundary Errors e Cache Problems
+- [ ] 🟡 Source Maps
 
 ---
 
@@ -28,4 +29,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

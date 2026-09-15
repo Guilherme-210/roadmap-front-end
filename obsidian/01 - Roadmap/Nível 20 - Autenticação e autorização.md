@@ -1,6 +1,7 @@
 ---
 nivel: 20
 tipo: nivel
+status: proposto
 ---
 
 # Nível 20 — Autenticação e autorização
@@ -9,10 +10,10 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 Authentication, Authorization, Session, Cookie, JWT, Access/Refresh Token
-- [ ]  🟡 OAuth e OpenID Connect
-- [ ]  🔴 Proteção de páginas, autenticação/autorização no servidor e cookies seguros
-- [ ]  🟡 Proxy, Auth.js/NextAuth, RBAC e Permissions
+- [ ] 🔴 Authentication, Authorization, Session, Cookie, JWT, Access/Refresh Token
+- [ ] 🟡 OAuth e OpenID Connect
+- [ ] 🔴 Proteção de páginas, autenticação/autorização no servidor e cookies seguros
+- [ ] 🟡 Proxy, Auth.js/NextAuth, RBAC e Permissions
 
 ---
 
@@ -27,4 +28,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

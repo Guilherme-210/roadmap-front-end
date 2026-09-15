@@ -1,6 +1,7 @@
 ---
 nivel: 15
 tipo: nivel
+status: proposto
 ---
 
 # Nível 15 — Mutação de dados
@@ -9,10 +10,10 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 `'use server'`, Server Functions, Server Actions e Mutations
-- [ ]  🔴 Forms, validação, erros, Pending State, Revalidation e Redirects
-- [ ]  🟡 `useOptimistic`, Optimistic Updates e Rollback
-- [ ]  🟡 `useActionState`, Pending, Success e Error
+- [ ] 🔴 `'use server'`, Server Functions, Server Actions e Mutations
+- [ ] 🔴 Forms, validação, erros, Pending State, Revalidation e Redirects
+- [ ] 🟡 `useOptimistic`, Optimistic Updates e Rollback
+- [ ] 🟡 `useActionState`, Pending, Success e Error
 
 ---
 
@@ -27,4 +28,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

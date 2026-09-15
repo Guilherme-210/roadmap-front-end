@@ -1,6 +1,7 @@
 ---
 nivel: 23
 tipo: nivel
+status: proposto
 ---
 
 # Nível 23 — Imagens, fontes e assets
@@ -9,10 +10,10 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 `next/image`, responsive images, remote images, lazy loading e LCP
-- [ ]  🟡 Placeholders e Image Loaders
-- [ ]  🔴 `next/font`, Google Fonts, fontes locais, preload e CLS
-- [ ]  🔴 `/public`, SVG, favicon e scripts externos
+- [ ] 🔴 `next/image`, responsive images, remote images, lazy loading e LCP
+- [ ] 🟡 Placeholders e Image Loaders
+- [ ] 🔴 `next/font`, Google Fonts, fontes locais, preload e CLS
+- [ ] 🔴 `/public`, SVG, favicon e scripts externos
 
 ---
 
@@ -27,4 +28,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

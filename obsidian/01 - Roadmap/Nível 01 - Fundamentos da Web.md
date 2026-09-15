@@ -1,6 +1,7 @@
 ---
 nivel: 1
 tipo: nivel
+status: revisão
 ---
 
 # Nível 1 — Fundamentos da Web

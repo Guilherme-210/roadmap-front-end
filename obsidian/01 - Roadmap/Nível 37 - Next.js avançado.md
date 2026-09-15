@@ -1,6 +1,7 @@
 ---
 nivel: 37
 tipo: nivel
+status: proposto
 ---
 
 # Nível 37 — Next.js avançado
@@ -9,13 +10,13 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🟣 RSC, Streaming, Suspense, Partial Rendering, Hydration e Selective Hydration
-- [ ]  🟣 Cache Components, `use cache`, cacheLife, cacheTag, updateTag e ISR
-- [ ]  🟣 Prefetching, Partial Prefetching, Instant Navigation, Preserving UI State e Preventing Flash
-- [ ]  🟣 BFF, Multi-tenant, Multi-zones e Self-hosting
-- [ ]  🔵 Adapters e Custom Servers
-- [ ]  🟣 Turbopack e Server vs Client Bundle
-- [ ]  🟡 Code Splitting, Tree Shaking, Bundle Size e Package Optimization
+- [ ] 🟣 RSC, Streaming, Suspense, Partial Rendering, Hydration e Selective Hydration
+- [ ] 🟣 Cache Components, `use cache`, cacheLife, cacheTag, updateTag e ISR
+- [ ] 🟣 Prefetching, Partial Prefetching, Instant Navigation, Preserving UI State e Preventing Flash
+- [ ] 🟣 BFF, Multi-tenant, Multi-zones e Self-hosting
+- [ ] 🔵 Adapters e Custom Servers
+- [ ] 🟣 Turbopack e Server vs Client Bundle
+- [ ] 🟡 Code Splitting, Tree Shaking, Bundle Size e Package Optimization
 
 ---
 
@@ -30,4 +31,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

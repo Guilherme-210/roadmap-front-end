@@ -1,6 +1,7 @@
 ---
 nivel: 24
 tipo: nivel
+status: proposto
 ---
 
 # Nível 24 — Performance
@@ -9,12 +10,12 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 Core Web Vitals: LCP, CLS e INP
-- [ ]  🟡 TTFB e FCP
-- [ ]  🔴 evitar renders desnecessários e State Colocation
-- [ ]  🟡 Memoization, `useMemo`, `useCallback` e React Compiler
-- [ ]  🔴 Server Components, Image/Font Optimization, Streaming, Suspense, Lazy Loading, Dynamic Imports, Caching e Prefetch
-- [ ]  🟡 Bundle Analysis, Package Optimization, Chrome DevTools, Lighthouse e Profiler
+- [ ] 🔴 Core Web Vitals: LCP, CLS e INP
+- [ ] 🟡 TTFB e FCP
+- [ ] 🔴 evitar renders desnecessários e State Colocation
+- [ ] 🟡 Memoization, `useMemo`, `useCallback` e React Compiler
+- [ ] 🔴 Server Components, Image/Font Optimization, Streaming, Suspense, Lazy Loading, Dynamic Imports, Caching e Prefetch
+- [ ] 🟡 Bundle Analysis, Package Optimization, Chrome DevTools, Lighthouse e Profiler
 
 ---
 
@@ -29,4 +30,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

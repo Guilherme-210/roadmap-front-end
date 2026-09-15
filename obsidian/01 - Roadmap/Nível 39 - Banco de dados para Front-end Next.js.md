@@ -1,6 +1,7 @@
 ---
 nivel: 39
 tipo: nivel
+status: proposto
 ---
 
 # Nível 39 — Banco de dados para Front-end Next.js
@@ -9,10 +10,10 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🟡 SQL básico, tabelas, PK/FK, relacionamentos e joins
-- [ ]  🟡 Migrations e Transactions
-- [ ]  🔵 Prisma
-- [ ]  🔵 Drizzle
+- [ ] 🟡 SQL básico, tabelas, PK/FK, relacionamentos e joins
+- [ ] 🟡 Migrations e Transactions
+- [ ] 🔵 Prisma
+- [ ] 🔵 Drizzle
 
 ---
 
@@ -27,4 +28,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

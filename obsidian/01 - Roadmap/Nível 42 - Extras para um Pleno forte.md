@@ -1,6 +1,7 @@
 ---
 nivel: 42
 tipo: nivel
+status: proposto
 ---
 
 # Nível 42 — Extras para um Pleno forte
@@ -11,39 +12,39 @@ tipo: nivel
 
 ## PWA
 
-- [ ]  🔵 Service Workers, Manifest, Offline, Installability e Caching
+- [ ] 🔵 Service Workers, Manifest, Offline, Installability e Caching
 
 ## MDX e CMS
 
-- [ ]  🔵 Markdown, MDX, Strapi, Contentful, Sanity e WordPress Headless
+- [ ] 🔵 Markdown, MDX, Strapi, Contentful, Sanity e WordPress Headless
 
 ## Storybook
 
-- [ ]  🔵 Stories, Component Documentation e Visual Testing
+- [ ] 🔵 Stories, Component Documentation e Visual Testing
 
 ## Monorepos
 
-- [ ]  🔵 pnpm workspaces, Turborepo, Shared Packages e Shared UI
+- [ ] 🔵 pnpm workspaces, Turborepo, Shared Packages e Shared UI
 
 ## Microfrontends
 
-- [ ]  🔵 Conceitos, vantagens, problemas e Module Federation
+- [ ] 🔵 Conceitos, vantagens, problemas e Module Federation
 
 ## Docker
 
-- [ ]  🔵 Dockerfile, Containers, Images, Multi-stage Builds e Docker Compose
+- [ ] 🔵 Dockerfile, Containers, Images, Multi-stage Builds e Docker Compose
 
 ## Realtime e APIs
 
-- [ ]  🔵 WebSockets, Notifications, Chat, GraphQL e Apollo
+- [ ] 🔵 WebSockets, Notifications, Chat, GraphQL e Apollo
 
 ## Uploads
 
-- [ ]  🔵 Multipart, Signed URLs, S3, Progress e Validation
+- [ ] 🔵 Multipart, Signed URLs, S3, Progress e Validation
 
 ## Feature Flags
 
-- [ ]  🔵 Rollout, A/B e Feature Toggles
+- [ ] 🔵 Rollout, A/B e Feature Toggles
 
 ---
 
@@ -58,4 +59,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

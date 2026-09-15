@@ -1,6 +1,7 @@
 ---
 nivel: 35
 tipo: nivel
+status: proposto
 ---
 
 # Nível 35 — Observabilidade
@@ -9,9 +10,9 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🟡 Logging, Error Tracking, Metrics e Traces
-- [ ]  🟡 Sentry, OpenTelemetry, Analytics e Web Vitals
-- [ ]  🟡 `instrumentation.ts`, Instrumentation Client e `useReportWebVitals`
+- [ ] 🟡 Logging, Error Tracking, Metrics e Traces
+- [ ] 🟡 Sentry, OpenTelemetry, Analytics e Web Vitals
+- [ ] 🟡 `instrumentation.ts`, Instrumentation Client e `useReportWebVitals`
 
 ---
 
@@ -26,4 +27,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

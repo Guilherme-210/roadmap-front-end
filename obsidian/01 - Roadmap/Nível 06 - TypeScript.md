@@ -1,6 +1,10 @@
 ---
 nivel: 6
 tipo: nivel
+status: em andamento
+tags:
+  - importante
+  - revisão
 ---
 
 # Nível 6 — TypeScript

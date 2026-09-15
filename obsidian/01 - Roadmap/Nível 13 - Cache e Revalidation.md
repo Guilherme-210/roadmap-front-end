@@ -1,6 +1,7 @@
 ---
 nivel: 13
 tipo: nivel
+status: proposto
 ---
 
 # Nível 13 — Cache e Revalidation
@@ -9,13 +10,13 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 Cache, Stale Data, Invalidation, Revalidation e TTL
-- [ ]  🔴 Cache de dados, UI, rotas e Request Memoization
-- [ ]  🔴 `revalidatePath` e `revalidateTag`
-- [ ]  🟡 `updateTag` e CDN Caching
-- [ ]  🟣 Cache Components, `'use cache'`, `cacheLife`, `cacheTag`, `use cache: private`
-- [ ]  🔵 `use cache: remote`
-- [ ]  🔴 Estratégias de cache e invalidação
+- [ ] 🔴 Cache, Stale Data, Invalidation, Revalidation e TTL
+- [ ] 🔴 Cache de dados, UI, rotas e Request Memoization
+- [ ] 🔴 `revalidatePath` e `revalidateTag`
+- [ ] 🟡 `updateTag` e CDN Caching
+- [ ] 🟣 Cache Components, `'use cache'`, `cacheLife`, `cacheTag`, `use cache: private`
+- [ ] 🔵 `use cache: remote`
+- [ ] 🔴 Estratégias de cache e invalidação
 
 ---
 
@@ -30,4 +31,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

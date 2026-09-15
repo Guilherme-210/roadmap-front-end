@@ -1,6 +1,7 @@
 ---
 nivel: 21
 tipo: nivel
+status: proposto
 ---
 
 # Nível 21 — Proxy
@@ -9,9 +10,9 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 `proxy.ts`, Matchers, Redirect, Rewrite e Headers
-- [ ]  🟡 autenticação, internacionalização e execução antes de rotas
-- [ ]  🔴 Quando usar e quando não usar
+- [ ] 🔴 `proxy.ts`, Matchers, Redirect, Rewrite e Headers
+- [ ] 🟡 autenticação, internacionalização e execução antes de rotas
+- [ ] 🔴 Quando usar e quando não usar
 
 ---
 
@@ -26,4 +27,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

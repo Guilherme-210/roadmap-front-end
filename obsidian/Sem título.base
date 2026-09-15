@@ -1,3 +1,10 @@
 views:
   - type: table
     name: Tabela
+    order:
+      - file.name
+      - status
+      - tipo
+      - file.path
+      - criado
+      - file.tags

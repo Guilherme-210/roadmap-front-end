@@ -1,6 +1,7 @@
 ---
 nivel: 18
 tipo: nivel
+status: proposto
 ---
 
 # Nível 18 — Gerenciamento de estado
@@ -9,11 +10,11 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 Local, Derived, URL, Form, Server e Global Client State
-- [ ]  🔴 React State e Context API
-- [ ]  🟡 TanStack Query
-- [ ]  🔵 Zustand, Redux Toolkit e Jotai
-- [ ]  🔴 Saber quando não usar estado global
+- [ ] 🔴 Local, Derived, URL, Form, Server e Global Client State
+- [ ] 🔴 React State e Context API
+- [ ] 🟡 TanStack Query
+- [ ] 🔵 Zustand, Redux Toolkit e Jotai
+- [ ] 🔴 Saber quando não usar estado global
 
 ---
 
@@ -28,4 +29,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

@@ -1,6 +1,7 @@
 ---
 nivel: 32
 tipo: nivel
+status: proposto
 ---
 
 # Nível 32 — Build e Deployment
@@ -9,12 +10,12 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 Development/Production Build, `next build` e erros de build
-- [ ]  🔴 Vercel
-- [ ]  🟡 Node Server, Docker, Self-hosting, CDN e Reverse Proxy
-- [ ]  🟡 CI/CD: pipelines, build, lint, tests, deploy, preview environments e rollback
-- [ ]  🟡 GitHub Actions
-- [ ]  🔵 Azure Pipelines
+- [ ] 🔴 Development/Production Build, `next build` e erros de build
+- [ ] 🔴 Vercel
+- [ ] 🟡 Node Server, Docker, Self-hosting, CDN e Reverse Proxy
+- [ ] 🟡 CI/CD: pipelines, build, lint, tests, deploy, preview environments e rollback
+- [ ] 🟡 GitHub Actions
+- [ ] 🔵 Azure Pipelines
 
 ---
 
@@ -29,4 +30,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

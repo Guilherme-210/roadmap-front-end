@@ -1,6 +1,7 @@
 ---
 nivel: 7
 tipo: nivel
+status: em andamento
 ---
 
 # Nível 7 — React

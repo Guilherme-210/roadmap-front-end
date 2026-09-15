@@ -1,6 +1,7 @@
 ---
 nivel: 40
 tipo: nivel
+status: proposto
 ---
 
 # Nível 40 — Ferramentas de um desenvolvedor pleno
@@ -9,8 +10,8 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 VS Code, Git, Browser DevTools, Postman/Insomnia, npm/pnpm, ESLint, Prettier e React DevTools
-- [ ]  🟡 Docker, Figma Dev Mode, GitHub/GitLab/Azure DevOps, CI/CD e Swagger/OpenAPI
+- [ ] 🔴 VS Code, Git, Browser DevTools, Postman/Insomnia, npm/pnpm, ESLint, Prettier e React DevTools
+- [ ] 🟡 Docker, Figma Dev Mode, GitHub/GitLab/Azure DevOps, CI/CD e Swagger/OpenAPI
 
 ---
 
@@ -25,4 +26,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

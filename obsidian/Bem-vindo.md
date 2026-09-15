@@ -4,15 +4,15 @@ Este cofre é meu caderno de aprendizado: aqui registro o que entendi, testo na 
 
 ## Acesso rápido
 
-| Quero… | Abrir |
-| --- | --- |
-| Escolher o próximo assunto | [[Roadmap completo]] |
-| Revisar JavaScript e TypeScript | [[Revisão contínua]] |
-| Registrar um conceito | [[Aprendizados]] |
-| Fazer um exercício ou projeto | [[Prática]] |
-| Anotar uma dificuldade | [[Dúvidas]] |
-| Registrar uma sessão de estudo | [[Diário de estudo]] |
-| Abrir o ambiente de exercícios | [[Ambiente de prática - Next.js e dependências]] |
+| Quero…                          | Abrir                                            |
+| ------------------------------- | ------------------------------------------------ |
+| Escolher o próximo assunto      | [[Roadmap completo]]                             |
+| Revisar JavaScript e TypeScript | [[Revisão contínua]]                             |
+| Registrar um conceito           | [[Aprendizados]]                                 |
+| Fazer um exercício ou projeto   | [[Prática]]                                      |
+| Anotar uma dificuldade          | [[Dúvidas]]                                      |
+| Registrar uma sessão de estudo  | [[Diário de estudo]]                             |
+| Abrir o ambiente de exercícios  | [[Ambiente de prática - Next.js e dependências]] |
 
 ## Meu foco agora
 
@@ -81,9 +81,6 @@ Quando surgir um ponto relevante, o assistente também me orientará na conversa
 
 [[IA no dia a dia - Melhorias do sistema]] reúne sugestões para melhorar as instruções, os modelos e o uso de skills e agentes auxiliares. Cada proposta deve mostrar o problema, o benefício e uma forma de verificar o resultado.
 
-
-
 ## Acesso ao cofre após a mudança
 
 O cofre agora está na subpasta obsidian. Abra essa pasta como cofre no Obsidian. As pastas de estudo, os modelos e as configurações foram movidos juntos. A pasta principal continua reunindo o projeto completo.
-

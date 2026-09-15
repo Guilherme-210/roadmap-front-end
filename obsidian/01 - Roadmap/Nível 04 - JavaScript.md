@@ -1,6 +1,10 @@
 ---
 nivel: 4
 tipo: nivel
+status: em andamento
+tags:
+  - importante
+  - revisão
 ---
 
 # Nível 4 — JavaScript

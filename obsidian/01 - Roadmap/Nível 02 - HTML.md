@@ -1,6 +1,7 @@
 ---
 nivel: 2
 tipo: nivel
+status: concluido
 ---
 
 # Nível 2 — HTML

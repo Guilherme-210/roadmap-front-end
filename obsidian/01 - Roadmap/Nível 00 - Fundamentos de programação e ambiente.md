@@ -1,6 +1,7 @@
 ---
 nivel: 0
 tipo: nivel
+status: concluido
 ---
 
 # Nível 0 — Fundamentos de programação e ambiente

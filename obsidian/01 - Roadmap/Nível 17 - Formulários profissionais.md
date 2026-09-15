@@ -1,6 +1,7 @@
 ---
 nivel: 17
 tipo: nivel
+status: proposto
 ---
 
 # Nível 17 — Formulários profissionais
@@ -9,10 +10,10 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 Controlled, Uncontrolled, FormData e Validation
-- [ ]  🟡 React Hook Form completo
-- [ ]  🟡 Zod completo
-- [ ]  🟡 RHF + Zod, API/Server Actions, erros, Upload e multipart/form-data
+- [ ] 🔴 Controlled, Uncontrolled, FormData e Validation
+- [ ] 🟡 React Hook Form completo
+- [ ] 🟡 Zod completo
+- [ ] 🟡 RHF + Zod, API/Server Actions, erros, Upload e multipart/form-data
 
 ---
 
@@ -29,5 +30,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-
-

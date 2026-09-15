@@ -1,6 +1,7 @@
 ---
 nivel: 19
 tipo: nivel
+status: proposto
 ---
 
 # Nível 19 — Tratamento de erros
@@ -9,9 +10,9 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 try/catch, erros esperados/inesperados e API Errors
-- [ ]  🔴 `error.tsx`, `not-found.tsx`, `notFound()` e Redirects
-- [ ]  🟡 Global Error, `forbidden` e `unauthorized`
+- [ ] 🔴 try/catch, erros esperados/inesperados e API Errors
+- [ ] 🔴 `error.tsx`, `not-found.tsx`, `notFound()` e Redirects
+- [ ] 🟡 Global Error, `forbidden` e `unauthorized`
 
 ---
 
@@ -26,4 +27,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

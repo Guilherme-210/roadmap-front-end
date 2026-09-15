@@ -1,6 +1,7 @@
 ---
 nivel: 14
 tipo: nivel
+status: proposto
 ---
 
 # Nível 14 — Streaming e Suspense
@@ -9,9 +10,9 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 Loading UI, `loading.tsx`, Skeletons e `<Suspense>`
-- [ ]  🔴 Streaming, Granular Streaming e Suspense Boundaries
-- [ ]  🟡 Selective Hydration
+- [ ] 🔴 Loading UI, `loading.tsx`, Skeletons e `<Suspense>`
+- [ ] 🔴 Streaming, Granular Streaming e Suspense Boundaries
+- [ ] 🟡 Selective Hydration
 
 ---
 
@@ -26,4 +27,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

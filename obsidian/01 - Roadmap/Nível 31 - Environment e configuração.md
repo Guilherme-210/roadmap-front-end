@@ -1,6 +1,7 @@
 ---
 nivel: 31
 tipo: nivel
+status: proposto
 ---
 
 # Nível 31 — Environment e configuração
@@ -9,10 +10,10 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 `.env`, `.env.local`, Environment Variables, ambientes e Secrets
-- [ ]  🔴 `NEXT_PUBLIC`
-- [ ]  🔴 `next.config.ts`: images, redirects, rewrites, headers e environment
-- [ ]  🟡 basePath, output, transpilePackages, typedRoutes, reactCompiler e Turbopack
+- [ ] 🔴 `.env`, `.env.local`, Environment Variables, ambientes e Secrets
+- [ ] 🔴 `NEXT_PUBLIC`
+- [ ] 🔴 `next.config.ts`: images, redirects, rewrites, headers e environment
+- [ ] 🟡 basePath, output, transpilePackages, typedRoutes, reactCompiler e Turbopack
 
 ---
 
@@ -27,4 +28,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

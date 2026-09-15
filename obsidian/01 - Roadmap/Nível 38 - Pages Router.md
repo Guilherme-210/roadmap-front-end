@@ -1,6 +1,7 @@
 ---
 nivel: 38
 tipo: nivel
+status: proposto
 ---
 
 # Nível 38 — Pages Router
@@ -9,10 +10,10 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🟡 `/pages`, `_app.tsx`, `_document.tsx`
-- [ ]  🟡 `getServerSideProps`, `getStaticProps`, `getStaticPaths`
-- [ ]  🟡 API Routes e `next/router`
-- [ ]  🟡 diferenças para App Router e migração Pages → App Router
+- [ ] 🟡 `/pages`, `_app.tsx`, `_document.tsx`
+- [ ] 🟡 `getServerSideProps`, `getStaticProps`, `getStaticPaths`
+- [ ] 🟡 API Routes e `next/router`
+- [ ] 🟡 diferenças para App Router e migração Pages → App Router
 
 ---
 
@@ -27,4 +28,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

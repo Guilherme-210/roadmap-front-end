@@ -1,6 +1,7 @@
 ---
 nivel: 26
 tipo: nivel
+status: proposto
 ---
 
 # Nível 26 — Testes
@@ -9,11 +10,11 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 Pirâmide de testes, Unitário, Integração, E2E, Mocks e Fixtures
-- [ ]  🔴 Vitest/Jest
-- [ ]  🔴 React Testing Library
-- [ ]  🟡 Playwright
-- [ ]  🔴 Saber o que testar e escolher Unitário vs Integração vs E2E
+- [ ] 🔴 Pirâmide de testes, Unitário, Integração, E2E, Mocks e Fixtures
+- [ ] 🔴 Vitest/Jest
+- [ ] 🔴 React Testing Library
+- [ ] 🟡 Playwright
+- [ ] 🔴 Saber o que testar e escolher Unitário vs Integração vs E2E
 
 ---
 
@@ -30,5 +31,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-
-

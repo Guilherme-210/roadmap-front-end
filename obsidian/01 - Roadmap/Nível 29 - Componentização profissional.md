@@ -1,6 +1,7 @@
 ---
 nivel: 29
 tipo: nivel
+status: proposto
 ---
 
 # Nível 29 — Componentização profissional
@@ -9,12 +10,12 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 Responsabilidade, Composition, Props API, evitar Prop Drilling e Reusabilidade
-- [ ]  🔴 Controlled e Compound Components
-- [ ]  🟡 Polymorphic Components
-- [ ]  🟡 Design Systems: Tokens, Typography, Spacing, Colors, Variants, Themes e Dark Mode
-- [ ]  🟡 MUI e Tailwind
-- [ ]  🔵 shadcn/ui, Chakra e Radix UI
+- [ ] 🔴 Responsabilidade, Composition, Props API, evitar Prop Drilling e Reusabilidade
+- [ ] 🔴 Controlled e Compound Components
+- [ ] 🟡 Polymorphic Components
+- [ ] 🟡 Design Systems: Tokens, Typography, Spacing, Colors, Variants, Themes e Dark Mode
+- [ ] 🟡 MUI e Tailwind
+- [ ] 🔵 shadcn/ui, Chakra e Radix UI
 
 ---
 
@@ -31,5 +32,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-
-

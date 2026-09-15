@@ -1,6 +1,7 @@
 ---
 nivel: 33
 tipo: nivel
+status: proposto
 ---
 
 # Nível 33 — Qualidade de código
@@ -9,8 +10,8 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 ESLint, TypeScript Strict, Prettier, Lint, Formatting e Code Review
-- [ ]  🟡 Husky, lint-staged, pre-commit hooks, commitlint e Conventional Commits
+- [ ] 🔴 ESLint, TypeScript Strict, Prettier, Lint, Formatting e Code Review
+- [ ] 🟡 Husky, lint-staged, pre-commit hooks, commitlint e Conventional Commits
 
 ---
 
@@ -27,5 +28,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-
-

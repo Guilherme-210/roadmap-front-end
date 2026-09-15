@@ -1,6 +1,7 @@
 ---
 nivel: 10
 tipo: nivel
+status: proposto
 ---
 
 # Nível 10 — Server Components e Client Components
@@ -9,11 +10,11 @@ tipo: nivel
 
 ## Checklist de estudo
 
-- [ ]  🔴 Server Components: execução, async components, acesso a dados e composição
-- [ ]  🔴 Client Components: `'use client'`, state, effects, Browser APIs e eventos
-- [ ]  🔴 Server/Client Boundary, serialização e composição correta
-- [ ]  🟡 RSC Payload, Hydration e Streaming
-- [ ]  🟣 Funcionamento interno de RSC
+- [ ] 🔴 Server Components: execução, async components, acesso a dados e composição
+- [ ] 🔴 Client Components: `'use client'`, state, effects, Browser APIs e eventos
+- [ ] 🔴 Server/Client Boundary, serialização e composição correta
+- [ ] 🟡 RSC Payload, Hydration e Streaming
+- [ ] 🟣 Funcionamento interno de RSC
 
 ---
 
@@ -28,4 +29,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

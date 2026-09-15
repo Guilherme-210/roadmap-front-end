@@ -1,6 +1,7 @@
 ---
 nivel: 8
 tipo: nivel
+status: proposto
 ---
 
 # Nível 8 — Next.js básico
