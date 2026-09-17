@@ -10,12 +10,23 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 Responsabilidade, Composition, Props API, evitar Prop Drilling e Reusabilidade
-- [ ] 🔴 Controlled e Compound Components
-- [ ] 🟡 Polymorphic Components
-- [ ] 🟡 Design Systems: Tokens, Typography, Spacing, Colors, Variants, Themes e Dark Mode
-- [ ] 🟡 MUI e Tailwind
-- [ ] 🔵 shadcn/ui, Chakra e Radix UI
+## 29.1 — Design de Componentes, Composição e Props API
+
+- [ ] 🔴 Princípio de responsabilidade única aplicado a componentes
+- [ ] 🔴 Design de Props API intuitiva, extensível e tipada
+- [ ] 🔴 Composição com `children` e eliminação de Prop Drilling
+
+## 29.2 — Padrões Avançados de Componentes
+
+- [ ] 🔴 Padrão Compound Components (ex.: `Select.Root`, `Select.Trigger`, `Select.Option`)
+- [ ] 🔴 Componentes controlados vs não-controlados com sincronização fluida
+- [ ] 🟡 Componentes Polimórficos (`as` / `asChild`) e tipagem flexível com TypeScript
+
+## 29.3 — Design Systems e Bibliotecas UI
+
+- [ ] 🟡 Estrutura de Design Tokens (cores, tipografia, espaçamento, sombras, raios de borda)
+- [ ] 🟡 Suporte a temas dinâmicos e Dark Mode
+- [ ] 🟡 Integração e customização de bibliotecas headless: shadcn/ui, Radix UI e Tailwind CSS
 
 ---
 

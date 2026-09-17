@@ -10,8 +10,18 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 ESLint, TypeScript Strict, Prettier, Lint, Formatting e Code Review
-- [ ] 🟡 Husky, lint-staged, pre-commit hooks, commitlint e Conventional Commits
+## 33.1 — Linters, Tipagem Estrita e Formatação
+
+- [ ] 🔴 Configuração de ESLint moderno (Flat Config) e regras recomendadas para React e Next.js
+- [ ] 🔴 TypeScript Strict Mode e eliminação de tipos inseguros (`any`)
+- [ ] 🔴 Formatação consistente de código com Prettier
+- [ ] 🔴 Boas práticas em Code Review: legibilidade, manutenibilidade e testes
+
+## 33.2 — Automação de Git Hooks e Padrões de Commit
+
+- [ ] 🟡 Configuração de Git Hooks com Husky
+- [ ] 🟡 Execução rápida de verificações em arquivos modificados com `lint-staged`
+- [ ] 🟡 Padronização de mensagens de commit com Commitlint e Conventional Commits
 
 ---
 

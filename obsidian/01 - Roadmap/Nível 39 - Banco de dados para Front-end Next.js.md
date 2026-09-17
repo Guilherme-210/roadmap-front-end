@@ -8,9 +8,12 @@ status: proposto
 
 [[Bem-vindo|Início]] · [[Roadmap completo|Todos os níveis]]
 
-## Checklist de estudo
+## 39.1 — Modelagem e SQL Básico
 
 - [ ] 🟡 SQL básico, tabelas, PK/FK, relacionamentos e joins
+
+## 39.2 — Migrações, Transações e ORMs
+
 - [ ] 🟡 Migrations e Transactions
 - [ ] 🔵 Prisma
 - [ ] 🔵 Drizzle

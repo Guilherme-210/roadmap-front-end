@@ -10,10 +10,26 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 REST: Endpoints, DTO, Query Params, filtros, paginação, ordenação, Upload e Download
-- [ ] 🔴 Loading, Empty/Error State, Retry, Timeout, Debounce, Race Conditions e Cancelamento
-- [ ] 🟡 Optimistic Updates
-- [ ] 🔵 GraphQL, WebSockets e Server-Sent Events
+## 30.1 — Padrões REST, DTOs e Comunicação
+
+- [ ] 🔴 Design e consumo de Endpoints REST
+- [ ] 🔴 Definição estrita de contratos de dados (DTOs - Data Transfer Objects) com TypeScript
+- [ ] 🔴 Paginação (offset vs cursor), filtros e ordenação via query parameters
+- [ ] 🔴 Upload e Download de arquivos
+
+## 30.2 — Resiliência e Estados de Interface
+
+- [ ] 🔴 Estados visuais completos: Loading, Empty, Error e Success
+- [ ] 🔴 Estratégias de Retry com backoff e controle de Timeout
+- [ ] 🔴 Técnicas de Debounce e Throttle em buscas
+- [ ] 🔴 Cancelamento de requisições pendentes com `AbortController`
+- [ ] 🟡 Atualizações Otimistas (Optimistic Updates) com reversão de estado
+
+## 30.3 — Protocolos Alternativos e Tempo Real
+
+- [ ] 🔵 Noções de consumo de APIs GraphQL (Queries, Mutations)
+- [ ] 🔵 Comunicação bidirecional com WebSockets
+- [ ] 🔵 Fluxos unidirecionais com Server-Sent Events (SSE)
 
 ---
 

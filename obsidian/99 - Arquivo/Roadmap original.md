@@ -57,7 +57,7 @@ O foco principal será **Next.js 16 + App Router**. O **Pages Router continua su
 
 ## 6.1 — Fundamentos
 
-- [x]  🔴 Tipagem, inferência, tipos primitivos, arrays, objects, functions e optional properties
+- [ ]  🔴 Tipagem, inferência, tipos primitivos, arrays, objects, functions e optional properties
 
 ## 6.2 — Tipos importantes
 
@@ -110,77 +110,77 @@ Antes de pensar em React ou Next.js.
 
 ## 0.1 — Lógica de programação
 
-- [x]  🔴 Algoritmos
-- [x]  🔴 Variáveis
-- [x]  🔴 Tipos de dados
-- [x]  🔴 Operadores
-- [x]  🔴 Condicionais
-- [x]  🔴 Loops
-- [x]  🔴 Funções
-- [x]  🔴 Arrays
-- [x]  🔴 Objetos
-- [x]  🔴 Estruturas de dados básicas
-- [x]  🔴 Entrada e saída
-- [x]  🔴 Tratamento de erros
-- [x]  🟡 Recursividade
-- [x]  🟡 Complexidade básica de algoritmos
-- [x]  🟡 Big O — noções básicas
+- [ ]  🔴 Algoritmos
+- [ ]  🔴 Variáveis
+- [ ]  🔴 Tipos de dados
+- [ ]  🔴 Operadores
+- [ ]  🔴 Condicionais
+- [ ]  🔴 Loops
+- [ ]  🔴 Funções
+- [ ]  🔴 Arrays
+- [ ]  🔴 Objetos
+- [ ]  🔴 Estruturas de dados básicas
+- [ ]  🔴 Entrada e saída
+- [ ]  🔴 Tratamento de erros
+- [ ]  🟡 Recursividade
+- [ ]  🟡 Complexidade básica de algoritmos
+- [ ]  🟡 Big O — noções básicas
 
 ## 0.2 — Terminal
 
-- [x]  🔴 Navegação entre diretórios
-- [x]  🔴 Criar/remover/copiar arquivos
-- [x]  🔴 Variáveis de ambiente
-- [x]  🔴 PATH
-- [x]  🔴 Executar programas pelo terminal
-- [x]  🔴 PowerShell / Bash
-- [x]  🟡 Git Bash
-- [x]  🟡 WSL
-- [x]  🔵 Comandos Linux básicos
+- [ ]  🔴 Navegação entre diretórios
+- [ ]  🔴 Criar/remover/copiar arquivos
+- [ ]  🔴 Variáveis de ambiente
+- [ ]  🔴 PATH
+- [ ]  🔴 Executar programas pelo terminal
+- [ ]  🔴 PowerShell / Bash
+- [ ]  🟡 Git Bash
+- [ ]  🟡 WSL
+- [ ]  🔵 Comandos Linux básicos
 
 ## 0.3 — Node.js
 
-- [x]  🔴 O que é Node.js
-- [x]  🔴 Runtime
-- [x]  🔴 Node vs navegador
-- [x]  🔴 npm
-- [x]  🔴 `package.json`
-- [x]  🔴 `package-lock.json`
-- [x]  🔴 Scripts npm
-- [x]  🔴 dependencies
-- [x]  🔴 devDependencies
-- [x]  🔴 Semantic Versioning
-- [x]  🔴 `node_modules`
-- [x]  🔴 Instalação de pacotes
-- [x]  🟡 npm vs pnpm vs yarn
-- [x]  🟡 npx
-- [x]  🟡 `.npmrc`
-- [x]  🟡 lockfiles
-- [x]  🟡 resolução de dependências
-- [x]  🟡 ESM vs CommonJS
-- [x]  🔵 workspaces
+- [ ]  🔴 O que é Node.js
+- [ ]  🔴 Runtime
+- [ ]  🔴 Node vs navegador
+- [ ]  🔴 npm
+- [ ]  🔴 `package.json`
+- [ ]  🔴 `package-lock.json`
+- [ ]  🔴 Scripts npm
+- [ ]  🔴 dependencies
+- [ ]  🔴 devDependencies
+- [ ]  🔴 Semantic Versioning
+- [ ]  🔴 `node_modules`
+- [ ]  🔴 Instalação de pacotes
+- [ ]  🟡 npm vs pnpm vs yarn
+- [ ]  🟡 npx
+- [ ]  🟡 `.npmrc`
+- [ ]  🟡 lockfiles
+- [ ]  🟡 resolução de dependências
+- [ ]  🟡 ESM vs CommonJS
+- [ ]  🔵 workspaces
 
 # NÍVEL 1 — Fundamentos da Web 💭
 
 ## 1.1 — Como a Web funciona
 
-- [x]  🔴 Cliente e servidor
-- [x]  🔴 Browser
-- [x]  🔴 HTTP
-- [x]  🔴 HTTPS
-- [x]  🔴 Request
-- [x]  🔴 Response
-- [x]  🔴 URL
-- [x]  🔴 Query parameters
-- [x]  🔴 Headers
-- [x]  🔴 Body
-- [x]  🔴 Métodos HTTP: GET, POST, PUT, PATCH e DELETE
-- [x]  🔴 Status HTTP: 2xx, 3xx, 4xx e 5xx
-- [x]  🔴 JSON
+- [ ]  🔴 Cliente e servidor
+- [ ]  🔴 Browser
+- [ ]  🔴 HTTP
+- [ ]  🔴 HTTPS
+- [ ]  🔴 Request
+- [ ]  🔴 Response
+- [ ]  🔴 URL
+- [ ]  🔴 Query parameters
+- [ ]  🔴 Headers
+- [ ]  🔴 Body
+- [ ]  🔴 Métodos HTTP: GET, POST, PUT, PATCH e DELETE
+- [ ]  🔴 Status HTTP: 2xx, 3xx, 4xx e 5xx
+- [ ]  🔴 JSON
 - [ ]  🟡 DNS
 - [ ]  🟡 TLS/SSL
-- [x]  🟡 Cookies
-- [x]  🟡 Cache HTTP
+- [ ]  🟡 Cookies
+- [ ]  🟡 Cache HTTP
 - [ ]  🟡 CORS
 - [ ]  🟡 Content-Type
 - [ ]  🟡 Authorization Header
@@ -192,54 +192,54 @@ Antes de pensar em React ou Next.js.
 
 ## 2.1 — HTML básico
 
-- [x]  🔴 Estrutura HTML
-- [x]  🔴 elementos e atributos
-- [x]  🔴 headings, parágrafos e links
-- [x]  🔴 imagens, listas e tabelas
-- [x]  🔴 formulários, inputs, buttons, labels, selects e textarea
+- [ ]  🔴 Estrutura HTML
+- [ ]  🔴 elementos e atributos
+- [ ]  🔴 headings, parágrafos e links
+- [ ]  🔴 imagens, listas e tabelas
+- [ ]  🔴 formulários, inputs, buttons, labels, selects e textarea
 
 ## 2.2 — HTML semântico
 
-- [x]  🔴 `header`, `main`, `nav`, `section`, `article`, `aside`, `footer`
+- [ ]  🔴 `header`, `main`, `nav`, `section`, `article`, `aside`, `footer`
 
 ## 2.3 — Formulários
 
-- [x]  🔴 `form`, `action`, `method`
-- [x]  🔴 validação HTML, required, min/max, pattern, autocomplete
-- [x]  🟡 fieldset e legend
+- [ ]  🔴 `form`, `action`, `method`
+- [ ]  🔴 validação HTML, required, min/max, pattern, autocomplete
+- [ ]  🟡 fieldset e legend
 
 ## 2.4 — Acessibilidade HTML
 
-- [x]  🔴 Semântica, teclado, foco, label, alt, landmarks e hierarquia de títulos
-- [x]  🟡 ARIA e atributos `aria-*`
+- [ ]  🔴 Semântica, teclado, foco, label, alt, landmarks e hierarquia de títulos
+- [ ]  🟡 ARIA e atributos `aria-*`
 
 # NÍVEL 3 — CSS 🟢
 
 ## 3.1 — CSS básico
 
-- [x]  🔴 Seletores, propriedades, classes, pseudo-classes e pseudo-elements
-- [x]  🔴 Cascade, specificity e inheritance
+- [ ]  🔴 Seletores, propriedades, classes, pseudo-classes e pseudo-elements
+- [ ]  🔴 Cascade, specificity e inheritance
 
 ## 3.2 — Box Model
 
-- [x]  🔴 width, height, margin, padding, border, box-sizing
+- [ ]  🔴 width, height, margin, padding, border, box-sizing
 
 ## 3.3 — Layout
 
-- [x]  🔴 Flexbox completo
-- [x]  🔴 CSS Grid completo
-- [x]  🟡 auto-fit e auto-fill
+- [ ]  🔴 Flexbox completo
+- [ ]  🔴 CSS Grid completo
+- [ ]  🟡 auto-fit e auto-fill
 
 ## 3.4 — Responsividade
 
-- [x]  🔴 Mobile First, Media Queries, Breakpoints e unidades responsivas
-- [x]  🔴 Imagens responsivas
-- [x]  🟡 Container Queries
+- [ ]  🔴 Mobile First, Media Queries, Breakpoints e unidades responsivas
+- [ ]  🔴 Imagens responsivas
+- [ ]  🟡 Container Queries
 
 ## 3.5 — CSS moderno
 
-- [x]  🔴 CSS Variables, `calc`, `min`, `max`, `clamp`
-- [x]  🟡 nesting, logical properties, `aspect-ratio`, `object-fit`, sticky, transitions e animations
+- [ ]  🔴 CSS Variables, `calc`, `min`, `max`, `clamp`
+- [ ]  🟡 nesting, logical properties, `aspect-ratio`, `object-fit`, sticky, transitions e animations
 
 ## 3.6 — Arquitetura CSS
 
@@ -250,24 +250,24 @@ Antes de pensar em React ou Next.js.
 
 ## 5.1 — Git
 
-- [x]  🔴 repository, clone, init, status, add, commit, push, pull e fetch
-- [x]  🔴 branch, checkout/switch, merge, conflitos e `.gitignore`
+- [ ]  🔴 repository, clone, init, status, add, commit, push, pull e fetch
+- [ ]  🔴 branch, checkout/switch, merge, conflitos e `.gitignore`
 
 ## 5.2 — Git profissional
 
-- [x]  🔴 Pull Request, Code Review, merge, squash e rebase
-- [x]  🟡 cherry-pick, revert, reset, reflog, tags e releases
+- [ ]  🔴 Pull Request, Code Review, merge, squash e rebase
+- [ ]  🟡 cherry-pick, revert, reset, reflog, tags e releases
 
 ## 5.3 — Workflow
 
-- [x]  🟡 Conventional Commits, Feature/Release Branches e Hotfix
-- [x]  🟡 Git Flow, Trunk-based Development e CI/CD associado a PRs
+- [ ]  🟡 Conventional Commits, Feature/Release Branches e Hotfix
+- [ ]  🟡 Git Flow, Trunk-based Development e CI/CD associado a PRs
 
 # NÍVEL 7 — React
 
 ## 7.1 — Fundamentos do React
 
-- [x]  🔴 JSX, componentes, props, children, composição e eventos
+- [ ]  🔴 JSX, componentes, props, children, composição e eventos
 - [ ]  🔴 renderização condicional, listas, `key`, estado e imutabilidade
 
 ## 7.2 — Hooks fundamentais

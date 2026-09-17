@@ -1,7 +1,7 @@
 ---
 nivel: 1
 tipo: nivel
-status: revisão
+status: proposto
 ---
 
 # Nível 1 — Fundamentos da Web
@@ -10,31 +10,39 @@ status: revisão
 
 ## Checklist de estudo
 
-## 1.1 — Como a Web funciona
+## 1.1 — Arquitetura da Web e Navegadores
 
-- [x]  🔴 Cliente e servidor
-- [x]  🔴 Browser
-- [x]  🔴 HTTP
-- [x]  🔴 HTTPS
-- [x]  🔴 Request
-- [x]  🔴 Response
-- [x]  🔴 URL
-- [x]  🔴 Query parameters
-- [x]  🔴 Headers
-- [x]  🔴 Body
-- [x]  🔴 Métodos HTTP: GET, POST, PUT, PATCH e DELETE
-- [x]  🔴 Status HTTP: 2xx, 3xx, 4xx e 5xx
-- [x]  🔴 JSON
-- [ ]  🟡 DNS
-- [ ]  🟡 TLS/SSL
-- [x]  🟡 Cookies
-- [x]  🟡 Cache HTTP
-- [ ]  🟡 CORS
-- [ ]  🟡 Content-Type
-- [ ]  🟡 Authorization Header
-- [ ]  🟡 CDN
-- [ ]  🔵 HTTP/2
-- [ ]  🔵 HTTP/3
+- [ ]  🔴 Modelo Cliente e Servidor
+- [ ]  🔴 Papel do Navegador (Browser engines, renderização inicial)
+- [ ]  🟡 Resolução de nomes com DNS
+- [ ]  🟡 Redes de distribuição de conteúdo (CDN)
+
+## 1.2 — Protocolo HTTP e Mensagens
+
+- [ ]  🔴 Protocolo HTTP e versão segura HTTPS
+- [ ]  🟡 Criptografia com TLS/SSL
+- [ ]  🔴 Estrutura de Request (requisição) e Response (resposta)
+- [ ]  🔴 Estrutura de URL e Query parameters
+- [ ]  🔴 Headers HTTP e cabeçalho Content-Type
+- [ ]  🔴 Body da mensagem e formato JSON
+
+## 1.3 — Métodos e Status Codes HTTP
+
+- [ ]  🔴 Métodos HTTP principais: GET, POST, PUT, PATCH e DELETE
+- [ ]  🔴 Semântica dos métodos (idempotência e segurança)
+- [ ]  🔴 Categorias de Status Codes HTTP:
+  - 2xx (Sucesso: 200, 201, 204)
+  - 3xx (Redirecionamento: 301, 302, 304)
+  - 4xx (Erro do cliente: 400, 401, 403, 404)
+  - 5xx (Erro do servidor: 500, 502, 503)
+
+## 1.4 — Mecanismos Web, Segurança e Performance
+
+- [ ]  🟡 Cookies e sessões no navegador
+- [ ]  🟡 Cabeçalho de autorização (Authorization Header)
+- [ ]  🟡 Políticas de mesma origem e CORS (Cross-Origin Resource Sharing)
+- [ ]  🟡 Cache HTTP básico (Cache-Control, ETag)
+- [ ]  🔵 Evolução do protocolo: HTTP/2 (multiplexação) e HTTP/3 (QUIC)
 
 ---
 
@@ -49,4 +57,3 @@ Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
 ## Dúvidas e próximas revisões
 
 Registre o que ainda precisa entender ou retomar.
-

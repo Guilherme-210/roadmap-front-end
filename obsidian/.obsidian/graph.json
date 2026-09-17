@@ -25,7 +25,7 @@
       "query": "path:\"03 - Prática\"  ",
       "color": {
         "a": 1,
-        "rgb": 11657298
+        "rgb": 1709
       }
     },
     {
@@ -81,6 +81,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.28710820679714827,
+  "scale": 0.28710820679714855,
   "close": false
 }

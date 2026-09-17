@@ -10,13 +10,26 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 Cache, Stale Data, Invalidation, Revalidation e TTL
-- [ ] 🔴 Cache de dados, UI, rotas e Request Memoization
-- [ ] 🔴 `revalidatePath` e `revalidateTag`
-- [ ] 🟡 `updateTag` e CDN Caching
-- [ ] 🟣 Cache Components, `'use cache'`, `cacheLife`, `cacheTag`, `use cache: private`
-- [ ] 🔵 `use cache: remote`
-- [ ] 🔴 Estratégias de cache e invalidação
+## 13.1 — Mecanismos de Cache do Next.js
+
+- [ ] 🔴 Conceitos de cache: Stale Data, TTL (Time To Live) e Invalidation
+- [ ] 🔴 Request Memoization no React
+- [ ] 🔴 Data Cache e Full Route Cache no Next.js
+- [ ] 🔴 Estratégias de cache e trade-offs de consistência eventual
+
+## 13.2 — Revalidação e Invalidação
+
+- [ ] 🔴 Revalidação por caminho: `revalidatePath`
+- [ ] 🔴 Revalidação por tag semântica: `revalidateTag`
+- [ ] 🟡 Atualização atômica de tags: `updateTag`
+- [ ] 🟡 CDN Caching e cabeçalhos de controle de cache
+
+## 13.3 — Cache Avançado e Diretiva 'use cache'
+
+- [ ] 🟣 Diretiva `'use cache'` no nível de função ou componente
+- [ ] 🟣 Configuração de granularidade: `cacheLife` e marcação com `cacheTag`
+- [ ] 🟣 Escopos de cache: `use cache: private` vs padrão
+- [ ] 🔵 Integrações remotas: `use cache: remote`
 
 ---
 

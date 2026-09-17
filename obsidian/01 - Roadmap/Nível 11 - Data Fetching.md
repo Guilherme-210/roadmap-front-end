@@ -10,12 +10,30 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 Fetch no servidor com async Server Components
-- [ ] 🔴 Requests paralelas, sequenciais, waterfall e `Promise.all`
-- [ ] 🔴 Fetch no cliente, Loading, Error, Refetch e Race Conditions
-- [ ] 🟡 Server State com TanStack Query e SWR
-- [ ] 🟡 TanStack Query: QueryClient, useQuery, useMutation, queryKey, staleTime, gcTime, invalidation, optimistic updates, retries e paginação
-- [ ] 🟣 Hydration/Dehydration
+## 11.1 — Fetch no Servidor
+
+- [ ] 🔴 Data Fetching em async Server Components
+- [ ] 🔴 Padrões de requisição: paralelas vs sequenciais (waterfall)
+- [ ] 🔴 Otimização de múltiplas chamadas com `Promise.all` e `Promise.allSettled`
+
+## 11.2 — Fetch no Cliente
+
+- [ ] 🔴 Data Fetching no cliente e ciclo de vida
+- [ ] 🔴 Estados de interface: Loading, Error, Empty e Success
+- [ ] 🔴 Refetching manual e prevenção de Race Conditions
+
+## 11.3 — Server State com TanStack Query
+
+- [ ] 🟡 Configuração do `QueryClient` e `QueryClientProvider`
+- [ ] 🟡 Leitura de dados com `useQuery` e chaves estáveis (`queryKey`)
+- [ ] 🟡 Mutação com `useMutation` e invalidação de queries (`queryClient.invalidateQueries`)
+- [ ] 🟡 Ciclo de vida de dados: `staleTime`, `gcTime` e refetch automático
+- [ ] 🟡 Atualizações otimistas (`onMutate`, rollback) e paginação / infinite queries
+
+## 11.4 — Hidratação e Integração Server/Client
+
+- [ ] 🟣 Pré-busca de dados no servidor (`prefetchQuery`)
+- [ ] 🟣 Transferência de estado via Hydration/Dehydration (`HydrationBoundary`)
 
 ---
 

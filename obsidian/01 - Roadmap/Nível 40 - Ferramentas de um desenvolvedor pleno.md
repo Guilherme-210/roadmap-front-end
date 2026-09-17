@@ -8,9 +8,12 @@ status: proposto
 
 [[Bem-vindo|Início]] · [[Roadmap completo|Todos os níveis]]
 
-## Checklist de estudo
+## 40.1 — Ferramentas Essenciais de Código e Depuração
 
 - [ ] 🔴 VS Code, Git, Browser DevTools, Postman/Insomnia, npm/pnpm, ESLint, Prettier e React DevTools
+
+## 40.2 — Ferramentas de Colaboração, Containers e DevOps
+
 - [ ] 🟡 Docker, Figma Dev Mode, GitHub/GitLab/Azure DevOps, CI/CD e Swagger/OpenAPI
 
 ---

@@ -10,10 +10,23 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 SEO, title, description, canonical, robots e sitemap
-- [ ] 🔴 Metadata API, `metadata`, `generateMetadata`, Open Graph e Twitter Cards
-- [ ] 🟡 robots.txt, sitemap.xml, favicon, manifest, JSON-LD e [Schema.org](http://Schema.org)
-- [ ] 🟣 Dynamic OG Images e `ImageResponse`
+## 22.1 — Fundamentos de SEO e Metatags
+
+- [ ] 🔴 Conceitos essenciais: title, description, URL canônica e indexação por robôs
+- [ ] 🔴 Redes sociais: Open Graph (Facebook/LinkedIn/WhatsApp) e Twitter Cards
+- [ ] 🔴 Estrutura semântica e boas práticas para mecanismos de busca
+
+## 22.2 — Metadata API e Arquivos Especiais de SEO
+
+- [ ] 🔴 Definição estática de metadados: objeto `metadata`
+- [ ] 🔴 Definição dinâmica de metadados baseada em dados de rota: função `generateMetadata`
+- [ ] 🟡 Arquivos estáticos e gerados de indexação: `robots.txt` e `sitemap.xml`
+- [ ] 🟡 Favicons e Web App Manifest (`manifest.json`)
+
+## 22.3 — Dados Estruturados e Imagens Dinâmicas de Compartilhamento
+
+- [ ] 🟡 Implementação de dados estruturados com JSON-LD e vocabulários do Schema.org
+- [ ] 🟣 Geração dinâmica de imagens para redes sociais com `ImageResponse` (Edge Rendering)
 
 ---
 

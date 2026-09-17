@@ -10,10 +10,24 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 `next/image`, responsive images, remote images, lazy loading e LCP
-- [ ] 🟡 Placeholders e Image Loaders
-- [ ] 🔴 `next/font`, Google Fonts, fontes locais, preload e CLS
-- [ ] 🔴 `/public`, SVG, favicon e scripts externos
+## 23.1 — Otimização de Imagens com next/image
+
+- [ ] 🔴 Componente `<Image>`: redimensionamento automático, formatos modernos (WebP, AVIF)
+- [ ] 🔴 Imagens responsivas (`sizes`, `fill`), prevenção de layout shift e impacto no LCP
+- [ ] 🔴 Imagens remotas e configuração de `remotePatterns` no `next.config.ts`
+- [ ] 🟡 Blur placeholders, carregamento sob demanda (lazy loading) e loaders customizados
+
+## 23.2 — Gestão e Preload de Fontes com next/font
+
+- [ ] 🔴 Integração nativa de Google Fonts com zero layout shift (CLS)
+- [ ] 🔴 Utilização de fontes locais com `next/font/local`
+- [ ] 🔴 Preloading automático de subsets e aplicação via variáveis CSS
+
+## 23.3 — Assets Estáticos e Scripts Externos
+
+- [ ] 🔴 Diretório estático `/public` e resolução de caminhos
+- [ ] 🔴 Importação e uso de SVGs no React
+- [ ] 🔴 Carregamento otimizado de scripts de terceiros com `next/script` (`strategy`: `beforeInteractive`, `afterInteractive`, `lazyOnload`)
 
 ---
 

@@ -10,9 +10,24 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 `route.ts`, GET, POST, PUT, PATCH e DELETE
-- [ ] 🔴 Request, Response, NextRequest, NextResponse, Headers, Cookies, JSON e Status Codes
-- [ ] 🟡 BFF, Proxy de APIs, esconder tokens, composição, validação e transformação
+## 16.1 — Métodos e Estrutura de Route Handlers
+
+- [ ] 🔴 Arquivo de rota de API: `route.ts`
+- [ ] 🔴 Implementação dos métodos HTTP: GET, POST, PUT, PATCH e DELETE
+- [ ] 🔴 Segmentos estáticos e dinâmicos em rotas de API
+
+## 16.2 — Mensagens, Contexto e Respostas HTTP
+
+- [ ] 🔴 Objetos Web Standard: `Request` e `Response`
+- [ ] 🔴 Extensões do Next.js: `NextRequest` e `NextResponse`
+- [ ] 🔴 Manipulação de Headers, Cookies e Query Parameters
+- [ ] 🔴 Parsing de payload JSON e definição correta de Status Codes
+
+## 16.3 — Padrão BFF e Proxy de Serviços
+
+- [ ] 🟡 Implementação de Backend-for-Frontend (BFF)
+- [ ] 🟡 Proxy de APIs externas e proteção de chaves/tokens confidenciais
+- [ ] 🟡 Validação, composição e transformação de dados antes de entregar ao cliente
 
 ---
 

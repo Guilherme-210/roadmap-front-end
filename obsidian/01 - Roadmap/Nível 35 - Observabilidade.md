@@ -10,9 +10,17 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🟡 Logging, Error Tracking, Metrics e Traces
-- [ ] 🟡 Sentry, OpenTelemetry, Analytics e Web Vitals
-- [ ] 🟡 `instrumentation.ts`, Instrumentation Client e `useReportWebVitals`
+## 35.1 — Pilares de Observabilidade e Rastreamento de Erros
+
+- [ ] 🟡 Os três pilares fundamentais: Logs estruturados, Métricas e Tracing distribuído
+- [ ] 🟡 Monitoramento e captura de exceções em tempo real com Sentry
+- [ ] 🟡 Padrão aberto de telemetria com OpenTelemetry
+
+## 35.2 — Instrumentação e Métricas no Next.js
+
+- [ ] 🟡 Inicialização de serviços no boot do servidor com `instrumentation.ts`
+- [ ] 🟡 Instrumentação no cliente para telemetria de performance
+- [ ] 🟡 Captura contínua de métricas reais de usuário com `useReportWebVitals`
 
 ---
 

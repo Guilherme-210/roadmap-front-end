@@ -10,10 +10,24 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 `'use server'`, Server Functions, Server Actions e Mutations
-- [ ] 🔴 Forms, validação, erros, Pending State, Revalidation e Redirects
-- [ ] 🟡 `useOptimistic`, Optimistic Updates e Rollback
-- [ ] 🟡 `useActionState`, Pending, Success e Error
+## 15.1 — Server Actions e Server Functions
+
+- [ ] 🔴 Diretiva `'use server'` no topo do arquivo ou no escopo de função
+- [ ] 🔴 Server Functions e invocação remota segura a partir do cliente
+- [ ] 🔴 Execução de mutações de dados no servidor
+
+## 15.2 — Integração com Formulários e Ciclo de Mutação
+
+- [ ] 🔴 Formulários nativos (`action={minhaAction}`)
+- [ ] 🔴 Validação no servidor e captura de erros
+- [ ] 🔴 Gerenciamento de estado de envio (Pending State)
+- [ ] 🔴 Ciclo pós-mutação: Revalidation de dados e Redirects
+
+## 15.3 — Estados de Ação e Feedback Otimista
+
+- [ ] 🟡 Hook `useActionState`: captura de estados de Pending, Success e Error
+- [ ] 🟡 Hook `useOptimistic`: atualização imediata da interface antes da resposta do servidor
+- [ ] 🟡 Padrão de Rollback em caso de falha da operação
 
 ---
 

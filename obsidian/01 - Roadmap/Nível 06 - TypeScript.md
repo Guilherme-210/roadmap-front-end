@@ -18,7 +18,7 @@ tags:
 
 ## 6.1 — Fundamentos
 
-- [x]  🔴 Tipagem, inferência, tipos primitivos, arrays, objects, functions e optional properties
+- [ ]  🔴 Tipagem, inferência, tipos primitivos, arrays, objects, functions e optional properties
 
 ## 6.2 — Tipos importantes
 

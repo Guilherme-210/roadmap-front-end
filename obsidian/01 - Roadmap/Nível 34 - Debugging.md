@@ -10,11 +10,23 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 Browser DevTools: Console, Network, Elements, Application e Sources
-- [ ] 🔴 React DevTools e Components
-- [ ] 🟡 Profiler
-- [ ] 🔴 Logs server/client, Build Errors, Hydration Errors, Boundary Errors e Cache Problems
-- [ ] 🟡 Source Maps
+## 34.1 — Ferramentas do Navegador e Source Maps
+
+- [ ] 🔴 Painéis do Browser DevTools: Console, Network (análise de payloads e tempos), Elements e Application (cookies, storage)
+- [ ] 🔴 Depuração via Sources: breakpoints condicionais, step into/over e call stack
+- [ ] 🟡 Utilização de Source Maps para mapear código compilado para TypeScript original
+
+## 34.2 — Debugging no Ecossistema React
+
+- [ ] 🔴 Inspeção da árvore de componentes, props e hooks com React DevTools
+- [ ] 🟡 Análise de commits e renderizações com o React Profiler
+- [ ] 🔴 Identificação de renders em cascata e estado dessincronizado
+
+## 34.3 — Diagnóstico de Falhas Comuns no Next.js
+
+- [ ] 🔴 Rastreamento de erros de servidor vs erros de cliente em logs
+- [ ] 🔴 Diagnóstico e resolução de erros de hidratação (Hydration Mismatch)
+- [ ] 🔴 Falhas de captura em Error Boundaries e problemas de cache desatualizado
 
 ---
 

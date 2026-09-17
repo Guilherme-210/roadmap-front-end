@@ -12,18 +12,18 @@ status: proposto
 
 ## 5.1 — Git
 
-- [x]  🔴 repository, clone, init, status, add, commit, push, pull e fetch
-- [x]  🔴 branch, checkout/switch, merge, conflitos e `.gitignore`
+- [ ]  🔴 repository, clone, init, status, add, commit, push, pull e fetch
+- [ ]  🔴 branch, checkout/switch, merge, conflitos e `.gitignore`
 
 ## 5.2 — Git profissional
 
-- [x]  🔴 Pull Request, Code Review, merge, squash e rebase
-- [x]  🟡 cherry-pick, revert, reset, reflog, tags e releases
+- [ ]  🔴 Pull Request, Code Review, merge, squash e rebase
+- [ ]  🟡 cherry-pick, revert, reset, reflog, tags e releases
 
 ## 5.3 — Workflow
 
-- [x]  🟡 Conventional Commits, Feature/Release Branches e Hotfix
-- [x]  🟡 Git Flow, Trunk-based Development e CI/CD associado a PRs
+- [ ]  🟡 Conventional Commits, Feature/Release Branches e Hotfix
+- [ ]  🟡 Git Flow, Trunk-based Development e CI/CD associado a PRs
 
 ---
 

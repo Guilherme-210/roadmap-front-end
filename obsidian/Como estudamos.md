@@ -17,5 +17,8 @@ Este é um resumo para consulta no Obsidian. As instruções completas ficam no 
 
 ## Organização atual
 
-O cofre fica em obsidian, incluindo sua pasta .obsidian. O aplicativo único para os exercícios está instalado em next, ao lado de obsidian. Veja [[Ambiente de prática - Next.js e dependências]]. A proposta de separação está em [[Organização - Repositório, cofre e projeto Next.js]].
+O cofre fica em obsidian, incluindo sua pasta `.obsidian`. O aplicativo único para os exercícios está em `next-lab`, ao lado de obsidian. Antes de criar exercícios para um subnível do roadmap em [[Roadmap completo|01 - Roadmap]], avalia-se se ele precisa de 1 ou mais exercícios para abranger o conteúdo. Os exercícios ficam em subpastas com o nome do nível em `03 - Prática/<Nome do Nível>/` (ex.: `03 - Prática/Nível 07 - React/`). Novos exercícios para um subnível existente nunca apagam os antigos, alterando apenas o sufixo do nome. Estrutura via [[Modelo - Exercício]] e código em `next-lab/app/exercicios/`. Veja [[Ambiente de prática - Next.js e dependências]].
+
+
+
 

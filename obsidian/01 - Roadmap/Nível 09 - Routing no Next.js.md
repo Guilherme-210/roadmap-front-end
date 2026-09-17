@@ -10,12 +10,30 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 File-system Routing, Nested Routes e Layouts
-- [ ] 🔴 Rotas dinâmicas `[id]`, `[slug]`, `[...slug]`, `[[...slug]]` e `params`
-- [ ] 🔴 Route Groups
-- [ ] 🔴 `<Link>`, Prefetch, Client-side Navigation e hooks de navegação
-- [ ] 🔴 URL como estado: filtros, busca e paginação
-- [ ] 🟣 Parallel Routes, Intercepting Routes, modals, redirects e rewrites
+## 9.1 — File-system Routing e Layouts
+
+- [ ] 🔴 File-system Routing no App Router
+- [ ] 🔴 Nested Routes (rotas aninhadas)
+- [ ] 🔴 Layouts raiz e layouts aninhados (`layout.tsx`)
+
+## 9.2 — Rotas Dinâmicas e Route Groups
+
+- [ ] 🔴 Segmentos dinâmicos: `[id]` e `[slug]`
+- [ ] 🔴 Catch-all segments: `[...slug]` e Optional Catch-all: `[[...slug]]`
+- [ ] 🔴 Leitura de parâmetros de rota (`params`)
+- [ ] 🔴 Route Groups `(nome-do-grupo)` para organização sem afetar a URL
+
+## 9.3 — Navegação e Estado na URL
+
+- [ ] 🔴 Componente `<Link>` e estratégias de Prefetching
+- [ ] 🔴 Client-side Navigation e hooks de navegação (`useRouter`, `usePathname`, `useSearchParams`)
+- [ ] 🔴 URL como estado da aplicação: filtros, busca e paginação sincronizados
+
+## 9.4 — Roteamento Avançado
+
+- [ ] 🟣 Parallel Routes (`@slot`) para painéis simultâneos
+- [ ] 🟣 Intercepting Routes (`(..)`) para modais na URL
+- [ ] 🟣 Redirecionamentos (`redirect`, `permanentRedirect`) e Rewrites
 
 ---
 

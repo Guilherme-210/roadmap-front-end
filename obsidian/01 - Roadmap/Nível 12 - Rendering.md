@@ -10,12 +10,22 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 CSR
-- [ ] 🔴 SSR
-- [ ] 🔴 SSG
-- [ ] 🔴 Dynamic Rendering
-- [ ] 🔴 ISR e Revalidation
-- [ ] 🔴 Saber escolher entre Static, Dynamic, Cached, Uncached, ISR e Streaming
+## 12.1 — Modelos Clássicos de Renderização
+
+- [ ] 🔴 CSR (Client-Side Rendering): funcionamento, tradeoffs e impactos no SEO
+- [ ] 🔴 SSR (Server-Side Rendering): geração por requisição e TTFB
+- [ ] 🔴 SSG (Static Site Generation): geração no momento do build e vantagens de CDN
+
+## 12.2 — Renderização Dinâmica e ISR
+
+- [ ] 🔴 Dynamic Rendering no Next.js (headers, cookies, searchParams dinâmicos)
+- [ ] 🔴 ISR (Incremental Static Regeneration): revalidação estática periódica e sob demanda
+- [ ] 🔴 Parâmetros de revalidação e funções de geração estática de rotas (`generateStaticParams`)
+
+## 12.3 — Decisão Arquitetural de Renderização
+
+- [ ] 🔴 Matriz de decisão: escolher entre Static, Dynamic, Cached, Uncached, ISR e Streaming
+- [ ] 🔴 Impacto de cada modelo no desempenho, custo de servidor e experiência do usuário
 
 ---
 

@@ -10,9 +10,16 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🟡 i18n, Locales, Tradução, moedas, datas e Timezone
-- [ ] 🟡 Routing internacionalizado
-- [ ] 🔵 next-intl
+## 36.1 — Fundamentos de Internacionalização (i18n) e Formatação
+
+- [ ] 🟡 Conceitos de Locales e estratégias de tradução de conteúdo
+- [ ] 🟡 Formatação internacionalizada nativa (`Intl` API): moedas, números, datas e fusos horários (Timezone)
+
+## 36.2 — Roteamento Internacionalizado e next-intl
+
+- [ ] 🟡 Roteamento por subcaminho de idioma (ex.: `/[locale]/minha-pagina`)
+- [ ] 🟡 Detecção automática de idioma de preferência do usuário
+- [ ] 🔵 Integração prática de bibliotecas dedicadas: `next-intl`
 
 ---
 

@@ -10,11 +10,25 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 XSS, CSRF, CORS, Injection, exposição de Secrets e Open Redirects
-- [ ] 🟡 Clickjacking
-- [ ] 🔴 Environment Variables, `NEXT_PUBLIC_*`, Secrets Server-side e validação
-- [ ] 🔴 Cookies HttpOnly, Secure e SameSite
-- [ ] 🟡 CSP e Security Headers
+## 27.1 — Principais Vulnerabilidades Web no Front-end
+
+- [ ] 🔴 XSS (Cross-Site Scripting): sanitização e perigos de `dangerouslySetInnerHTML`
+- [ ] 🔴 CSRF (Cross-Site Request Forgery) e proteções nativas em formulários/actions
+- [ ] 🔴 CORS (Cross-Origin Resource Sharing) e vazamento de dados
+- [ ] 🔴 Injeções de código/dados e Open Redirects
+- [ ] 🟡 Prevenção de Clickjacking (combate a iframes maliciosos)
+
+## 27.2 — Proteção de Variáveis de Ambiente e Segredos
+
+- [ ] 🔴 Separação estrita: variáveis públicas (`NEXT_PUBLIC_*`) vs segredos do servidor
+- [ ] 🔴 Prevenção de vazamento acidental de chaves em bundles do cliente
+- [ ] 🔴 Validação obrigatória de schema de variáveis de ambiente no build
+
+## 27.3 — Cookies Seguros e Cabeçalhos de Segurança (CSP)
+
+- [ ] 🔴 Configuração de cookies defensivos: flags `HttpOnly`, `Secure` e `SameSite`
+- [ ] 🟡 Content Security Policy (CSP): controle de origens confiáveis de scripts e mídias
+- [ ] 🟡 Cabeçalhos essenciais de segurança (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`)
 
 ---
 

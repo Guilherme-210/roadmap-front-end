@@ -1,7 +1,7 @@
 ---
 nivel: 2
 tipo: nivel
-status: concluido
+status: proposto
 ---
 
 # Nível 2 — HTML
@@ -12,26 +12,26 @@ status: concluido
 
 ## 2.1 — HTML básico
 
-- [x]  🔴 Estrutura HTML
-- [x]  🔴 elementos e atributos
-- [x]  🔴 headings, parágrafos e links
-- [x]  🔴 imagens, listas e tabelas
-- [x]  🔴 formulários, inputs, buttons, labels, selects e textarea
+- [ ]  🔴 Estrutura HTML
+- [ ]  🔴 elementos e atributos
+- [ ]  🔴 headings, parágrafos e links
+- [ ]  🔴 imagens, listas e tabelas
+- [ ]  🔴 formulários, inputs, buttons, labels, selects e textarea
 
 ## 2.2 — HTML semântico
 
-- [x]  🔴 `header`, `main`, `nav`, `section`, `article`, `aside`, `footer`
+- [ ]  🔴 `header`, `main`, `nav`, `section`, `article`, `aside`, `footer`
 
 ## 2.3 — Formulários
 
-- [x]  🔴 `form`, `action`, `method`
-- [x]  🔴 validação HTML, required, min/max, pattern, autocomplete
-- [x]  🟡 fieldset e legend
+- [ ]  🔴 `form`, `action`, `method`
+- [ ]  🔴 validação HTML, required, min/max, pattern, autocomplete
+- [ ]  🟡 fieldset e legend
 
 ## 2.4 — Acessibilidade HTML
 
-- [x]  🔴 Semântica, teclado, foco, label, alt, landmarks e hierarquia de títulos
-- [x]  🟡 ARIA e atributos `aria-*`
+- [ ]  🔴 Semântica, teclado, foco, label, alt, landmarks e hierarquia de títulos
+- [ ]  🟡 ARIA e atributos `aria-*`
 
 ---
 

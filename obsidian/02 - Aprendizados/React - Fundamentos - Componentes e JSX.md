@@ -60,9 +60,9 @@ export default function App() {
 
 ## Orientação e sequência
 
-O primeiro objetivo é distinguir JavaScript de JSX e conseguir definir e usar um componente. Funções, return, variáveis e módulos são pré-requisitos a conferir na tentativa; não há dificuldade observada ainda. Retomar [[Nível 04 - JavaScript]] se necessário, mantendo [[Nível 06 - TypeScript]] em revisão contínua.
+O primeiro objetivo é distinguir JavaScript de JSX e conseguir definir e usar um componente. Funções, return, variáveis e módulos são pré-requisitos a conferir na tentativa. Retomar [[Nível 04 - JavaScript]] se necessário, mantendo [[Nível 06 - TypeScript]] em revisão contínua.
 
-Sequência prevista: componentes e JSX → props → children e composição → eventos → condicionais e listas com key → estado e imutabilidade. Estes próximos assuntos ainda não foram trabalhados nesta sessão.
+Sequência prevista: componentes e JSX → props → children e composição → eventos → condicionais e listas com key → estado e imutabilidade.
 
 ## Prática relacionada
 
@@ -70,8 +70,8 @@ Sequência prevista: componentes e JSX → props → children e composição →
 
 ## Acompanhamento do aprendizado
 
-- **Conteúdo apresentado:** introdução a React, componentes, JSX, expressões e composição simples.
-- **Compreensão relatada:** aguardando explicação do usuário.
-- **Prática demonstrada:** nenhuma tentativa recebida.
-- **Validação pendente:** escrever um componente, usá-lo em App e explicar o resultado.
+- **Conteúdo apresentado:** fundamentos de 7.1.
+- **Compreensão relatada:** pendente de tentativa.
+- **Prática demonstrada pelo usuário:** nenhuma tentativa realizada ainda.
+- **Validação pendente:** aguardando execução e submissão do exercício.
 - **Dúvidas:** nenhuma dúvida específica relatada até o momento.

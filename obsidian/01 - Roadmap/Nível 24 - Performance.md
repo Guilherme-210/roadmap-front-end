@@ -10,12 +10,28 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 Core Web Vitals: LCP, CLS e INP
-- [ ] 🟡 TTFB e FCP
-- [ ] 🔴 evitar renders desnecessários e State Colocation
-- [ ] 🟡 Memoization, `useMemo`, `useCallback` e React Compiler
-- [ ] 🔴 Server Components, Image/Font Optimization, Streaming, Suspense, Lazy Loading, Dynamic Imports, Caching e Prefetch
-- [ ] 🟡 Bundle Analysis, Package Optimization, Chrome DevTools, Lighthouse e Profiler
+## 24.1 — Core Web Vitals e Métricas de Carregamento
+
+- [ ] 🔴 Core Web Vitals essenciais: LCP (Largest Contentful Paint), CLS (Cumulative Layout Shift) e INP (Interaction to Next Paint)
+- [ ] 🟡 Métricas de rede e resposta: TTFB (Time to First Byte) e FCP (First Contentful Paint)
+
+## 24.2 — Otimização de Renderização no React
+
+- [ ] 🔴 Prevenção de renderizações desnecessárias e State Colocation
+- [ ] 🟡 Memoização consciente: `useMemo`, `useCallback`, `React.memo`
+- [ ] 🟡 Papel do React Compiler na eliminação manual de memoização
+
+## 24.3 — Otimizações no Nível de Aplicação Next.js
+
+- [ ] 🔴 Redução de JavaScript com Server Components
+- [ ] 🔴 Divisão de código com Lazy Loading e `next/dynamic`
+- [ ] 🔴 Estratégias integradas de streaming, prefetch e cache
+
+## 24.4 — Análise de Bundle e Ferramentas de Perfilamento
+
+- [ ] 🟡 Análise de tamanho de pacotes com `@next/bundle-analyzer`
+- [ ] 🟡 Auditorias com Google Lighthouse e Chrome DevTools (Performance panel)
+- [ ] 🟡 Perfilamento de renderização de componentes com React DevTools Profiler
 
 ---
 

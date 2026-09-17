@@ -10,10 +10,24 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🟡 `/pages`, `_app.tsx`, `_document.tsx`
-- [ ] 🟡 `getServerSideProps`, `getStaticProps`, `getStaticPaths`
-- [ ] 🟡 API Routes e `next/router`
-- [ ] 🟡 diferenças para App Router e migração Pages → App Router
+## 38.1 — Estrutura e Arquivos Especiais do Pages Router
+
+- [ ] 🟡 Estrutura do diretório `/pages` e convenções de arquivo
+- [ ] 🟡 Custom App (`_app.tsx`) e inicialização de páginas/layouts globais
+- [ ] 🟡 Custom Document (`_document.tsx`) e customização do HTML/Body
+- [ ] 🟡 Roteamento no cliente com `next/router` (`useRouter`)
+
+## 38.2 — Métodos Clássicos de Data Fetching e API Routes
+
+- [ ] 🟡 SSR por requisição com `getServerSideProps`
+- [ ] 🟡 SSG estático com `getStaticProps` e caminhos dinâmicos com `getStaticPaths`
+- [ ] 🟡 Criação de endpoints em `/pages/api/` (API Routes clássicas)
+
+## 38.3 — Diferenças Arquiteturais e Estratégias de Migração
+
+- [ ] 🟡 Comparativo estrutural: Pages Router vs App Router
+- [ ] 🟡 Convivência de ambos os roteadores na mesma aplicação
+- [ ] 🟡 Estratégias seguras e incrementais de migração para o App Router
 
 ---
 

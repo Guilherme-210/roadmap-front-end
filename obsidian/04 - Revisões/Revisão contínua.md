@@ -22,12 +22,8 @@ Preencha uma linha quando houver algo concreto para retomar. A data é opcional.
 
 | Conceito ou nota | Motivo | Próxima revisão |
 | --- | --- | --- |
-| [[React - Fundamentos - Componentes e JSX]] | Conferir a base na primeira tentativa; nenhuma dificuldade observada ainda | Ao revisar [[React - Exercício 01 - Cartão de estudo]] |
 
 ## Histórico
 
 | Data | Conceito ou nota | O que consegui sem consultar | O que falta |
 | --- | --- | --- | --- |
-| | | | |
-
-

@@ -10,13 +10,24 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🟣 RSC, Streaming, Suspense, Partial Rendering, Hydration e Selective Hydration
-- [ ] 🟣 Cache Components, `use cache`, cacheLife, cacheTag, updateTag e ISR
-- [ ] 🟣 Prefetching, Partial Prefetching, Instant Navigation, Preserving UI State e Preventing Flash
-- [ ] 🟣 BFF, Multi-tenant, Multi-zones e Self-hosting
+## 37.1 — Arquitetura de Renderização e Streaming Avançado
+
+- [ ] 🟣 Funcionamento aprofundado de React Server Components e reconciliação
+- [ ] 🟣 Streaming progressivo, Partial Rendering e Selective Hydration
+- [ ] 🟣 Preservação de estado da interface durante navegações parciais
+
+## 37.2 — Cache Avançado e Prefetching Instantâneo
+
+- [ ] 🟣 Estratégias combinadas com `'use cache'`, `cacheLife`, `cacheTag` e `updateTag`
+- [ ] 🟣 Partial Prefetching e navegação instantânea sem flashes de tela
+- [ ] 🟣 Sincronização e invalidação fina em tempo de execução
+
+## 37.3 — Arquiteturas Complexas e Otimização de Compilação
+
+- [ ] 🟣 Padrão BFF avançado, arquiteturas Multi-tenant e Multi-zones
+- [ ] 🟣 Otimizações extremas de compilação: Turbopack, separação de Server vs Client Bundle
+- [ ] 🟡 Code Splitting, Tree Shaking agressivo e eliminação de dead code
 - [ ] 🔵 Adapters e Custom Servers
-- [ ] 🟣 Turbopack e Server vs Client Bundle
-- [ ] 🟡 Code Splitting, Tree Shaking, Bundle Size e Package Optimization
 
 ---
 

@@ -8,12 +8,18 @@ status: proposto
 
 [[Bem-vindo|Início]] · [[Roadmap completo|Todos os níveis]]
 
-## Checklist de estudo
+## 41.1 — Engenharia de Requisitos e Resolução de Problemas
 
 - [ ] 🔴 Entender requisitos, Edge Cases, quebrar tarefas e estimar impacto
+- [ ] 🔴 Investigar, reproduzir e encontrar causa raiz de bugs
+
+## 41.2 — Decisões Arquiteturais e Qualidade de Código
+
 - [ ] 🔴 Escolher Server/Client Component, onde buscar dados, cache, estado e componentização
 - [ ] 🔴 Ler código de terceiros, trabalhar em projetos grandes, refatorar e identificar dívida técnica
-- [ ] 🔴 Investigar, reproduzir e encontrar causa raiz de bugs
+
+## 41.3 — Práticas Profissionais, Colaboração e Excelência Técnica
+
 - [ ] 🔴 Pull Requests, Code Review, Git, comunicação técnica e documentação
 - [ ] 🔴 TypeScript, testes, acessibilidade, performance, segurança e SEO
 

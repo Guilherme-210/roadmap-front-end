@@ -10,9 +10,17 @@ status: proposto
 
 ## Checklist de estudo
 
-- [ ] 🔴 `proxy.ts`, Matchers, Redirect, Rewrite e Headers
-- [ ] 🟡 autenticação, internacionalização e execução antes de rotas
-- [ ] 🔴 Quando usar e quando não usar
+## 21.1 — Configuração, Matchers e Manipulação de Requisições
+
+- [ ] 🔴 Arquivo de intercepção: `proxy.ts` (ou middleware)
+- [ ] 🔴 Definição de rotas interceptadas com `config.matcher`
+- [ ] 🔴 Operações de resposta: Redirects, Rewrites e injeção de Headers/Cookies
+
+## 21.2 — Casos de Uso, Autenticação Prévia e Limites
+
+- [ ] 🟡 Validação preliminar de sessão e tokens antes de renderizar rotas
+- [ ] 🟡 Detecção e roteamento para internacionalização (i18n)
+- [ ] 🔴 Critérios de performance: quando usar e quando NÃO usar (evitar sobrecarregar o proxy com lógica pesada)
 
 ---
 
