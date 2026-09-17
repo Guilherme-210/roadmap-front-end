@@ -59,7 +59,13 @@ Adicione links para suas notas, com uma frase sobre o que aprendeu.
 
 ## Prática e evidências
 
-Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
+- [[TypeScript - Exercício 01 - Tipagem de domínio]] — Subnível 6.1; Fundamentos de tipagem e inferência.
+- [[TypeScript - Exercício 02 - Modelagem com tipos compostos]] — Subnível 6.2; Tipos compostos, interfaces vs types e eliminação do any.
+- [[TypeScript - Exercício 03 - Guardas de tipo e narrowing]] — Subnível 6.3; Afunilamento e discriminated unions.
+- [[TypeScript - Exercício 04 - Funções e interfaces genéricas]] — Subnível 6.4; Generics com restrições e defaults.
+- [[TypeScript - Exercício 05 - Tipos derivados e mapeados]] — Subnível 6.5; Manipulação de tipos, satisfies e infer.
+- [[TypeScript - Exercício 06 - Utilitários de tipo aplicados]] — Subnível 6.6; Utility types oficiais aplicados.
+- [[TypeScript - Exercício 07 - Configuração profissional do tsconfig]] — Subnível 6.7; Configuração avançada do compilador.
 
 ## Dúvidas e próximas revisões
 

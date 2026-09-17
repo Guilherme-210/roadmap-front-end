@@ -52,7 +52,10 @@ Adicione links para suas notas, com uma frase sobre o que aprendeu.
 
 ## Prática e evidências
 
-Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
+- [[Web - Exercício 01 - Mapa da arquitetura web]] — Subnível 1.1; Modelo cliente-servidor, DNS e CDN.
+- [[Web - Exercício 02 - Inspetor de requisições HTTP]] — Subnível 1.2; Protocolo HTTP/HTTPS e mensagens.
+- [[Web - Exercício 03 - Laboratório de métodos e status]] — Subnível 1.3; Métodos HTTP e status codes.
+- [[Web - Exercício 04 - Explorador de cookies e CORS]] — Subnível 1.4; Cookies, CORS e cache HTTP.
 
 ## Dúvidas e próximas revisões
 

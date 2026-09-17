@@ -75,7 +75,12 @@ Adicione links para suas notas, com uma frase sobre o que aprendeu.
 
 ## Prática e evidências
 
-Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
+- [[Fundamentos - Exercício 01 - Calculadora de console]] — Subnível 0.1; Variáveis, tipos e operadores.
+- [[Fundamentos - Exercício 02 - Validador de dados]] — Subnível 0.2; Estruturas de controle e loops.
+- [[Fundamentos - Exercício 03 - Gerenciador de tarefas CLI]] — Subnível 0.3; Funções, escopo e coleções.
+- [[Fundamentos - Exercício 04 - Analisador de complexidade]] — Subnível 0.4; Recursão e Big O.
+- [[Fundamentos - Exercício 05 - Navegação e automação no terminal]] — Subnível 0.5; Terminal, comandos e scripts.
+- [[Fundamentos - Exercício 06 - Anatomia de um projeto Node.js]] — Subnível 0.6; Runtime Node.js, package.json e módulos.
 
 ## Dúvidas e próximas revisões
 

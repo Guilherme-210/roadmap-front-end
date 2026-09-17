@@ -33,7 +33,9 @@ Adicione links para suas notas, com uma frase sobre o que aprendeu.
 
 ## Prática e evidências
 
-Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
+- [[Git - Exercício 01 - Repositório do zero]] — Subnível 5.1; Git básico, branches e resolução de conflitos.
+- [[Git - Exercício 02 - Simulação de fluxo profissional]] — Subnível 5.2; Git profissional, rebase, cherry-pick e reflog.
+- [[Git - Exercício 03 - Workflow com Conventional Commits]] — Subnível 5.3; Conventional Commits, Git Flow e CI/CD.
 
 ## Dúvidas e próximas revisões
 

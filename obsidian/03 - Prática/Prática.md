@@ -21,6 +21,58 @@ Todos os exercícios práticos compartilham o mesmo projeto Next.js em `next-lab
 
 ## Índice de Exercícios por Nível
 
+### Nível 00 — Fundamentos de programação e ambiente
+- [[Fundamentos - Exercício 01 - Calculadora de console]] — **Subnível 0.1**; proposto; variáveis, tipos primitivos, operadores e I/O.
+- [[Fundamentos - Exercício 02 - Validador de dados]] — **Subnível 0.2**; proposto; estruturas de controle, loops e try/catch.
+- [[Fundamentos - Exercício 03 - Gerenciador de tarefas CLI]] — **Subnível 0.3**; proposto; funções, escopo, coleções e pilhas/filas.
+- [[Fundamentos - Exercício 04 - Analisador de complexidade]] — **Subnível 0.4**; proposto; recursão, algoritmos e análise Big O.
+- [[Fundamentos - Exercício 05 - Navegação e automação no terminal]] — **Subnível 0.5**; proposto; comandos de navegação, arquivos, PATH e scripts.
+- [[Fundamentos - Exercício 06 - Anatomia de um projeto Node.js]] — **Subnível 0.6**; proposto; runtime Node.js, package.json, SemVer e ESM vs CJS.
+
+### Nível 01 — Fundamentos da Web
+- [[Web - Exercício 01 - Mapa da arquitetura web]] — **Subnível 1.1**; proposto; modelo cliente-servidor, browser engines, DNS e CDNs.
+- [[Web - Exercício 02 - Inspetor de requisições HTTP]] — **Subnível 1.2**; proposto; protocolo HTTP/HTTPS, TLS/SSL, requests/responses e headers.
+- [[Web - Exercício 03 - Laboratório de métodos e status]] — **Subnível 1.3**; proposto; verbos CRUD, semântica/idempotência e faixas de status.
+- [[Web - Exercício 04 - Explorador de cookies e CORS]] — **Subnível 1.4**; proposto; cookies, authorization, política de mesma origem/CORS e cache.
+
+### Nível 02 — HTML
+- [[HTML - Exercício 01 - Página de perfil]] — **Subnível 2.1**; proposto; estrutura HTML, headings, mídias, listas, tabelas e formulários.
+- [[HTML - Exercício 02 - Refatoração semântica]] — **Subnível 2.2**; proposto; eliminação de div soup com header, main, nav, section, article, aside e footer.
+- [[HTML - Exercício 03 - Formulário de cadastro validado]] — **Subnível 2.3**; proposto; formulário com constraint validation nativa, fieldset e autocomplete.
+- [[HTML - Exercício 04 - Auditoria de acessibilidade]] — **Subnível 2.4**; proposto; a11y, foco por teclado, landmarks, atributos aria-* e auditoria Lighthouse.
+
+### Nível 03 — CSS
+- [[CSS - Exercício 01 - Estilização de cartão de perfil]] — **Subnível 3.1**; proposto; seletores, especificidade sem !important, herança e pseudo-elementos.
+- [[CSS - Exercício 02 - Laboratório do Box Model]] — **Subnível 3.2**; proposto; border-box vs content-box, colapso de margens e reset universal.
+- [[CSS - Exercício 03 - Dashboard com Flexbox e Grid]] — **Subnível 3.3**; proposto; diagramação macro com Grid e micro com Flexbox, auto-fit vs auto-fill.
+- [[CSS - Exercício 04 - Layout responsivo mobile-first]] — **Subnível 3.4**; proposto; mobile-first, media queries, imagens responsivas e Container Queries.
+- [[CSS - Exercício 05 - Painel com variáveis e animações]] — **Subnível 3.5**; proposto; CSS variables, clamp(), nesting nativo, logical properties e keyframes.
+- [[CSS - Exercício 06 - Sistema de design com tokens]] — **Subnível 3.6**; proposto; tokens de design, CSS Modules e alternador de tema claro/escuro.
+
+### Nível 04 — JavaScript
+- [[JavaScript - Exercício 01 - Conversor de unidades]] — **Subnível 4.1**; proposto; sintaxe moderna ES6+, arrow functions e template strings.
+- [[JavaScript - Exercício 02 - Transformador de dados com arrays]] — **Subnível 4.2**; proposto; pipeline de métodos funcionais de array e imutabilidade.
+- [[JavaScript - Exercício 03 - Construtor de perfil com objetos]] — **Subnível 4.3**; proposto; destructuring, spread/rest, Object.entries e operadores ?. e ??.
+- [[JavaScript - Exercício 04 - Fábrica de funções utilitárias]] — **Subnível 4.4**; proposto; higher-order functions, closures, funções puras e currying.
+- [[JavaScript - Exercício 05 - Agregador de APIs assíncrono]] — **Subnível 4.5**; proposto; Promises, async/await, Promise.all vs allSettled e Event Loop.
+- [[JavaScript - Exercício 06 - Cliente HTTP com Fetch]] — **Subnível 4.6**; proposto; Fetch API nativa, tratamento de status, erros e AbortController.
+- [[JavaScript - Exercício 07 - Refatoração para módulos ES]] — **Subnível 4.7**; proposto; ES Modules, barrel files e code splitting com dynamic import.
+- [[JavaScript - Exercício 08 - Explorador de protótipos e classes]] — **Subnível 4.8**; proposto; hoisting, this, herança prototipal, structuredClone e GC.
+
+### Nível 05 — Git e GitHub - Azure DevOps
+- [[Git - Exercício 01 - Repositório do zero]] — **Subnível 5.1**; proposto; fluxo diário do Git, criação de branches e resolução de conflitos de merge.
+- [[Git - Exercício 02 - Simulação de fluxo profissional]] — **Subnível 5.2**; proposto; rebase interativo, squash, cherry-pick, revert, reset e reflog.
+- [[Git - Exercício 03 - Workflow com Conventional Commits]] — **Subnível 5.3**; proposto; padronização de commits, Git Flow vs Trunk-Based e CI/CD.
+
+### Nível 06 — TypeScript
+- [[TypeScript - Exercício 01 - Tipagem de domínio]] — **Subnível 6.1**; proposto; inferência estática, primitivos, tuplas e propriedades opcionais.
+- [[TypeScript - Exercício 02 - Modelagem com tipos compostos]] — **Subnível 6.2**; proposto; union, intersection, interfaces vs types e eliminação do any.
+- [[TypeScript - Exercício 03 - Guardas de tipo e narrowing]] — **Subnível 6.3**; proposto; afunilamento com guardas, discriminated unions e type predicates.
+- [[TypeScript - Exercício 04 - Funções e interfaces genéricas]] — **Subnível 6.4**; proposto; generics reutilizáveis, generic constraints (extends) e defaults.
+- [[TypeScript - Exercício 05 - Tipos derivados e mapeados]] — **Subnível 6.5**; proposto; keyof, typeof, as const, satisfies, mapped types e infer.
+- [[TypeScript - Exercício 06 - Utilitários de tipo aplicados]] — **Subnível 6.6**; proposto; Partial, Required, Pick, Omit, Record, ReturnType e Awaited.
+- [[TypeScript - Exercício 07 - Configuração profissional do tsconfig]] — **Subnível 6.7**; proposto; tsconfig.json, modo strict, path aliases e moduleResolution.
+
 ### Nível 07 — React
 - [[React - Exercício 01 - Cartão de estudo]] — **Subnível 7.1**; proposto; cobertura integral dos fundamentos em etapas.
 - [[React - Exercício 02 - Hooks fundamentais]] — **Subnível 7.2**; proposto; central de sessões de estudo.
@@ -32,14 +84,6 @@ Todos os exercícios práticos compartilham o mesmo projeto Next.js em `next-lab
 
 ### Outros Níveis do Roadmap (Aguardando criação de exercícios por subnível)
 *À medida que os exercícios forem sendo criados para cada subnível dos arquivos em `01 - Roadmap`, adicione os links abaixo:*
-
-- **[[Nível 00 - Fundamentos de programação e ambiente]]** (Subníveis 0.1 a 0.6)
-- **[[Nível 01 - Fundamentos da Web]]** (Subníveis 1.1 a 1.4)
-- **[[Nível 02 - HTML]]** (Subníveis 2.1 a 2.4)
-- **[[Nível 03 - CSS]]** (Subníveis 3.1 a 3.6)
-- **[[Nível 04 - JavaScript]]** (Subníveis 4.1 a 4.8)
-- **[[Nível 05 - Git e GitHub - Azure DevOps]]** (Subníveis 5.1 a 5.3)
-- **[[Nível 06 - TypeScript]]** (Subníveis 6.1 a 6.7)
 - **[[Nível 08 - Next.js básico]]** (Subníveis 8.1 a 8.4)
 - **[[Nível 09 - Routing no Next.js]]** (Subníveis 9.1 a 9.4)
 - **[[Nível 10 - Server Components e Client Components]]** (Subníveis 10.1 a 10.4)

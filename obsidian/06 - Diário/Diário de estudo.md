@@ -6,6 +6,8 @@ Registro opcional, sem obrigação diária. Crie uma nota como “2026-09-15 - E
 
 ## Sessões
 
+- [[2026-09-17 - Criação dos exercícios dos Níveis 00 a 06]]
+
 - [[2026-09-17 - Planejamento das práticas React 7.2 a 7.7]]
 
 - [[2026-09-15 - React - Componentes e JSX]]

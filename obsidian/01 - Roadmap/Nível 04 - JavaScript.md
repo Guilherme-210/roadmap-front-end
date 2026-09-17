@@ -64,7 +64,14 @@ Adicione links para suas notas, com uma frase sobre o que aprendeu.
 
 ## Prática e evidências
 
-Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
+- [[JavaScript - Exercício 01 - Conversor de unidades]] — Subnível 4.1; JavaScript básico e sintaxe moderna.
+- [[JavaScript - Exercício 02 - Transformador de dados com arrays]] — Subnível 4.2; Métodos funcionais de arrays.
+- [[JavaScript - Exercício 03 - Construtor de perfil com objetos]] — Subnível 4.3; Objetos, desestruturação e spread.
+- [[JavaScript - Exercício 04 - Fábrica de funções utilitárias]] — Subnível 4.4; Funções de alta ordem, closures e currying.
+- [[JavaScript - Exercício 05 - Agregador de APIs assíncrono]] — Subnível 4.5; JavaScript assíncrono, Promises e Event Loop.
+- [[JavaScript - Exercício 06 - Cliente HTTP com Fetch]] — Subnível 4.6; Fetch API e AbortController.
+- [[JavaScript - Exercício 07 - Refatoração para módulos ES]] — Subnível 4.7; ES Modules e importação dinâmica.
+- [[JavaScript - Exercício 08 - Explorador de protótipos e classes]] — Subnível 4.8; JavaScript avançado, protótipos e classes.
 
 ## Dúvidas e próximas revisões
 

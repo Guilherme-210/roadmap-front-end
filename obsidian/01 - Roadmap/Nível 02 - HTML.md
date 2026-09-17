@@ -41,7 +41,10 @@ Adicione links para suas notas, com uma frase sobre o que aprendeu.
 
 ## Prática e evidências
 
-Adicione links para exercícios e projetos que mostrem o uso destes conceitos.
+- [[HTML - Exercício 01 - Página de perfil]] — Subnível 2.1; Estrutura HTML básica.
+- [[HTML - Exercício 02 - Refatoração semântica]] — Subnível 2.2; HTML semântico e estruturação.
+- [[HTML - Exercício 03 - Formulário de cadastro validado]] — Subnível 2.3; Formulários e validação nativa.
+- [[HTML - Exercício 04 - Auditoria de acessibilidade]] — Subnível 2.4; Acessibilidade HTML e ARIA.
 
 ## Dúvidas e próximas revisões
 
