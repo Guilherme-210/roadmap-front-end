@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dev: Next.js (next-lab)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/next-lab",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["run", "dev"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Next.js: Depurar Servidor",
+      "type": "node-terminal",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/next-lab",
+      "command": "pnpm run dev"
+    },
+    {
+      "name": "Next.js: Depurar Navegador (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/next-lab"
+    }
+  ]
+}

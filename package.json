@@ -1,0 +1,14 @@
+{
+  "name": "roadmap-front-end",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel --recursive run dev",
+    "dev:front": "pnpm --filter next-lab dev",
+    "build": "pnpm --parallel --recursive run build",
+    "build:front": "pnpm --filter next-lab run build",
+    "start": "pnpm --parallel --recursive run start",
+    "start:front": "pnpm --filter next-lab run start",
+    "lint": "pnpm --recursive run lint"
+  }
+}

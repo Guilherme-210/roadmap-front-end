@@ -1,0 +1,58 @@
+{
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.autoIndentOnPaste": true,
+  "files.eol": "\n",
+
+  // Organização e correções de lint ao salvar
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // Suporte a Monorepo pnpm (permite que o VS Code localize o ESLint nos subpacotes)
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+
+  // Utiliza a versão do TypeScript instalada no workspace (next-lab)
+  "typescript.tsdk": "next-lab/node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  // Resolução de imports: prioriza @/* no frontend Next.js
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "javascript.preferences.importModuleSpecifier": "shortest",
+  "typescript.preferences.importModuleSpecifierEnding": "auto",
+  "javascript.preferences.importModuleSpecifierEnding": "auto",
+
+  // Tailwind CSS v4: silencia alertas falsos de @theme, @utility e @import no CSS
+  "css.lint.unknownAtRules": "ignore",
+
+  // Emmet para React (TSX / JSX)
+  "emmet.includeLanguages": {
+    "typescriptreact": "html",
+    "javascriptreact": "html"
+  },
+
+  // Proteção do cofre Obsidian: evita que o Prettier quebre notas markdown e wikilinks
+  "[markdown]": {
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": false
+  },
+
+  // Performance e busca: evita indexar diretórios de build, dependências e dados internos do Obsidian
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/.next/**": true,
+    "**/dist/**": true,
+    "**/.obsidian/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/.obsidian": true
+  }
+}
