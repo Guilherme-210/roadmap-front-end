@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "title": "Playground Interativo",
+    "description": "Ambiente experimental com Monaco Editor e execução JavaScript em sandbox descartável."
+  },
+  "header": {
+    "badge": {
+      "text": "Sandbox experimental e descartável",
+      "ping": true
+    },
+    "title": "Playground JavaScript",
+    "description": "Experimente algoritmos, teste recursos assíncronos e inspecione a saída do console em tempo real. O código é executado por um Worker dentro de um iframe de origem opaca, permitindo interromper loops infinitos sem conceder acesso direto à origem da aplicação.",
+    "tags": [
+      { "label": "Linguagem", "value": "JavaScript (ESNext)", "color": "amber" },
+      { "label": "Isolamento", "value": "origem opaca + Worker", "color": "emerald" },
+      { "label": "Atalho", "value": "Ctrl + Enter", "color": "amber" }
+    ]
+  },
+  "featureCards": [
+    {
+      "title": "Execução Assíncrona",
+      "description": "Escreva await diretamente no topo do seu código sem precisar envolver em funções IIFE.",
+      "icon": "zap"
+    },
+    {
+      "title": "Segurança & Isolamento",
+      "description": "O executor usa origem opaca e bloqueio de rede. Este laboratório continua classificado para uso experimental/local, não para código público em produção.",
+      "icon": "shield"
+    },
+    {
+      "title": "Controle de Loops Infinitos",
+      "description": "Se acidentalmente disparar um loop infinito, utilize o botão Interromper ou aguarde o timeout de 5 segundos.",
+      "icon": "stop"
+    }
+  ]
+}
+
