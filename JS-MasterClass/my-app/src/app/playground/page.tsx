@@ -5,7 +5,7 @@ import { getDefaultPlaygroundExample } from "@/data/examples";
 export const metadata: Metadata = {
   title: "Playground Interativo",
   description:
-    "Ambiente interativo com Monaco Editor e execução isolada em Web Worker para testar códigos JavaScript modernos.",
+    "Ambiente experimental com Monaco Editor e execução JavaScript em sandbox descartável.",
 };
 
 export default function PlaygroundPage() {
@@ -20,7 +20,7 @@ export default function PlaygroundPage() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
           </span>
-          <span>Ambiente de Execução Isolado</span>
+          <span>Sandbox experimental e descartável</span>
         </div>
 
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--foreground)]">
@@ -29,8 +29,8 @@ export default function PlaygroundPage() {
 
         <p className="text-sm sm:text-base text-[var(--text-muted)] max-w-3xl leading-relaxed">
           Experimente algoritmos, teste recursos assíncronos e inspecione a saída do console
-          em tempo real. O código é executado em um <strong>Web Worker dedicado</strong>, garantindo
-          que loops infinitos possam ser interrompidos sem travar a interface.
+          em tempo real. O código é executado por um Worker dentro de um iframe de origem opaca,
+          permitindo interromper loops infinitos sem conceder acesso direto à origem da aplicação.
         </p>
 
         {/* Badges de recursos suportados */}
@@ -39,7 +39,7 @@ export default function PlaygroundPage() {
             Linguagem: <strong className="text-amber-500">JavaScript (ESNext)</strong>
           </span>
           <span className="px-2.5 py-1 rounded-md bg-[var(--card-bg)] text-[var(--foreground)] border border-[var(--border-subtle)] font-medium">
-            Isolamento: <strong className="text-emerald-500">Web Worker</strong>
+            Isolamento: <strong className="text-emerald-500">origem opaca + Worker</strong>
           </span>
           <span className="px-2.5 py-1 rounded-md bg-[var(--card-bg)] text-[var(--foreground)] border border-[var(--border-subtle)] font-medium">
             Atalho: <strong className="font-mono text-amber-500">Ctrl + Enter</strong>
@@ -81,7 +81,7 @@ export default function PlaygroundPage() {
             <span>Segurança & Isolamento</span>
           </div>
           <p className="text-xs text-[var(--text-muted)] leading-relaxed">
-            Seu código é executado em um Web Worker, sem acesso direto a <code className="font-mono text-amber-500">window</code> ou dados sensíveis da aplicação.
+            O executor usa origem opaca e bloqueio de rede. Este laboratório continua classificado para uso experimental/local, não para código público em produção.
           </p>
         </div>
 

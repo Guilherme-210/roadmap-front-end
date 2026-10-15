@@ -4,7 +4,7 @@ export const playgroundDefaultExample: CodeExample = {
   id: "playground-starter",
   title: "Boas-vindas ao Playground JS MasterClass",
   description:
-    "Ambiente interativo com suporte a assincronismo, captura de logs estruturados e isolamento via Web Worker.",
+    "Ambiente experimental com assincronismo, logs estruturados e sandbox descartável de origem opaca.",
   language: "javascript",
   category: "Playground",
   difficulty: "iniciante",
@@ -13,14 +13,14 @@ export const playgroundDefaultExample: CodeExample = {
 // JS MasterClass Playground - Ambiente Interativo
 // ============================================================================
 // Dica: Execute pressionando o botão "Executar" ou pelo atalho Ctrl+Enter.
-// Este código roda isolado em um Web Worker, sem risco de congelar sua aba!
+// O código roda em um Worker dentro de um sandbox de origem opaca e descartável.
 
 console.info("⚡ Ambiente inicializado com sucesso!");
 
 // 1. Tipos primitivos e estruturas modernas
 const configuracao = {
   versao: "2.0.0",
-  ambiente: "Navegador (Web Worker)",
+  ambiente: "Navegador (sandbox opaco + Worker)",
   linguagem: "JavaScript (ESNext)",
   recursos: ["Async/Await", "Imutabilidade", "Console Estruturado"]
 };

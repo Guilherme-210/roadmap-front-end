@@ -48,6 +48,10 @@ export interface CodePlaygroundProps {
   layout?: PlaygroundLayout;
   autoRun?: boolean;
   timeoutMs?: number;
+  maxCodeSizeBytes?: number;
+  maxLogEntries?: number;
+  maxLogMessageBytes?: number;
+  maxOutputBytes?: number;
   onCodeChange?: (code: string) => void;
   className?: string;
 }

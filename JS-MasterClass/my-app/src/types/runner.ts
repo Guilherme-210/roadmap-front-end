@@ -13,7 +13,8 @@ export type LogLevel = "log" | "info" | "warn" | "error" | "system";
 export interface LogEntry {
   id: string;
   level: LogLevel;
-  messages: unknown[];
+  /** Argumentos já serializados. Nunca contém objetos vindos do executor. */
+  messages: string[];
   formattedText: string;
   timestamp: number;
 }
@@ -42,6 +43,18 @@ export interface RunnerOptions {
    * Padrão recomendado: 5000ms.
    */
   timeoutMs?: number;
+
+  /** Tamanho máximo do código UTF-8 aceito pelo executor. */
+  maxCodeSizeBytes?: number;
+
+  /** Quantidade máxima de entradas emitidas pelo console. */
+  maxLogEntries?: number;
+
+  /** Tamanho máximo de uma entrada de console já formatada. */
+  maxLogMessageBytes?: number;
+
+  /** Orçamento total, em bytes, para a saída de console. */
+  maxOutputBytes?: number;
 
   /**
    * Callback invocado em tempo real a cada nova saída de log interceptada.

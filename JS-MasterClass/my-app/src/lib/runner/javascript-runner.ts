@@ -4,327 +4,319 @@ import type {
   ExecutionResult,
   LogEntry,
   RunnerOptions,
+  RunnerStatus,
   SupportedLanguage,
 } from "@/types/runner";
-import { formatLogArgs, safeSerialize } from "./formatter";
-import { createWorkerScript } from "./worker-script";
+import {
+  RUNNER_PROTOCOL,
+  createProtocolMessage,
+  isExecutorMessage,
+  resolveRunnerLimits,
+  utf8ByteLength,
+  type RunnerLimits,
+} from "./protocol";
+import { createExecutorFrameDocument } from "./worker-script";
 
+interface ActiveExecution {
+  executionId: string;
+  channelId: string;
+  iframe: HTMLIFrameElement;
+  limits: RunnerLimits;
+  logs: LogEntry[];
+  outputBytes: number;
+  timeoutId: ReturnType<typeof setTimeout>;
+  finish: (
+    status: RunnerStatus,
+    result: Omit<ExecutionResult, "logs" | "executionTimeMs"> & {
+      executionTimeMs?: number;
+    }
+  ) => void;
+}
+
+function secureId(): string {
+  if (typeof crypto === "undefined" || typeof crypto.getRandomValues !== "function") {
+    throw new Error("Gerador criptográfico indisponível no navegador.");
+  }
+  if (typeof crypto.randomUUID === "function") return crypto.randomUUID();
+  const bytes = new Uint8Array(24);
+  crypto.getRandomValues(bytes);
+  return Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+
+function safeCallback(callback: (() => void) | undefined): void {
+  try {
+    callback?.();
+  } catch {
+    // Callbacks pertencem à UI e não podem quebrar o ciclo de vida do runner.
+  }
+}
+
+function createSystemLog(
+  executionId: string,
+  level: LogEntry["level"],
+  text: string
+): LogEntry {
+  return {
+    id: `${executionId}:system:${Date.now()}`,
+    level,
+    messages: [text],
+    formattedText: text,
+    timestamp: Date.now(),
+  };
+}
+
+/**
+ * Runner browser-only. O código não é executado nesta classe nem na origem da
+ * aplicação. Cada execução recebe um iframe sandboxed de origem opaca; esse
+ * iframe cria um Worker descartável para preservar a responsividade.
+ */
 export class JavaScriptRunner implements CodeRunner {
   readonly language: SupportedLanguage = "javascript";
   readonly isExecutable = true;
-  readonly displayName = "JavaScript (V8 / Isolated Worker)";
+  readonly displayName = "JavaScript (Opaque Sandbox + Worker)";
 
-  private activeWorker: Worker | null = null;
-  private activeBlobUrl: string | null = null;
-  private timeoutId: ReturnType<typeof setTimeout> | null = null;
-  private isTerminatedByUser = false;
+  private active: ActiveExecution | null = null;
 
-  /**
-   * Executa o código JavaScript fornecido.
-   * No navegador, utiliza um Web Worker isolado gerado via Blob URL.
-   * Em ambientes sem suporte a Web Worker (como testes unitários em Node.js),
-   * utiliza uma estratégia de emulação segura com captura de console.
-   */
   async run(code: string, options?: RunnerOptions): Promise<ExecutionResult> {
-    // Interrompe qualquer execução anterior pendente para evitar vazamentos e conflitos
     this.stop();
 
-    this.isTerminatedByUser = false;
-    options?.onStatusChange?.("running");
-
-    if (typeof window !== "undefined" && typeof Worker !== "undefined") {
-      return this.runInWorker(code, options);
+    const limits = resolveRunnerLimits(options);
+    const provisionalId = "rejected";
+    if (utf8ByteLength(code) > limits.maxCodeSizeBytes) {
+      const error: ExecutionError = {
+        name: "CodeSizeLimitError",
+        message: `O código excede o limite de ${limits.maxCodeSizeBytes} bytes.`,
+      };
+      const log = createSystemLog(provisionalId, "error", error.message);
+      safeCallback(() => options?.onLog?.(log));
+      safeCallback(() => options?.onStatusChange?.("error"));
+      return { success: false, logs: [log], error, executionTimeMs: 0 };
     }
 
-    return this.runInNodeFallback(code, options);
-  }
-
-  /**
-   * Interrompe a execução atual imediatamente.
-   */
-  stop(): void {
-    if (this.activeWorker) {
-      this.isTerminatedByUser = true;
-      this.activeWorker.terminate();
-      this.activeWorker = null;
+    if (
+      typeof window === "undefined" ||
+      typeof document === "undefined" ||
+      typeof HTMLIFrameElement === "undefined"
+    ) {
+      const error: ExecutionError = {
+        name: "UnsupportedEnvironmentError",
+        message: "O executor JavaScript isolado está disponível apenas no navegador.",
+      };
+      safeCallback(() => options?.onStatusChange?.("error"));
+      return { success: false, logs: [], error, executionTimeMs: 0 };
     }
 
-    if (this.timeoutId) {
-      clearTimeout(this.timeoutId);
-      this.timeoutId = null;
-    }
+    safeCallback(() => options?.onStatusChange?.("running"));
 
-    if (this.activeBlobUrl) {
-      URL.revokeObjectURL(this.activeBlobUrl);
-      this.activeBlobUrl = null;
-    }
-  }
-
-  /**
-   * Libera recursos alocados.
-   */
-  dispose(): void {
-    this.stop();
-  }
-
-  /**
-   * Execução isolada em Web Worker no navegador.
-   */
-  private runInWorker(code: string, options?: RunnerOptions): Promise<ExecutionResult> {
     return new Promise<ExecutionResult>((resolve) => {
+      let executionId: string;
+      let channelId: string;
+      try {
+        executionId = secureId();
+        channelId = secureId();
+      } catch (cause) {
+        const error: ExecutionError = {
+          name: "InitializationError",
+          message: cause instanceof Error ? cause.message : "Falha ao criar identificadores seguros.",
+        };
+        safeCallback(() => options?.onStatusChange?.("error"));
+        resolve({ success: false, logs: [], error, executionTimeMs: 0 });
+        return;
+      }
+
       const logs: LogEntry[] = [];
-      const startTime = performance.now();
-      const timeoutMs = options?.timeoutMs ?? 5000;
+      const startedAt = performance.now();
+      const iframe = document.createElement("iframe");
+      iframe.hidden = true;
+      iframe.tabIndex = -1;
+      iframe.setAttribute("aria-hidden", "true");
+      iframe.setAttribute("sandbox", "allow-scripts");
+      iframe.setAttribute("referrerpolicy", "no-referrer");
+      iframe.title = "Executor JavaScript isolado";
+
+      let finished = false;
+      let started = false;
+
+      const cleanup = () => {
+        window.removeEventListener("message", handleMessage);
+        iframe.removeEventListener("error", handleFrameError);
+        clearTimeout(active.timeoutId);
+        iframe.remove();
+        if (this.active === active) this.active = null;
+      };
+
+      const finish: ActiveExecution["finish"] = (status, result) => {
+        if (finished) return;
+        finished = true;
+        const measuredTime = Math.max(0, Math.round(performance.now() - startedAt));
+        cleanup();
+        safeCallback(() => options?.onStatusChange?.(status));
+        resolve({
+          ...result,
+          logs: [...logs],
+          executionTimeMs: result.executionTimeMs ?? measuredTime,
+        });
+      };
+
+      const active: ActiveExecution = {
+        executionId,
+        channelId,
+        iframe,
+        limits,
+        logs,
+        outputBytes: 0,
+        timeoutId: setTimeout(() => {
+          const error: ExecutionError = {
+            name: "ExecutionTimeoutError",
+            message: `Tempo limite de execução excedido (${limits.timeoutMs}ms).`,
+          };
+          const log = createSystemLog(executionId, "error", `[Timeout] ${error.message}`);
+          const logBytes = utf8ByteLength(log.formattedText);
+          if (
+            logs.length < limits.maxLogEntries &&
+            active.outputBytes + logBytes <= limits.maxOutputBytes
+          ) {
+            active.outputBytes += logBytes;
+            logs.push(log);
+            safeCallback(() => options?.onLog?.(log));
+          }
+          finish("terminated", {
+            success: false,
+            error,
+            executionTimeMs: limits.timeoutMs,
+          });
+        }, limits.timeoutMs),
+        finish,
+      };
+
+      function handleFrameError() {
+        const error: ExecutionError = {
+          name: "InitializationError",
+          message: "Falha ao carregar o contexto isolado do executor.",
+        };
+        finish("error", { success: false, error });
+      }
+
+      const handleMessage = (event: MessageEvent) => {
+        if (finished || this.active !== active) return;
+        if (event.source !== iframe.contentWindow || event.origin !== "null") return;
+        if (!isExecutorMessage(event.data, { channelId, executionId, limits })) return;
+
+        const message = event.data;
+        if (message.type === "ready") {
+          if (started || !iframe.contentWindow) return;
+          started = true;
+          iframe.contentWindow.postMessage(
+            createProtocolMessage({
+              protocol: RUNNER_PROTOCOL,
+              channelId,
+              executionId,
+              type: "start",
+              payload: { code, limits },
+            }),
+            "*"
+          );
+          return;
+        }
+
+        if (message.type === "log") {
+          if (logs.length >= limits.maxLogEntries) return;
+          const entryBytes = utf8ByteLength(message.payload.formattedText);
+          if (active.outputBytes + entryBytes > limits.maxOutputBytes) return;
+          active.outputBytes += entryBytes;
+          logs.push(message.payload);
+          safeCallback(() => options?.onLog?.(message.payload));
+          return;
+        }
+
+        if (message.type === "success") {
+          finish("completed", {
+            success: true,
+            returnValue: message.payload.returnValue,
+            executionTimeMs: Math.round(message.payload.duration),
+          });
+          return;
+        }
+
+        if (message.type === "error") {
+          const log = createSystemLog(
+            executionId,
+            "error",
+            `${message.payload.error.name}: ${message.payload.error.message}`
+          );
+          const logBytes = utf8ByteLength(log.formattedText);
+          if (
+            logs.length < limits.maxLogEntries &&
+            active.outputBytes + logBytes <= limits.maxOutputBytes
+          ) {
+            active.outputBytes += logBytes;
+            logs.push(log);
+            safeCallback(() => options?.onLog?.(log));
+          }
+          finish("error", {
+            success: false,
+            error: message.payload.error,
+            executionTimeMs: Math.round(message.payload.duration),
+          });
+        }
+      };
+
+      this.active = active;
+      window.addEventListener("message", handleMessage);
+      iframe.addEventListener("error", handleFrameError, { once: true });
 
       try {
-        const workerScript = createWorkerScript();
-        const blob = new Blob([workerScript], { type: "application/javascript" });
-        const blobUrl = URL.createObjectURL(blob);
-        this.activeBlobUrl = blobUrl;
-
-        const worker = new Worker(blobUrl);
-        this.activeWorker = worker;
-
-        const cleanup = () => {
-          if (this.timeoutId) {
-            clearTimeout(this.timeoutId);
-            this.timeoutId = null;
-          }
-          if (this.activeWorker === worker) {
-            this.activeWorker = null;
-          }
-          if (this.activeBlobUrl === blobUrl) {
-            URL.revokeObjectURL(blobUrl);
-            this.activeBlobUrl = null;
-          }
-        };
-
-        // Timeout de proteção contra loops infinitos
-        this.timeoutId = setTimeout(() => {
-          worker.terminate();
-          cleanup();
-
-          const timeoutError: ExecutionError = {
-            name: "ExecutionTimeoutError",
-            message: `Tempo limite de execução excedido (${timeoutMs}ms). A execução foi interrompida para proteger a aplicação.`,
-          };
-
-          const timeoutLog: LogEntry = {
-            id: `system-timeout-${Date.now()}`,
-            level: "error",
-            messages: [timeoutError.message],
-            formattedText: `[Timeout] ${timeoutError.message}`,
-            timestamp: Date.now(),
-          };
-
-          logs.push(timeoutLog);
-          options?.onLog?.(timeoutLog);
-          options?.onStatusChange?.("terminated");
-
-          resolve({
-            success: false,
-            logs,
-            error: timeoutError,
-            executionTimeMs: timeoutMs,
-          });
-        }, timeoutMs);
-
-        worker.onmessage = (e: MessageEvent) => {
-          const { type, payload } = e.data || {};
-
-          if (type === "log" && payload) {
-            const entry: LogEntry = payload;
-            logs.push(entry);
-            options?.onLog?.(entry);
-          } else if (type === "success") {
-            cleanup();
-            const totalTime = performance.now() - startTime;
-            options?.onStatusChange?.("completed");
-            resolve({
-              success: true,
-              logs,
-              returnValue: payload?.returnValue,
-              executionTimeMs: Math.round(payload?.duration || totalTime),
-            });
-          } else if (type === "error") {
-            cleanup();
-            const totalTime = performance.now() - startTime;
-            const errorObj: ExecutionError = payload?.error || {
-              name: "RuntimeError",
-              message: "Erro desconhecido durante a execução.",
-            };
-
-            const errorLog: LogEntry = {
-              id: `worker-err-${Date.now()}`,
-              level: "error",
-              messages: [errorObj.message],
-              formattedText: `${errorObj.name}: ${errorObj.message}`,
-              timestamp: Date.now(),
-            };
-            logs.push(errorLog);
-            options?.onLog?.(errorLog);
-
-            options?.onStatusChange?.("error");
-            resolve({
-              success: false,
-              logs,
-              error: errorObj,
-              executionTimeMs: Math.round(payload?.duration || totalTime),
-            });
-          }
-        };
-
-        worker.onerror = (err) => {
-          cleanup();
-          const totalTime = performance.now() - startTime;
-
-          if (this.isTerminatedByUser) {
-            options?.onStatusChange?.("terminated");
-            const interruptedLog: LogEntry = {
-              id: `system-interrupted-${Date.now()}`,
-              level: "warn",
-              messages: ["Execução interrompida pelo usuário."],
-              formattedText: "[Interrompido] Execução cancelada pelo usuário.",
-              timestamp: Date.now(),
-            };
-            logs.push(interruptedLog);
-            options?.onLog?.(interruptedLog);
-
-            resolve({
-              success: false,
-              logs,
-              error: {
-                name: "AbortError",
-                message: "Execução interrompida manualmente.",
-              },
-              executionTimeMs: Math.round(totalTime),
-            });
-            return;
-          }
-
-          const message = typeof err.message === "string" ? err.message : "Erro no Web Worker";
-          const errorObj: ExecutionError = {
-            name: "WorkerError",
-            message,
-          };
-
-          const errorLog: LogEntry = {
-            id: `err-${Date.now()}`,
-            level: "error",
-            messages: [message],
-            formattedText: `WorkerError: ${message}`,
-            timestamp: Date.now(),
-          };
-          logs.push(errorLog);
-          options?.onLog?.(errorLog);
-
-          options?.onStatusChange?.("error");
-          resolve({
-            success: false,
-            logs,
-            error: errorObj,
-            executionTimeMs: Math.round(totalTime),
-          });
-        };
-
-        // Envia o código para o worker iniciar a execução
-        worker.postMessage({ code });
-      } catch (err) {
-        const errorObj: ExecutionError = {
+        iframe.srcdoc = createExecutorFrameDocument(channelId, window.location.origin);
+        document.body.appendChild(iframe);
+      } catch (cause) {
+        const error: ExecutionError = {
           name: "InitializationError",
-          message: err instanceof Error ? err.message : "Falha ao inicializar o executor.",
+          message: cause instanceof Error ? cause.message : "Falha ao inicializar o executor.",
         };
-        options?.onStatusChange?.("error");
-        resolve({
-          success: false,
-          logs,
-          error: errorObj,
-          executionTimeMs: 0,
-        });
+        finish("error", { success: false, error });
       }
     });
   }
 
-  /**
-   * Fallback de execução em ambiente Node.js / testes automatizados.
-   */
-  private async runInNodeFallback(
-    code: string,
-    options?: RunnerOptions
-  ): Promise<ExecutionResult> {
-    const logs: LogEntry[] = [];
-    const startTime = performance.now();
-
-    const pushLog = (level: LogEntry["level"], args: unknown[]) => {
-      const entry: LogEntry = {
-        id: Math.random().toString(36).substring(2, 9),
-        level,
-        messages: args.map((a) => safeSerialize(a, 1)),
-        formattedText: formatLogArgs(args),
-        timestamp: Date.now(),
-      };
-      logs.push(entry);
-      options?.onLog?.(entry);
-    };
-
-    // Salva referências originais de console
-    const origLog = console.log;
-    const origInfo = console.info;
-    const origWarn = console.warn;
-    const origError = console.error;
-
-    console.log = (...args: unknown[]) => pushLog("log", args);
-    console.info = (...args: unknown[]) => pushLog("info", args);
-    console.warn = (...args: unknown[]) => pushLog("warn", args);
-    console.error = (...args: unknown[]) => pushLog("error", args);
+  stop(): void {
+    const active = this.active;
+    if (!active) return;
 
     try {
-      const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor as new (
-        ...args: string[]
-      ) => (...args: unknown[]) => Promise<unknown>;
-
-      const runnerFn = new AsyncFunction(code);
-      const returnValue = await runnerFn();
-      const executionTimeMs = Math.round(performance.now() - startTime);
-
-      options?.onStatusChange?.("completed");
-      return {
-        success: true,
-        logs,
-        returnValue: returnValue !== undefined ? safeSerialize(returnValue, 0) : undefined,
-        executionTimeMs,
-      };
-    } catch (err) {
-      const executionTimeMs = Math.round(performance.now() - startTime);
-      const errorObj: ExecutionError = {
-        name: err instanceof Error ? err.name : "RuntimeError",
-        message: err instanceof Error ? err.message : String(err),
-        stack: err instanceof Error ? err.stack : undefined,
-      };
-
-      const errorLog: LogEntry = {
-        id: `err-${Date.now()}`,
-        level: "error",
-        messages: [errorObj.message],
-        formattedText: `${errorObj.name}: ${errorObj.message}`,
-        timestamp: Date.now(),
-      };
-      logs.push(errorLog);
-      options?.onLog?.(errorLog);
-
-      options?.onStatusChange?.("error");
-      return {
-        success: false,
-        logs,
-        error: errorObj,
-        executionTimeMs,
-      };
-    } finally {
-      // Restaura métodos do console
-      console.log = origLog;
-      console.info = origInfo;
-      console.warn = origWarn;
-      console.error = origError;
+      active.iframe.contentWindow?.postMessage(
+        createProtocolMessage({
+          protocol: RUNNER_PROTOCOL,
+          channelId: active.channelId,
+          executionId: active.executionId,
+          type: "stop",
+        }),
+        "*"
+      );
+    } catch {
+      // O descarte abaixo continua sendo a forma efetiva de cancelamento.
     }
+
+    const error: ExecutionError = {
+      name: "AbortError",
+      message: "Execução interrompida manualmente.",
+    };
+    const log = createSystemLog(
+      active.executionId,
+      "warn",
+      "[Interrompido] Execução cancelada pelo usuário."
+    );
+    const logBytes = utf8ByteLength(log.formattedText);
+    if (
+      active.logs.length < active.limits.maxLogEntries &&
+      active.outputBytes + logBytes <= active.limits.maxOutputBytes
+    ) {
+      active.outputBytes += logBytes;
+      active.logs.push(log);
+    }
+    active.finish("terminated", { success: false, error });
+  }
+
+  dispose(): void {
+    this.stop();
   }
 }

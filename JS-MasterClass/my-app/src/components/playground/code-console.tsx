@@ -252,7 +252,7 @@ export function CodeConsole({
               />
             </svg>
             <span className="text-xs font-sans font-medium">
-              Executando código em thread isolada...
+              Executando no sandbox descartável...
             </span>
           </div>
         )}
@@ -283,6 +283,15 @@ export function CodeConsole({
             </div>
           );
         })}
+
+        {error && !logs.some((entry) =>
+          entry.level === "error" && entry.formattedText.includes(error.message)
+        ) && (
+          <div className="text-rose-300 border-l-2 border-rose-500/80 bg-rose-500/10 pl-3 py-1.5 rounded-r">
+            <span className="font-semibold">{error.name}:</span>{" "}
+            <span>{error.message}</span>
+          </div>
+        )}
       </div>
     </div>
   );

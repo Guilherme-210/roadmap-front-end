@@ -20,6 +20,10 @@ export function CodePlayground({
   layout = "split",
   autoRun = false,
   timeoutMs = 5000,
+  maxCodeSizeBytes,
+  maxLogEntries,
+  maxLogMessageBytes,
+  maxOutputBytes,
   onCodeChange,
   className = "",
 }: CodePlaygroundProps) {
@@ -29,6 +33,7 @@ export function CodePlayground({
   const [isRunning, setIsRunning] = useState(false);
   const [error, setError] = useState<ExecutionError | null>(null);
   const [executionTimeMs, setExecutionTimeMs] = useState<number | null>(null);
+  const executionSequence = useRef(0);
 
   // Obtém o executor registrado para a linguagem configurada via RunnerRegistry
   const runner = runnerRegistry.get(language);
@@ -44,6 +49,7 @@ export function CodePlayground({
   // Limpeza de recursos e término de execuções ativas ao desmontar
   useEffect(() => {
     return () => {
+      executionSequence.current += 1;
       runner?.stop?.();
     };
   }, [runner]);
@@ -58,6 +64,7 @@ export function CodePlayground({
 
   const handleRun = useCallback(async () => {
     if (!runner || !isExecutable || isRunning) return;
+    const execution = ++executionSequence.current;
 
     // Conforme requisito: execução consecutiva sem misturar resultados antigos
     setLogs([]);
@@ -68,30 +75,49 @@ export function CodePlayground({
     try {
       const result = await runner.run(code, {
         timeoutMs,
+        maxCodeSizeBytes,
+        maxLogEntries,
+        maxLogMessageBytes,
+        maxOutputBytes,
         onLog: (newEntry) => {
+          if (execution !== executionSequence.current) return;
           setLogs((prev) => [...prev, newEntry]);
         },
         onStatusChange: (status: RunnerStatus) => {
+          if (execution !== executionSequence.current) return;
           if (status === "completed" || status === "error" || status === "terminated") {
             setIsRunning(false);
           }
         },
       });
 
+      if (execution !== executionSequence.current) return;
+      setLogs(result.logs);
       setExecutionTimeMs(result.executionTimeMs);
       if (!result.success && result.error) {
         setError(result.error);
       }
     } catch (err) {
+      if (execution !== executionSequence.current) return;
       const errObj: ExecutionError = {
         name: err instanceof Error ? err.name : "ExecutionError",
         message: err instanceof Error ? err.message : String(err),
       };
       setError(errObj);
     } finally {
-      setIsRunning(false);
+      if (execution === executionSequence.current) setIsRunning(false);
     }
-  }, [code, isExecutable, isRunning, runner, timeoutMs]);
+  }, [
+    code,
+    isExecutable,
+    isRunning,
+    maxCodeSizeBytes,
+    maxLogEntries,
+    maxLogMessageBytes,
+    maxOutputBytes,
+    runner,
+    timeoutMs,
+  ]);
 
   const handleStop = useCallback(() => {
     if (!runner) return;

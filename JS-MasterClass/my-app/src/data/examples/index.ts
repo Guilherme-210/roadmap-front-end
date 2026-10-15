@@ -2,6 +2,7 @@ import type { CodeExample } from "@/types/example";
 import type { SupportedLanguage } from "@/types/runner";
 import { arrayFilterExample } from "./javascript/array-filter";
 import { arrayMapExample } from "./javascript/array-map";
+import { booleanExample } from "./javascript/boolean";
 import { playgroundDefaultExample } from "./javascript/playground-default";
 
 /**
@@ -12,6 +13,7 @@ export const EXAMPLES_CATALOG: CodeExample[] = [
   playgroundDefaultExample,
   arrayMapExample,
   arrayFilterExample,
+  booleanExample,
 ];
 
 /**
