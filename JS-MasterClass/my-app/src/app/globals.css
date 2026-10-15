@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *, .dark, .dark *));
+
+/* ==========================================================================
+   Controle Global de Estilização Padrão (globals.css)
+   Suporta Modo Claro e Modo Escuro
+   ========================================================================== */
+
+:root {
+  /* Modo Claro (Default) */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --footer-bg: #f1f5f9;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --muted: #eef2f6;
+  --text-muted: #64748b;
+  --border-subtle: #e2e8f0;
+  --accent: #d97706;
+  --accent-hover: #b45309;
+  --accent-subtle: rgba(217, 119, 6, 0.12);
+  --accent-foreground: #ffffff;
+  --nav-link-color: #334155;
+  --nav-link-hover: #0f172a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not(.light) {
+    /* Modo Escuro automático via preferência do sistema */
+    --background: #08090d;
+    --foreground: #f8fafc;
+    --header-bg: rgba(8, 9, 13, 0.85);
+    --footer-bg: #050608;
+    --card-bg: #10131c;
+    --card-border: #1e2433;
+    --muted: #151a26;
+    --text-muted: #94a3b8;
+    --border-subtle: #1c2331;
+    --accent: #f59e0b;
+    --accent-hover: #fbbf24;
+    --accent-subtle: rgba(245, 158, 11, 0.15);
+    --accent-foreground: #08090d;
+    --nav-link-color: #94a3b8;
+    --nav-link-hover: #ffffff;
+  }
+}
+
+.dark,
+[data-theme="dark"] {
+  /* Modo Escuro ativado manualmente */
+  --background: #08090d;
+  --foreground: #f8fafc;
+  --header-bg: rgba(8, 9, 13, 0.85);
+  --footer-bg: #050608;
+  --card-bg: #10131c;
+  --card-border: #1e2433;
+  --muted: #151a26;
+  --text-muted: #94a3b8;
+  --border-subtle: #1c2331;
+  --accent: #f59e0b;
+  --accent-hover: #fbbf24;
+  --accent-subtle: rgba(245, 158, 11, 0.15);
+  --accent-foreground: #08090d;
+  --nav-link-color: #94a3b8;
+  --nav-link-hover: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--text-muted);
+  --color-border: var(--border-subtle);
+  --color-card: var(--card-bg);
+}
+
+/* ==========================================================================
+   Estilização Padrão de Elementos Base
+   ========================================================================== */
+
+* {
+  border-color: var(--border-subtle);
+}
+
+html {
+  color-scheme: light dark;
+}
+
+html.dark,
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Scrollbar com acabamento refinado */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
