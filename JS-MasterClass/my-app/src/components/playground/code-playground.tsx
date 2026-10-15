@@ -26,8 +26,11 @@ export function CodePlayground({
   maxOutputBytes,
   onCodeChange,
   className = "",
+  collapsible = false,
+  defaultOpen = true,
 }: CodePlaygroundProps) {
   const playgroundId = useId();
+  const [isOpen, setIsOpen] = useState(defaultOpen);
   const [code, setCode] = useState(initialCode);
   const [logs, setLogs] = useState<LogEntry[]>([]);
   const [isRunning, setIsRunning] = useState(false);
@@ -152,91 +155,146 @@ export function CodePlayground({
       aria-labelledby={`playground-title-${playgroundId}`}
       className={`flex flex-col w-full rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] shadow-md overflow-hidden ${className}`}
     >
-      {/* Cabeçalho opcional do Playground */}
-      {(title || description) && (
-        <header className="px-5 py-4 border-b border-[var(--border-subtle)] bg-[var(--card-bg)]">
-          {title && (
-            <h3
-              id={`playground-title-${playgroundId}`}
-              className="text-base sm:text-lg font-bold text-[var(--foreground)] tracking-tight flex items-center gap-2"
-            >
-              <span>{title}</span>
-              <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20">
-                {language}
-              </span>
-            </h3>
-          )}
-          {description && (
-            <p className="text-xs sm:text-sm text-[var(--text-muted)] mt-1">
-              {description}
-            </p>
-          )}
+      {/* Cabeçalho do Playground (Suporta modo Colapsável quando requisitado em páginas de estudo) */}
+      {collapsible ? (
+        <header className="border-b border-[var(--border-subtle)] bg-[var(--card-bg)]">
+          <button
+            type="button"
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-expanded={isOpen}
+            aria-controls={`playground-content-${playgroundId}`}
+            className="w-full px-5 py-3.5 flex items-center justify-between text-left hover:bg-[var(--muted)]/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 cursor-pointer"
+          >
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+              <div className="flex items-center gap-2.5">
+                <span className="p-1.5 rounded-lg bg-amber-500/10 text-amber-500 border border-amber-500/20">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </span>
+                <h3
+                  id={`playground-title-${playgroundId}`}
+                  className="text-sm sm:text-base font-bold text-[var(--foreground)] tracking-tight"
+                >
+                  {title || "Playground de Código Interativo"}
+                </h3>
+                <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20">
+                  {language}
+                </span>
+              </div>
+              {description && (
+                <span className="text-xs text-[var(--text-muted)] hidden md:inline-block">
+                  &bull; {description}
+                </span>
+              )}
+            </div>
+
+            <div className="flex items-center gap-2 text-xs font-semibold text-amber-500 select-none">
+              <span>{isOpen ? "Recolher Playground" : "Expandir Playground"}</span>
+              <svg
+                className={`w-4 h-4 transform transition-transform duration-200 ${
+                  isOpen ? "rotate-180" : "rotate-0"
+                }`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
         </header>
+      ) : (
+        (title || description) && (
+          <header className="px-5 py-4 border-b border-[var(--border-subtle)] bg-[var(--card-bg)]">
+            {title && (
+              <h3
+                id={`playground-title-${playgroundId}`}
+                className="text-base sm:text-lg font-bold text-[var(--foreground)] tracking-tight flex items-center gap-2"
+              >
+                <span>{title}</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20">
+                  {language}
+                </span>
+              </h3>
+            )}
+            {description && (
+              <p className="text-xs sm:text-sm text-[var(--text-muted)] mt-1">
+                {description}
+              </p>
+            )}
+          </header>
+        )
       )}
 
-      {/* Barra de Controles de Execução */}
-      {showControls && (
-        <div className="p-3 border-b border-[var(--border-subtle)] bg-[var(--background)]/50">
-          <CodeControls
-            isRunning={isRunning}
-            onRun={handleRun}
-            onStop={handleStop}
-            onClear={handleClear}
-            onReset={handleReset}
-            canReset={canReset}
-            isReadOnly={isReadOnly}
-            language={language}
-            isExecutable={isExecutable}
-          />
-        </div>
-      )}
+      {/* Conteúdo do Playground: Controles, Editor e Console */}
+      {(!collapsible || isOpen) && (
+        <div id={`playground-content-${playgroundId}`}>
+          {/* Barra de Controles de Execução */}
+          {showControls && (
+            <div className="p-3 border-b border-[var(--border-subtle)] bg-[var(--background)]/50">
+              <CodeControls
+                isRunning={isRunning}
+                onRun={handleRun}
+                onStop={handleStop}
+                onClear={handleClear}
+                onReset={handleReset}
+                canReset={canReset}
+                isReadOnly={isReadOnly}
+                language={language}
+                isExecutable={isExecutable}
+              />
+            </div>
+          )}
 
-      {/* Área Central: Editor e Console */}
-      <div
-        className={`p-3 sm:p-4 gap-4 ${
-          layout === "split" && showConsole
-            ? "grid grid-cols-1 lg:grid-cols-12"
-            : "flex flex-col"
-        }`}
-      >
-        {/* Painel do Editor */}
-        <div
-          className={`${
-            layout === "split" && showConsole
-              ? "lg:col-span-7 flex flex-col"
-              : "w-full"
-          }`}
-        >
-          <CodeEditor
-            value={code}
-            onChange={handleCodeChange}
-            language={language}
-            readOnly={isReadOnly}
-            height={height}
-            onRunShortcut={handleRun}
-          />
-        </div>
-
-        {/* Painel do Console */}
-        {showConsole && (
+          {/* Área Central: Editor e Console */}
           <div
-            className={`${
-              layout === "split"
-                ? "lg:col-span-5 flex flex-col mt-4 lg:mt-0"
-                : "w-full mt-2"
+            className={`p-3 sm:p-4 gap-4 ${
+              layout === "split" && showConsole
+                ? "grid grid-cols-1 lg:grid-cols-12"
+                : "flex flex-col"
             }`}
           >
-            <CodeConsole
-              logs={logs}
-              isRunning={isRunning}
-              error={error}
-              onClear={handleClear}
-              executionTimeMs={executionTimeMs}
-              maxHeight={height}
-            />
+            {/* Painel do Editor */}
+            <div
+              className={`${
+                layout === "split" && showConsole
+                  ? "lg:col-span-7 flex flex-col"
+                  : "w-full"
+              }`}
+            >
+              <CodeEditor
+                value={code}
+                onChange={handleCodeChange}
+                language={language}
+                readOnly={isReadOnly}
+                height={height}
+                onRunShortcut={handleRun}
+              />
+            </div>
+
+            {/* Painel do Console */}
+            {showConsole && (
+              <div
+                className={`${
+                  layout === "split"
+                    ? "lg:col-span-5 flex flex-col mt-4 lg:mt-0"
+                    : "w-full mt-2"
+                }`}
+              >
+                <CodeConsole
+                  logs={logs}
+                  isRunning={isRunning}
+                  error={error}
+                  onClear={handleClear}
+                  executionTimeMs={executionTimeMs}
+                  maxHeight={height}
+                />
+              </div>
+            )}
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </section>
   );
 }

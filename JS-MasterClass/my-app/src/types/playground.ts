@@ -54,5 +54,7 @@ export interface CodePlaygroundProps {
   maxOutputBytes?: number;
   onCodeChange?: (code: string) => void;
   className?: string;
+  collapsible?: boolean;
+  defaultOpen?: boolean;
 }
 

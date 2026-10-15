@@ -1,0 +1,44 @@
+{
+  "badgeText": "Do Básico aos Padrões Avançados",
+  "title": {
+    "prefix": "Domine o",
+    "highlight": "JavaScript Moderno",
+    "suffix": "com Maestria"
+  },
+  "description": "Aprenda a fundo tipos primitivos, coerção, escopo léxico, closures, event loop, Promises, protótipos e arquitetura modular com exemplos práticos e exercícios do mundo real.",
+  "highlights": [
+    "Conteúdo Prático & Direto",
+    "TypeScript & Next.js Turbopack"
+  ],
+  "actions": [
+    {
+      "label": "Abrir Playground Interativo",
+      "href": "/playground",
+      "primary": true
+    },
+    {
+      "label": "Documentação: Array.map()",
+      "href": "/javascript",
+      "primary": false
+    }
+  ],
+  "previewCard": {
+    "title": "JS MasterClass",
+    "subtitle": "Módulo 01 • Fundamentos",
+    "status": "Ativo",
+    "codeComment": "// Exemplo de código",
+    "codeSnippet": "const isMastered = Boolean(deepUnderstanding);",
+    "codeExplanation": "Entenda exatamente o que o JavaScript avalia por trás dos panos.",
+    "stats": [
+      {
+        "value": "100%",
+        "label": "Tipado & Modular"
+      },
+      {
+        "value": "Dark/Light",
+        "label": "Suporte Nativo"
+      }
+    ]
+  }
+}
+
