@@ -1,3 +1,6 @@
+# pnpm
+.pnpm-store/
+
 # Dependências e arquivos gerados
 node_modules/
 .next/

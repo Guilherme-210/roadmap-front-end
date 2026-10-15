@@ -50,13 +50,24 @@ export const SITE_CONFIG: SiteConfig = {
  */
 export const HEADER_NAV_LINKS: NavLinkItem[] = [
   {
+    id: "playground",
+    label: "Playground",
+    href: "/playground",
+    badge: "Live",
+  },
+  {
     id: "aulas",
     label: "Aulas",
-    href: "/aulas/boolean",
+    href: "/javascript",
     dropdown: [
       {
+        label: "Array.prototype.map()",
+        href: "/javascript",
+        description: "Transformações funcionais e imutabilidade prática.",
+      },
+      {
         label: "Tipos Primitivos & Boolean",
-        href: "/aulas/boolean",
+        href: "/aulas/java-script/boolean",
         description: "Valores truthy/falsy, coerção e comparações estritas.",
       },
       {
@@ -115,11 +126,11 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "SITE",
     links: [
+      { label: "Playground Interativo", href: "/playground", badge: "Novo" },
+      { label: "Documentação Array.map()", href: "/javascript" },
+      { label: "Aula de Booleans", href: "/aulas/java-script/boolean" },
       { label: "Trilha de Aprendizado", href: "#roadmap" },
-      { label: "Aulas Interativas", href: "/aulas/boolean" },
       { label: "Laboratórios de Código", href: "#labs" },
-      { label: "Instrutores & Mentores", href: "#mentores" },
-      { label: "Comunidade Discord", href: "#comunidade" },
     ],
   },
   {

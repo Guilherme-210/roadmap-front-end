@@ -51,21 +51,21 @@ export default function Home() {
           {/* Botões de Ação (CTAs) */}
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <Link
-              href="/aulas/boolean"
+              href="/playground"
               className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/25 hover:from-amber-400 hover:to-amber-500 transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
-              <span>Acessar Aula de Boolean</span>
+              <span>Abrir Playground Interativo</span>
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </Link>
 
-            <a
-              href="#roadmap"
+            <Link
+              href="/javascript"
               className="inline-flex items-center gap-2 rounded-xl border border-[var(--border-subtle)] bg-[var(--card-bg)] px-6 py-3.5 text-sm font-semibold text-[var(--foreground)] hover:bg-[var(--muted)] hover:border-amber-500/40 transition-all"
             >
-              <span>Ver Trilha Completa</span>
-            </a>
+              <span>Documentação: Array.map()</span>
+            </Link>
           </div>
         </div>
 
