@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "title": "Aula 7.3: IEEE 754 • JavaScript MasterClass",
+    "description": "A especificação IEEE 754 de ponto flutuante de precisão dupla em binário de 64 bits (binary64). Entenda a fundo por que 0.1 + 0.2 !== 0.3, como o expoente e a mantissa funcionam e como lidar com precisão monetária e matemática em produção."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Aulas",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    {
+      "label": "Aula 7.3: IEEE 754",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 03: Tipos & Semântica • Vídeo Aula",
+    "title": "Aula 7.3: IEEE 754",
+    "description": "A especificação IEEE 754 de ponto flutuante de precisão dupla em binário de 64 bits (binary64). Entenda a fundo por que 0.1 + 0.2 !== 0.3, como o expoente e a mantissa funcionam e como lidar com precisão monetária e matemática em produção."
+  },
+  "topics": [
+    "A estrutura dos 64 bits: 1 bit de sinal, 11 bits de expoente, 52 bits de fração (mantissa)",
+    "O problema da dízima periódica em base binária",
+    "Por que 0.1 + 0.2 === 0.30000000000000004",
+    "O conceito de Number.EPSILON para comparações seguras de ponto flutuante",
+    "Estratégias de mitigação para cálculos financeiros (inteiros em centavos ou bibliotecas de precisão arbitrária)"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "Nunca armazene valores monetários com decimais simples em sistemas críticos; trabalhe em centavos inteiros.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "A imprecisão não é um bug do JavaScript, mas do padrão de ponto flutuante de quase todas as linguagens modernas.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "// A famosa imprecisão do IEEE 754:\nconsole.log(0.1 + 0.2); // 0.30000000000000004\nconsole.log(0.1 + 0.2 === 0.3); // false!\n\n// Comparação correta usando Number.EPSILON:\nfunction quaseIguais(a, b) {\n  return Math.abs(a - b) < Number.EPSILON;\n}\nconsole.log(quaseIguais(0.1 + 0.2, 0.3)); // true",
+    "caption": "Comparação segura de números fracionários com Number.EPSILON"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 7.2: Conversão Numérica",
+      "href": "/aulas/java-script/java-script-masterclass/conversao-numerica"
+    },
+    "next": {
+      "label": "Aula 7.4: Math API",
+      "href": "/aulas/java-script/java-script-masterclass/math-api"
+    }
+  }
+}

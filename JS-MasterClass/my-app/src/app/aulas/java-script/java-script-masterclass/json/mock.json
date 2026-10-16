@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "title": "Aula 14: JSON • JavaScript MasterClass",
+    "description": "Estudo detalhado sobre o formato JSON (JavaScript Object Notation), sua especificação derivada do JavaScript, as diferenças para objetos literais, os métodos JSON.stringify() e JSON.parse(), funções replacer e reviver, e tratamento de referências circulares."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Aulas",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    {
+      "label": "Aula 14: JSON",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 06: Serialização & Prática Avançada • Vídeo Aula",
+    "title": "Aula 14: JSON",
+    "description": "Estudo detalhado sobre o formato JSON (JavaScript Object Notation), sua especificação derivada do JavaScript, as diferenças para objetos literais, os métodos JSON.stringify() e JSON.parse(), funções replacer e reviver, e tratamento de referências circulares."
+  },
+  "topics": [
+    "História e origem do formato JSON por Douglas Crockford",
+    "Diferenças fundamentais entre Objeto Literal JS e formato JSON",
+    "Serialização com JSON.stringify(valor, replacer, espacamento)",
+    "Desserialização e conversão com JSON.parse(texto, reviver)",
+    "Customização de serialização com o método toJSON()",
+    "Erros comuns: perda de funções, undefined, Symbol e referências circulares"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "`JSON.stringify()` ignora propriedades com valores `undefined`, funções ou `Symbol`.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "O parâmetro `replacer` e o método `toJSON()` permitem controlar com precisão como o objeto é serializado.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "const usuario = {\n  nome: \"Rodrigo\",\n  modulo: 6,\n  tags: [\"javascript\", \"json\", \"backend\"],\n  ativo: true\n};\n\n// Serialização para string JSON formatada:\nconst jsonString = JSON.stringify(usuario, null, 2);\nconsole.log(\"JSON Serializado:\\n\" + jsonString);\n\n// Desserialização com reviver:\nconst objetoRecuperado = JSON.parse(jsonString, (chave, valor) => {\n  if (chave === \"nome\") return valor.toUpperCase();\n  return valor;\n});\nconsole.log(\"Nome parseado:\", objetoRecuperado.nome);",
+    "caption": "Serialização e desserialização com JSON.stringify e JSON.parse"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 13.4: Object API",
+      "href": "/aulas/java-script/java-script-masterclass/object-api"
+    },
+    "next": {
+      "label": "Aula 15: Exercício 2",
+      "href": "/aulas/java-script/java-script-masterclass/exercicio-2"
+    }
+  }
+}

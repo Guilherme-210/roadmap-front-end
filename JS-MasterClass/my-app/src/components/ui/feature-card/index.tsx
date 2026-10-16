@@ -14,7 +14,7 @@ export interface FeatureCardProps {
   className?: string;
 }
 
-function renderCardIcon(icon?: string, variant: FeatureCardVariant = "default") {
+function renderCardIcon(icon?: string) {
   if (!icon) return null;
 
   switch (icon) {
@@ -82,7 +82,7 @@ export function FeatureCard({ card, className = "" }: FeatureCardProps) {
   return (
     <div className={`${containerClasses} ${className}`}>
       <div className={`flex items-center gap-2 font-semibold text-sm ${titleColorClass}`}>
-        {renderCardIcon(card.icon, variant)}
+        {renderCardIcon(card.icon)}
         <span>{card.title}</span>
       </div>
       <div className="text-xs text-[var(--text-muted)] leading-relaxed">

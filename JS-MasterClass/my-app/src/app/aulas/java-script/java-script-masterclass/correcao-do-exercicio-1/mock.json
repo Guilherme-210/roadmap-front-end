@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "title": "Aula 12.1: Correção do Exercício 1 • JavaScript MasterClass",
+    "description": "Resolução e correção completa do Exercício 1 pelo professor Rodrigo Branas. Análise de decisões de arquitetura de código, tratamento de casos de borda, legibilidade e dicas de refatoração para código limpo."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Aulas",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    {
+      "label": "Aula 12.1: Correção do Exercício 1",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 04: Prática & Desafios • Vídeo Aula",
+    "title": "Aula 12.1: Correção do Exercício 1",
+    "description": "Resolução e correção completa do Exercício 1 pelo professor Rodrigo Branas. Análise de decisões de arquitetura de código, tratamento de casos de borda, legibilidade e dicas de refatoração para código limpo."
+  },
+  "topics": [
+    "Resolução comentada passo a passo do enunciado",
+    "Tratamento de cenários extremos e validação de tipos",
+    "Refatoração com foco em clareza e manutenção",
+    "Comparação entre soluções procedurais e soluções expressivas"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "A resolução de problemas reais revela peculiaridades de coerção de tipos que raramente aparecem em teoria.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "Escreva pequenos testes para certificar-se de que sua solução cobre todos os cenários.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": null,
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 12: Exercício 1",
+      "href": "/aulas/java-script/java-script-masterclass/exercicio-1"
+    },
+    "next": {
+      "label": "Aula 13: Object",
+      "href": "/aulas/java-script/java-script-masterclass/object"
+    }
+  }
+}

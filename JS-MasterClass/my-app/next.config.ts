@@ -24,6 +24,15 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/aulas/java-script/boolean",
+        destination: "/aulas/java-script/java-script-masterclass/boolean",
+        permanent: true,
+      },
+    ];
+  },
   experimental: {
     agentFeedback: true,
   },

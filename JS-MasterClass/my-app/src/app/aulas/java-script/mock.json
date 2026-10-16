@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "Cursos & Formações de JavaScript | JS MasterClass",
+    "description": "Explore as trilhas e cursos especializados em JavaScript, do básico aos mecanismos internos da engine V8 e arquitetura moderna."
+  },
+  "breadcrumbs": [
+    { "label": "Início", "href": "/" },
+    { "label": "Aulas", "href": "/aulas/java-script" },
+    { "label": "JavaScript", "current": true }
+  ],
+  "header": {
+    "badge": "Trilha Oficial • Linguagem JavaScript",
+    "title": "Cursos & Especializações em JavaScript",
+    "description": "Selecione um curso para mergulhar nos fundamentos, tipos de dados, orientação a objetos, assincronismo e engenharia de software com JavaScript moderno."
+  },
+  "courseCard": {
+    "badge": "Curso em Andamento",
+    "title": "JavaScript MasterClass",
+    "instructor": "Prof. Rodrigo Branas",
+    "description": "Curso completo e aprofundado cobrindo desde a história da linguagem, tipos primitivos, coerção, IEEE 754, orientação a objetos, herança prototípica e APIs nativas.",
+    "stats": [
+      { "label": "Total de Lições", "value": "28 aulas" },
+      { "label": "Módulos", "value": "6 módulos" },
+      { "label": "Formato", "value": "Vídeos + PDFs + Labs" },
+      { "label": "Nível", "value": "Fundamentos ao Avançado" }
+    ],
+    "cta": "Acessar Curso Completo",
+    "href": "/aulas/java-script/java-script-masterclass"
+  },
+  "upcomingCourses": [
+    {
+      "badge": "Em Breve",
+      "title": "TypeScript Pro & Arquitetura",
+      "description": "Tipagem avançada, generics, decorators e integração com ecossistema enterprise."
+    },
+    {
+      "badge": "Em Breve",
+      "title": "Node.js & Microsserviços",
+      "description": "Event loop, streams, performance de I/O e construção de APIs resilientes."
+    }
+  ]
+}
+

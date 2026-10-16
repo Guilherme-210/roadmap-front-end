@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "title": "Aula 5: Variáveis • JavaScript MasterClass",
+    "description": "Como o motor JavaScript gerencia identificadores e alocação de memória. As diferenças essenciais entre var, let e const, escopo de função versus escopo de bloco, elevação (Hoisting) e a Zona Morta Temporal (Temporal Dead Zone - TDZ)."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Aulas",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    {
+      "label": "Aula 5: Variáveis",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 02: Fundamentos & Declarações • Vídeo Aula",
+    "title": "Aula 5: Variáveis",
+    "description": "Como o motor JavaScript gerencia identificadores e alocação de memória. As diferenças essenciais entre var, let e const, escopo de função versus escopo de bloco, elevação (Hoisting) e a Zona Morta Temporal (Temporal Dead Zone - TDZ)."
+  },
+  "topics": [
+    "Declarações com var, let e const",
+    "Escopo global, escopo de função e escopo de bloco",
+    "O mecanismo de Hoisting (elevação de declarações)",
+    "Temporal Dead Zone (TDZ) com let e const",
+    "Reatribuição versus mutabilidade em variáveis const"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "Prefira const por padrão para evitar reatribuições acidentais; utilize let somente quando a variável precisar variar.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "Evite var no código moderno devido ao escopo de função e vazamentos de bloco.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "// Diferença fundamental de escopo e reatribuição:\nlet contador = 1;\ncontador = 2; // Permitido: let permite reatribuição\n\nconst usuario = { nome: \"Rodrigo\" };\nusuario.nome = \"Rodrigo Branas\"; // Permitido: mutação do objeto referenciado\n// usuario = {}; // Erro: const impede reatribuição da referência\n\nif (true) {\n  var escopoFuncao = \"vaza do bloco\";\n  let escopoBloco = \"preso ao bloco\";\n}\nconsole.log(escopoFuncao); // \"vaza do bloco\"\n// console.log(escopoBloco); // ReferenceError",
+    "caption": "Comparação de escopos e regras de reatribuição"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 4: Evolução das Versões",
+      "href": "/aulas/java-script/java-script-masterclass/evolucao-das-versoes"
+    },
+    "next": {
+      "label": "Aula 6: Tipos de Dados",
+      "href": "/aulas/java-script/java-script-masterclass/tipos-de-dados"
+    }
+  }
+}

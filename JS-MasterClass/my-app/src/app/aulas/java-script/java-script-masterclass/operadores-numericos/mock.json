@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "title": "Aula 7.1: Operadores Numéricos • JavaScript MasterClass",
+    "description": "Operações matemáticas e operadores aritméticos fundamentais: soma, subtração, multiplicação, divisão, resto (%) e exponenciação (**). Comportamento dos operadores de incremento e decremento pré e pós-fixados e regras de precedência."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Aulas",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    {
+      "label": "Aula 7.1: Operadores Numéricos",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 03: Tipos & Semântica • Vídeo Aula",
+    "title": "Aula 7.1: Operadores Numéricos",
+    "description": "Operações matemáticas e operadores aritméticos fundamentais: soma, subtração, multiplicação, divisão, resto (%) e exponenciação (**). Comportamento dos operadores de incremento e decremento pré e pós-fixados e regras de precedência."
+  },
+  "topics": [
+    "Operadores aritméticos binários (+, -, *, /, %, **)",
+    "Operador de resto da divisão (%) vs operador de módulo",
+    "Incremento e decremento: pré-fixado (++x) vs pós-fixado (x++)",
+    "Operadores de atribuição aritmética composta (+=, -=, *=, /=)",
+    "Tabela de precedência e associatividade de operadores"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "O operador de exponenciação `**` substituiu a necessidade de chamar `Math.pow` em código moderno.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "Cuidado com `+` atuando como concatenação quando um dos operandos é String.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "let x = 5;\nconst pos = x++; // Retorna o valor original (5), depois incrementa para 6\nconsole.log(pos, x); // 5, 6\n\nlet y = 5;\nconst pre = ++y; // Incrementa para 6, depois retorna o novo valor (6)\nconsole.log(pre, y); // 6, 6\n\n// Exponenciação (ES2016):\nconsole.log(2 ** 3); // 8",
+    "caption": "Diferença entre operadores pré e pós-fixados"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 7: Number",
+      "href": "/aulas/java-script/java-script-masterclass/number"
+    },
+    "next": {
+      "label": "Aula 7.2: Conversão Numérica",
+      "href": "/aulas/java-script/java-script-masterclass/conversao-numerica"
+    }
+  }
+}

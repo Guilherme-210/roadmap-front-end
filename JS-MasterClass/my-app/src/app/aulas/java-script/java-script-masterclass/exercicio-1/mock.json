@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "title": "Aula 12: Exercício 1 • JavaScript MasterClass",
+    "description": "Enunciado do primeiro grande exercício prático do curso. Um desafio integrador que exige a aplicação simultânea de variáveis, tipos primitivos, operadores lógicos e manipulação de strings em um algoritmo real."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Aulas",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    {
+      "label": "Aula 12: Exercício 1",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 04: Prática & Desafios • Material PDF",
+    "title": "Aula 12: Exercício 1",
+    "description": "Enunciado do primeiro grande exercício prático do curso. Um desafio integrador que exige a aplicação simultânea de variáveis, tipos primitivos, operadores lógicos e manipulação de strings em um algoritmo real."
+  },
+  "topics": [
+    "Enunciado detalhado do problema e requisitos funcionais",
+    "Especificação das entradas e saídas esperadas",
+    "Tratamento de regras de negócio com tipos primitivos",
+    "Orientações para implementação independente antes de assistir à resolução"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "Tente resolver o exercício por conta própria antes de conferir a aula de resolução para fixar os conceitos.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "Concentre-se em escrever código limpo e com nomes descritivos de variáveis.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": null,
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 11: RegExp",
+      "href": "/aulas/java-script/java-script-masterclass/regexp"
+    },
+    "next": {
+      "label": "Aula 12.1: Correção do Exercício 1",
+      "href": "/aulas/java-script/java-script-masterclass/correcao-do-exercicio-1"
+    }
+  }
+}

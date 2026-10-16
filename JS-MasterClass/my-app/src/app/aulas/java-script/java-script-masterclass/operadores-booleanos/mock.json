@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "title": "Aula 9.1: Operadores Booleanos • JavaScript MasterClass",
+    "description": "Operadores lógicos e a semântica de avaliação em curto-circuito (short-circuit). Os operadores AND (&&), OR (||), NOT (!) e a introdução do operador de coalescência nula (??) para tratamento seguro de valores default."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Aulas",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    {
+      "label": "Aula 9.1: Operadores Booleanos",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 03: Tipos & Semântica • Vídeo Aula",
+    "title": "Aula 9.1: Operadores Booleanos",
+    "description": "Operadores lógicos e a semântica de avaliação em curto-circuito (short-circuit). Os operadores AND (&&), OR (||), NOT (!) e a introdução do operador de coalescência nula (??) para tratamento seguro de valores default."
+  },
+  "topics": [
+    "Curto-circuito com AND (&&): retorna o primeiro falsy ou o último valor",
+    "Curto-circuito com OR (||): retorna o primeiro truthy ou o último valor",
+    "Operador de coalescência nula (??): avalia apenas null ou undefined",
+    "Diferença crítica entre || e ?? quando o valor válido é 0, '' ou false",
+    "Operadores de atribuição lógica (&&=, ||=, ??=)"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "Para valores padrão onde `0`, `false` ou `''` são válidos, use sempre `??` no lugar de `||`.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "Operadores lógicos em JavaScript retornam o valor avaliado real, permitindo pipelines expressivos.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "// Curto-circuito não retorna booleano, retorna o operando decisivo:\nconsole.log(\"admin\" && \"acesso liberado\"); // \"acesso liberado\"\nconsole.log(\"\" || \"valor padrão\"); // \"valor padrão\"\n\n// Diferença crucial entre || e ??:\nconst quantidade = 0; // 0 é um valor válido de estoque!\nconsole.log(quantidade || 10); // 10 (inesperado! 0 foi tratado como falsy)\nconsole.log(quantidade ?? 10); // 0 (correto! só substitui se for null/undefined)",
+    "caption": "Curto-circuito e a precisão da coalescência nula (??)"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 9: Boolean",
+      "href": "/aulas/java-script/java-script-masterclass/boolean"
+    },
+    "next": {
+      "label": "Aula 10: Symbol",
+      "href": "/aulas/java-script/java-script-masterclass/symbol"
+    }
+  }
+}

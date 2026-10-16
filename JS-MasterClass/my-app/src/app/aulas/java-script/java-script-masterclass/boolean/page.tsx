@@ -79,6 +79,30 @@ export default function BooleanPage() {
         <FeatureCardsGrid cards={booleanMock.tips} columns={3} />
       </div>
 
+      {/* Espaço Preparado para Conteúdo em Markdown (.md) */}
+      <section className="w-full rounded-2xl border border-dashed border-[var(--border-subtle)] bg-[var(--muted)]/20 p-6 sm:p-8 space-y-4">
+        <div className="flex items-center gap-2">
+          <span className="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/20">
+            .md Slot
+          </span>
+          <h3 className="text-sm sm:text-base font-bold text-[var(--foreground)]">
+            Anotações & Conteúdo Detalhado da Aula
+          </h3>
+        </div>
+
+        <p className="text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
+          Esta seção está estruturada para receber as notas em Markdown (<strong>.md</strong>) escritas durante o acompanhamento da aula de Rodrigo Branas.
+        </p>
+
+        <div className="p-4 rounded-xl bg-[var(--card-bg)] border border-[var(--border-subtle)] text-xs text-[var(--text-muted)] font-mono space-y-1">
+          <p className="text-amber-500 font-semibold">{"// Estrutura da aula:"}</p>
+          <p>- Identificador: js-mc-09</p>
+          <p>- Título: Aula 9 - Boolean & Coerção</p>
+          <p>- Módulo: Módulo 03: Tipos & Semântica</p>
+          <p>- Formato: VÍDEO AULA</p>
+        </div>
+      </section>
+
       {/* Navegação entre lições Componentizada */}
       <LessonNavigation
         previous={booleanMock.navigationFooter.previous}

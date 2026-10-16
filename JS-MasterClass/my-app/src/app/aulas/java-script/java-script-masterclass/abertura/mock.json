@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "title": "Aula 1: Abertura • JavaScript MasterClass",
+    "description": "Boas-vindas ao curso JavaScript MasterClass pelo professor Rodrigo Branas. Esta aula apresenta a proposta pedagógica, o rigor conceitual do curso e a mentalidade necessária para dominar a linguagem além dos frameworks."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Aulas",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    {
+      "label": "Aula 1: Abertura",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 01: Introdução & Metodologia • Vídeo Aula",
+    "title": "Aula 1: Abertura",
+    "description": "Boas-vindas ao curso JavaScript MasterClass pelo professor Rodrigo Branas. Esta aula apresenta a proposta pedagógica, o rigor conceitual do curso e a mentalidade necessária para dominar a linguagem além dos frameworks."
+  },
+  "topics": [
+    "Visão geral do currículo e objetivos do curso",
+    "Abordagem pedagógica focada nos mecanismos internos da linguagem",
+    "A importância dos fundamentos antes dos frameworks",
+    "Como tirar dúvidas e aproveitar os materiais complementares"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "O domínio do JavaScript puro (Vanilla) acelera o aprendizado de qualquer biblioteca ou framework moderno.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "Aulas focadas em código real, testes automatizados e especificações da ECMA.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": null,
+  "navigationFooter": {
+    "previous": {
+      "label": "Visão Geral do Curso",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    "next": {
+      "label": "Aula 2: Instruções",
+      "href": "/aulas/java-script/java-script-masterclass/instrucoes"
+    }
+  }
+}

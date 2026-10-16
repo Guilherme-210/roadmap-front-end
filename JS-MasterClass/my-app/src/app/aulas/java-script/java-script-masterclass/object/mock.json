@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "title": "Aula 13: Object • JavaScript MasterClass",
+    "description": "O tipo estrutural fundamental do JavaScript. Objetos como coleções dinâmicas de propriedades chave-valor, notação literal {}, acesso com ponto versus colchetes, adição dinâmica, alteração e exclusão de propriedades com o operador delete."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Aulas",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    {
+      "label": "Aula 13: Object",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 05: Objetos & Herança • Vídeo Aula",
+    "title": "Aula 13: Object",
+    "description": "O tipo estrutural fundamental do JavaScript. Objetos como coleções dinâmicas de propriedades chave-valor, notação literal {}, acesso com ponto versus colchetes, adição dinâmica, alteração e exclusão de propriedades com o operador delete."
+  },
+  "topics": [
+    "Criação literal de objetos e notação abreviada de propriedades (Shorthand)",
+    "Acesso com ponto (obj.prop) vs colchetes (obj['prop'])",
+    "Nomes de propriedades computadas em tempo de execução ([expressao])",
+    "Exclusão de propriedades com o operador delete",
+    "Verificação de existência de propriedades: operador in vs hasOwnProperty"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "Objetos em JavaScript são mapas chave-valor dinâmicos extremamente flexíveis.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "A notação de colchetes é indispensável para chaves dinâmicas ou caracteres especiais.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "const propriedadeDinamica = \"senioridade\";\n\nconst desenvolvedor = {\n  nome: \"Carlos\",\n  linguagem: \"JavaScript\",\n  [propriedadeDinamica]: \"Especialista\" // Chave dinâmica computada\n};\n\ndelete desenvolvedor.linguagem; // Remove a chave do objeto\nconsole.log(\"linguagem\" in desenvolvedor); // false\nconsole.log(desenvolvedor.senioridade); // \"Especialista\"",
+    "caption": "Criação dinâmica e manipulação de propriedades de objetos"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 12.1: Correção do Exercício 1",
+      "href": "/aulas/java-script/java-script-masterclass/correcao-do-exercicio-1"
+    },
+    "next": {
+      "label": "Aula 13.1: Undefined e Null",
+      "href": "/aulas/java-script/java-script-masterclass/undefined-e-null"
+    }
+  }
+}

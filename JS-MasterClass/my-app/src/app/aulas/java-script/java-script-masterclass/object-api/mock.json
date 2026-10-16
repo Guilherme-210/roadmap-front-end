@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "title": "Aula 13.4: Object API • JavaScript MasterClass",
+    "description": "Os métodos estáticos mais poderosos da função construtora Object: Object.assign(), Object.keys(), Object.values(), Object.entries(), Object.fromEntries(), descritores de propriedades (Object.defineProperty) e controle de mutabilidade com Object.freeze(), Object.seal() e Object.preventExtensions()."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Aulas",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    {
+      "label": "Aula 13.4: Object API",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 05: Objetos & Herança • Vídeo Aula",
+    "title": "Aula 13.4: Object API",
+    "description": "Os métodos estáticos mais poderosos da função construtora Object: Object.assign(), Object.keys(), Object.values(), Object.entries(), Object.fromEntries(), descritores de propriedades (Object.defineProperty) e controle de mutabilidade com Object.freeze(), Object.seal() e Object.preventExtensions()."
+  },
+  "topics": [
+    "Inspeção e iteração: Object.keys(), Object.values() e Object.entries()",
+    "Conversão inversa: Object.fromEntries()",
+    "Composição de objetos com Object.assign()",
+    "Descritores de propriedades: writable, enumerable e configurable",
+    "Níveis de integridade e imutabilidade: Object.preventExtensions(), Object.seal() e Object.freeze()"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "`Object.freeze()` congela apenas o primeiro nível (shallow freeze); para objetos aninhados é necessário congelamento recursivo.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "`Object.entries()` e `Object.fromEntries()` facilitam transformações funcionais de chave-valor.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "const configuracao = {\n  ambiente: \"producao\",\n  versao: \"2.0\"\n};\n\n// Congelamento total contra adições, remoções e alterações:\nObject.freeze(configuracao);\nconfiguracao.versao = \"3.0\"; // Ignorado silenciosamente (ou erro em strict mode)\nconsole.log(configuracao.versao); // \"2.0\"\n\n// Iteração elegante de entradas chave/valor:\nfor (const [chave, valor] of Object.entries(configuracao)) {\n  console.log(`${chave}: ${valor}`);\n}",
+    "caption": "Imutabilidade com Object.freeze e iteração com Object.entries"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 13.3: Herança",
+      "href": "/aulas/java-script/java-script-masterclass/heranca"
+    },
+    "next": {
+      "label": "Aula 14: JSON",
+      "href": "/aulas/java-script/java-script-masterclass/json"
+    }
+  }
+}

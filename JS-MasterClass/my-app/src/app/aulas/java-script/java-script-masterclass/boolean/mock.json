@@ -1,17 +1,18 @@
 {
   "metadata": {
-    "title": "Aula 01: Booleans & Coerção de Tipos",
-    "description": "Estudo prático e interativo sobre Booleans, valores Truthy/Falsy, coerção implícita e operadores lógicos em JavaScript."
+    "title": "Aula 9: Boolean & Coerção de Tipos • JavaScript MasterClass",
+    "description": "Estudo prático e interativo sobre Booleans, valores Truthy/Falsy, coerção implícita e operadores lógicos em JavaScript com Rodrigo Branas."
   },
   "breadcrumbs": [
     { "label": "Início", "href": "/" },
-    { "label": "Aulas" },
-    { "label": "JavaScript" },
-    { "label": "Booleans & Coerção", "current": true }
+    { "label": "Aulas", "href": "/aulas/java-script" },
+    { "label": "JavaScript", "href": "/aulas/java-script" },
+    { "label": "JavaScript MasterClass", "href": "/aulas/java-script/java-script-masterclass" },
+    { "label": "Aula 9: Boolean", "current": true }
   ],
   "header": {
-    "badge": "Aula 01 • Tipos Primitivos",
-    "title": "Estudo sobre Booleans & Coerção de Tipos",
+    "badge": "Módulo 03: Tipos & Semântica • Vídeo Aula",
+    "title": "Aula 9: Boolean & Coerção de Tipos",
     "description": "Nesta aula exploramos os conceitos de truthy, falsy, operadores lógicos (&&, ||, ??) e as regras de conversão do motor JavaScript."
   },
   "falsyCard": {
@@ -33,7 +34,7 @@
     ]
   },
   "playgroundSection": {
-    "title": "Playground Interativo",
+    "title": "Playground Interativo da Aula",
     "description": "Modifique o código abaixo e clique em Executar (ou use Ctrl + Enter) para testar os resultados no console."
   },
   "tips": [
@@ -52,13 +53,12 @@
   ],
   "navigationFooter": {
     "previous": {
-      "label": "Documentação: Array.map()",
-      "href": "/javascript"
+      "label": "Aula 8.2: String API",
+      "href": "/aulas/java-script/java-script-masterclass/string-api"
     },
     "next": {
-      "label": "Playground Livre",
-      "href": "/playground"
+      "label": "Aula 9.1: Operadores Booleanos",
+      "href": "/aulas/java-script/java-script-masterclass/operadores-booleanos"
     }
   }
 }
-

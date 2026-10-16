@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "title": "Aula 2: Instruções • JavaScript MasterClass",
+    "description": "Guia prático de instruções gerais para o curso. Orientações sobre a preparação do ambiente de desenvolvimento, instalação do Node.js, configuração de editor e execução dos testes práticos de cada lição."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Aulas",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    {
+      "label": "Aula 2: Instruções",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 01: Introdução & Metodologia • Material PDF",
+    "title": "Aula 2: Instruções",
+    "description": "Guia prático de instruções gerais para o curso. Orientações sobre a preparação do ambiente de desenvolvimento, instalação do Node.js, configuração de editor e execução dos testes práticos de cada lição."
+  },
+  "topics": [
+    "Requisitos de sistema e ambiente de desenvolvimento",
+    "Configuração recomendada do editor de código (VS Code / extensões)",
+    "Uso do Git e repositório de suporte",
+    "Estrutura dos exercícios e testes automatizados"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "Ambiente preparado e padronizado garante que todos os exemplos rodem sem inconsistências.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "Consulte o arquivo PDF para comandos de setup e orientações de fluxo de estudo.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": null,
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 1: Abertura",
+      "href": "/aulas/java-script/java-script-masterclass/abertura"
+    },
+    "next": {
+      "label": "Aula 3: História da Linguagem",
+      "href": "/aulas/java-script/java-script-masterclass/historia-da-linguagem"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "title": "Mapa do Site • Estrutura Completa de Navegação | JS MasterClass",
+    "description": "Índice navegacional completo de todas as seções, cursos, aulas do professor Rodrigo Branas, laboratórios e ferramentas da plataforma."
+  },
+  "breadcrumbs": [
+    { "label": "Início", "href": "/" },
+    { "label": "Mapa do Site", "current": true }
+  ],
+  "header": {
+    "badge": "Índice Navegacional • Arquitetura da Informação",
+    "title": "Mapa do Site (Site Map)",
+    "description": "Consulte a estrutura hierárquica completa do portal JS MasterClass, navegando diretamente por cursos, módulos, lições práticas, playgrounds interativos e documentação técnica."
+  },
+  "sections": [
+    {
+      "id": "geral",
+      "title": "1. Cursos & Especializações em JavaScript",
+      "badge": "25 Aulas",
+      "description": "Trilha completa ministrada pelo professor Rodrigo Branas com aulas práticas e teóricas.",
+      "items": [
+        { "label": "Hub da Linguagem JavaScript", "href": "/aulas/java-script" },
+        { "label": "Grade Completa do Curso JavaScript MasterClass", "href": "/aulas/java-script/java-script-masterclass" },
+        { "label": "Módulo 01: Introdução & Metodologia (Aulas 1 a 4)", "href": "/aulas/java-script/java-script-masterclass/abertura" },
+        { "label": "Módulo 02: Fundamentos & Declarações (Aula 5: Variáveis)", "href": "/aulas/java-script/java-script-masterclass/variaveis" },
+        { "label": "Módulo 03: Tipos & Semântica (Aulas 6 a 11 - Primitivos, IEEE 754, Strings, Boolean)", "href": "/aulas/java-script/java-script-masterclass/boolean" },
+        { "label": "Módulo 04: Prática & Desafios (Aulas 12 e 12.1 - Exercício 1 e Correção)", "href": "/aulas/java-script/java-script-masterclass/exercicio-1" },
+        { "label": "Módulo 05: Objetos & Herança (Aulas 13 a 13.4 - Objects, Protótipos e Object API)", "href": "/aulas/java-script/java-script-masterclass/object" }
+      ]
+    },
+    {
+      "id": "ferramentas",
+      "title": "2. Ambientes de Teste & Execução Isolada",
+      "badge": "Interativo",
+      "description": "Ferramentas em tempo real para experimentação e depuração de código no navegador.",
+      "items": [
+        { "label": "Playground Livre de JavaScript", "href": "/playground" },
+        { "label": "Documentação Funcional: Array.prototype.map()", "href": "/javascript" },
+        { "label": "Laboratório de Coerção e Booleans", "href": "/aulas/java-script/java-script-masterclass/boolean" }
+      ]
+    },
+    {
+      "id": "formacoes",
+      "title": "3. Formações e Trilhas de Carreira",
+      "badge": "Roadmap",
+      "description": "Trilhas de progressão técnica do desenvolvedor júnior ao especialista em arquitetura front-end.",
+      "items": [
+        { "label": "Formação JavaScript Core & V8", "href": "#formacao-js" },
+        { "label": "Formação TypeScript Avançado", "href": "#formacao-ts" },
+        { "label": "Formação Arquitetura Front-End & Clean Code", "href": "#formacao-arq" },
+        { "label": "Roadmap de Carreira Front-End", "href": "#roadmap" }
+      ]
+    }
+  ]
+}
+

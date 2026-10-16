@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "title": "Aula 7.2: Conversão Numérica • JavaScript MasterClass",
+    "description": "Regras de coerção implícita e conversão explícita para o tipo Number. As diferenças práticas entre a função construtora Number(), o operador unário +, parseInt() com base de cálculo (radix) e parseFloat()."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Aulas",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/aulas/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/aulas/java-script/java-script-masterclass"
+    },
+    {
+      "label": "Aula 7.2: Conversão Numérica",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 03: Tipos & Semântica • Vídeo Aula",
+    "title": "Aula 7.2: Conversão Numérica",
+    "description": "Regras de coerção implícita e conversão explícita para o tipo Number. As diferenças práticas entre a função construtora Number(), o operador unário +, parseInt() com base de cálculo (radix) e parseFloat()."
+  },
+  "topics": [
+    "Conversão explícita com Number(valor)",
+    "O atalho idiomático do operador unário +valor",
+    "Parsing com parseInt(string, radix) e parseFloat(string)",
+    "Diferença entre coerção estrita e parsing permissivo",
+    "Casos especiais: Number(''), Number(null), Number(undefined), Number(true)"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "Sempre passe o radix (base) no `parseInt(str, 10)` para evitar parsing em octal ou bases inesperadas.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "`Number(null)` resulta em `0`, mas `Number(undefined)` resulta em `NaN`.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "// Coerção Estrita (Number / +):\nconsole.log(Number(\"10\")); // 10\nconsole.log(Number(\"10px\")); // NaN (rejeita caracteres não numéricos)\nconsole.log(Number(null)); // 0\nconsole.log(Number(undefined)); // NaN\n\n// Parsing Permissivo (parseInt / parseFloat):\nconsole.log(parseInt(\"10px\", 10)); // 10 (lê até encontrar caractere inválido)\nconsole.log(parseFloat(\"10.5em\")); // 10.5",
+    "caption": "Coerção estrita com Number versus extração com parseInt"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 7.1: Operadores Numéricos",
+      "href": "/aulas/java-script/java-script-masterclass/operadores-numericos"
+    },
+    "next": {
+      "label": "Aula 7.3: IEEE 754",
+      "href": "/aulas/java-script/java-script-masterclass/ieee-754"
+    }
+  }
+}
