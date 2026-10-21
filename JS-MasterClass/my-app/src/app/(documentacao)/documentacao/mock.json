@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "title": "Documentação Técnica de Linguagens | JS MasterClass",
+    "description": "Catálogo de documentação técnica, referências de métodos e guias práticos por linguagem de programação com ambiente de testes interativo."
+  },
+  "breadcrumbs": [
+    { "label": "Início", "href": "/" },
+    { "label": "Documentação", "current": true }
+  ],
+  "header": {
+    "badge": "Catálogo de Referência Técnica",
+    "title": "Documentação de Linguagens",
+    "description": "Guias conceituais objetivos, assinaturas de métodos, boas práticas de engenharia e laboratórios interativos executáveis no navegador para cada linguagem suportada."
+  },
+  "languages": [
+    {
+      "id": "java-script",
+      "name": "JavaScript",
+      "badge": "Ativa • Referência Completa",
+      "status": "active",
+      "description": "Referência de métodos funcionais da Standard Library, tipos primitivos, coerção, escopo léxico, protótipos e execução assíncrona.",
+      "href": "/documentacao/java-script",
+      "cta": "Explorar Tópicos de JavaScript",
+      "stats": [
+        { "label": "Linguagem", "value": "ECMAScript" },
+        { "label": "Playground", "value": "Integrado" },
+        { "label": "Tópicos Ativos", "value": "Métodos de Array" },
+        { "label": "Ambiente", "value": "Web Worker Isolado" }
+      ],
+      "featuredTopics": [
+        "Array.prototype.map()",
+        "Array.prototype.filter()",
+        "Tipagem Dinâmica & Coerção",
+        "Tratamento de Exceções"
+      ]
+    },
+    {
+      "id": "type-script",
+      "name": "TypeScript",
+      "badge": "Em Breve",
+      "status": "planned",
+      "description": "Sistema de tipos estáticos, generics, type narrowing, interfaces e utilitários de tipo avançados para arquitetura escalável de aplicações.",
+      "href": "/documentacao",
+      "cta": "Em Desenvolvimento",
+      "stats": [
+        { "label": "Linguagem", "value": "TypeScript 5.x" },
+        { "label": "Playground", "value": "Planejado" },
+        { "label": "Tópicos", "value": "Tipos & Generics" },
+        { "label": "Status", "value": "Roadmap" }
+      ],
+      "featuredTopics": [
+        "Generics & Constraints",
+        "Utility Types",
+        "Discriminated Unions",
+        "Type Guards Customizados"
+      ]
+    }
+  ],
+  "documentationFeatures": [
+    {
+      "title": "Playground Interativo com Colapse",
+      "description": "Cada tópico possui um laboratório executável no topo com opção de colapso, permitindo focar na teoria ou testar código em tempo real.",
+      "variant": "amber",
+      "icon": "code"
+    },
+    {
+      "title": "Isolamento Seguro no Navegador",
+      "description": "Códigos são executados em Web Workers e iframes com Content Security Policy estrita, sem expor cookies, DOM ou APIs de rede.",
+      "variant": "emerald",
+      "icon": "shield"
+    },
+    {
+      "title": "Boas Práticas e Armadilhas",
+      "description": "Análise crítica de desempenho, imutabilidade, efeitos colaterais e problemas comuns encontrados no desenvolvimento diário.",
+      "variant": "cyan",
+      "icon": "book"
+    }
+  ]
+}

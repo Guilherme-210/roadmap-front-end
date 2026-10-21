@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "title": "Documentação: Array.prototype.map() | JS MasterClass",
+    "description": "Guia prático e interativo sobre Array.prototype.map() em JavaScript, com assinatura, boas práticas e playground executável com colapse."
+  },
+  "breadcrumbs": [
+    { "label": "Início", "href": "/" },
+    { "label": "Documentação", "href": "/documentacao" },
+    { "label": "JavaScript", "href": "/documentacao/java-script" },
+    { "label": "Array.prototype.map()", "current": true }
+  ],
+  "header": {
+    "badge": "JavaScript Core • Métodos Funcionais",
+    "title": "Array.prototype.map()",
+    "description": "O método map() é um dos pilares da programação funcional em JavaScript moderno. Ele permite transformar os elementos de uma coleção de forma declarativa, previsível e imutável."
+  },
+  "conceptSection": {
+    "title": "Como o método funciona?",
+    "description": "Diferente de métodos iterativos imperativos como for ou forEach, o map() sempre constrói e retorna um novo array com o mesmo número de posições do array de origem, sem alterar os dados originais.",
+    "signature": {
+      "heading": "Assinatura do Método",
+      "code": "array.map(function(elementoAtual, indice, arrayOriginal) { /* retorna o novo valor */ })",
+      "parameters": [
+        { "name": "elementoAtual", "description": "O item que está sendo processado na iteração atual." },
+        { "name": "indice", "optional": true, "description": "A posição indexada do elemento atual no array." },
+        { "name": "arrayOriginal", "optional": true, "description": "A referência ao array que invocou a operação." }
+      ]
+    }
+  },
+  "playgroundSection": {
+    "title": "Laboratório Interativo",
+    "description": "O editor pode ser recolhido ou expandido através do botão no topo. Altere os dados e execute para inspecionar os logs no console."
+  },
+  "bestPractices": [
+    {
+      "title": "Não use map() sem retornar valor",
+      "description": "Se você precisa apenas iterar para gerar efeitos colaterais sem coletar um novo array, prefira forEach() ou um loop for...of. O uso indevido de map() criará um array desnecessário de undefined.",
+      "variant": "rose",
+      "icon": "alert"
+    },
+    {
+      "title": "Preserve a Imutabilidade dos Itens",
+      "description": "Ao mapear arrays contendo objetos, retorne uma cópia superficial com spread ({ ...item, novaPropriedade }) em vez de fazer mutações diretas em item.prop = valor.",
+      "variant": "emerald",
+      "icon": "check"
+    }
+  ],
+  "navigationFooter": {
+    "previous": {
+      "label": "Tópicos de JavaScript",
+      "href": "/documentacao/java-script"
+    },
+    "next": {
+      "label": "Array.prototype.filter()",
+      "href": "/documentacao/java-script/array-filter"
+    }
+  }
+}
+

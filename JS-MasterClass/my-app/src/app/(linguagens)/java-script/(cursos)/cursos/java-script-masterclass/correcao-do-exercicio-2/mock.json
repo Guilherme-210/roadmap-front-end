@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "Aula 15.1: Correção Exercício 2 • JavaScript MasterClass",
+    "description": "Resolução e correção comentada passo a passo do Exercício 2 pelo professor Rodrigo Branas. Análise dos erros comuns, decisões de modelagem de dados, uso de protótipos e boas práticas de código limpo em JavaScript."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/java-script/cursos/java-script-masterclass"
+    },
+    {
+      "label": "Aula 15.1: Correção Exercício 2",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 06: Serialização & Prática Avançada • Vídeo Aula",
+    "title": "Aula 15.1: Correção Exercício 2",
+    "description": "Resolução e correção comentada passo a passo do Exercício 2 pelo professor Rodrigo Branas. Análise dos erros comuns, decisões de modelagem de dados, uso de protótipos e boas práticas de código limpo em JavaScript."
+  },
+  "topics": [
+    "Análise minuciosa dos requisitos do Exercício 2",
+    "Construção da solução passo a passo com testes orientados a comportamento",
+    "Refatoração de métodos utilizando boas práticas de Clean Code",
+    "Discussão sobre performance de protótipos versus closures",
+    "Conclusão do ciclo de fundamentos e objetos da linguagem"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "A correção demonstra como aplicar protótipos para economizar memória em múltiplas instâncias.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "A separação clara de responsabilidades simplifica a manutenção e os testes unitários.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "// Resumo da solução comentada pelo professor:\nfunction Database(nome) {\n  this.nome = nome;\n  this.tabelas = {};\n}\n\nDatabase.prototype.criarTabela = function(nomeTabela) {\n  this.tabelas[nomeTabela] = [];\n};\n\nconst db = new Database(\"masterclass\");\ndb.criarTabela(\"alunos\");\nconsole.log(\"Database inicializada:\", db.nome);\nconsole.log(\"Tabelas registradas:\", Object.keys(db.tabelas));",
+    "caption": "Padrão de modelagem orientado a protótipos demonstrado na correção"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 15: Exercício 2",
+      "href": "/java-script/cursos/java-script-masterclass/exercicio-2"
+    },
+    "next": {
+      "label": "Grade do Curso",
+      "href": "/java-script/cursos/java-script-masterclass"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "title": "Cursos de JavaScript | JS MasterClass",
+    "description": "Explore as formações especializadas em JavaScript, do básico aos mecanismos internos da engine V8 e arquitetura moderna."
+  },
+  "breadcrumbs": [
+    { "label": "Início", "href": "/" },
+    { "label": "JavaScript", "current": true }
+  ],
+  "header": {
+    "badge": "Linguagem Oficial • JavaScript",
+    "title": "Especialização em JavaScript",
+    "description": "Mergulhe nos fundamentos, tipos de dados, orientação a objetos, herança prototípica e ECMAScript moderno."
+  },
+  "courseCard": {
+    "badge": "Curso Disponível",
+    "title": "JavaScript MasterClass",
+    "instructor": "Prof. Rodrigo Branas",
+    "description": "Curso completo e aprofundado cobrindo desde a história da linguagem, tipos primitivos, coerção, IEEE 754, orientação a objetos, herança prototípica, JSON e exercícios com correção.",
+    "stats": [
+      { "label": "Total de Lições", "value": "28 aulas" },
+      { "label": "Módulos", "value": "6 módulos" },
+      { "label": "Formato", "value": "Vídeos + PDFs + Labs" },
+      { "label": "Nível", "value": "Fundamentos ao Avançado" }
+    ],
+    "cta": "Acessar Curso Completo",
+    "href": "/java-script/cursos/java-script-masterclass"
+  }
+}

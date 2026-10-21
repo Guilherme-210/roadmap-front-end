@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "title": "Aula 4: Evolução das Versões • JavaScript MasterClass",
+    "description": "A evolução cronológica do padrão ECMAScript: desde as versões iniciais (ES1 a ES3), o cancelamento polêmico do ES4, o marco de estabilidade do ES5 (2009), a grande revolução do ES6/ES2015 e o modelo moderno de lançamentos anuais conduzido pelo comitê TC39."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/java-script/cursos/java-script-masterclass"
+    },
+    {
+      "label": "Aula 4: Evolução das Versões",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 01: Introdução & Metodologia • Vídeo Aula",
+    "title": "Aula 4: Evolução das Versões",
+    "description": "A evolução cronológica do padrão ECMAScript: desde as versões iniciais (ES1 a ES3), o cancelamento polêmico do ES4, o marco de estabilidade do ES5 (2009), a grande revolução do ES6/ES2015 e o modelo moderno de lançamentos anuais conduzido pelo comitê TC39."
+  },
+  "topics": [
+    "ECMAScript 1, 2 e 3: consolidação da linguagem nos navegadores",
+    "A estagnação e o cancelamento do controverso ECMAScript 4",
+    "ECMAScript 5 (2009): strict mode, JSON nativo e novos métodos de array",
+    "ECMAScript 6 / ES2015: a maior transformação da história da linguagem",
+    "O processo do TC39 e os estágios de propostas (Stage 0 a Stage 4)",
+    "Lançamentos anuais contínuos (ES2016 até o ESNext)"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "A partir de 2015, o ECMAScript adotou cadência anual, garantindo evolução previsível sem esperas decenais.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "O TC39 (Technical Committee 39) avalia propostas por consenso e implementação real nos motores JS (V8, SpiderMonkey, JavaScriptCore).",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": null,
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 3: História da Linguagem",
+      "href": "/java-script/cursos/java-script-masterclass/historia-da-linguagem"
+    },
+    "next": {
+      "label": "Aula 5: Variáveis",
+      "href": "/java-script/cursos/java-script-masterclass/variaveis"
+    }
+  }
+}

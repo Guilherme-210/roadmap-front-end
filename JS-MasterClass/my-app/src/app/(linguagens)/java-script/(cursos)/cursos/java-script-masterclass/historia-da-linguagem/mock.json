@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "Aula 3: História da Linguagem • JavaScript MasterClass",
+    "description": "A história fascinante da criação do JavaScript em 1995 por Brendan Eich na Netscape em apenas 10 dias. Descubra os codinomes Mocha e LiveScript, a disputa comercial com a Microsoft (JScript) e o nascimento da especificação ECMA-262."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/java-script/cursos/java-script-masterclass"
+    },
+    {
+      "label": "Aula 3: História da Linguagem",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 01: Introdução & Metodologia • Vídeo Aula",
+    "title": "Aula 3: História da Linguagem",
+    "description": "A história fascinante da criação do JavaScript em 1995 por Brendan Eich na Netscape em apenas 10 dias. Descubra os codinomes Mocha e LiveScript, a disputa comercial com a Microsoft (JScript) e o nascimento da especificação ECMA-262."
+  },
+  "topics": [
+    "Criação por Brendan Eich em 1995 na Netscape",
+    "Origem dos nomes: Mocha, LiveScript e JavaScript",
+    "Influências fundamentais: Scheme (funções de primeira classe) e Self (herança prototípica)",
+    "A primeira guerra dos navegadores e o surgimento do JScript pela Microsoft",
+    "A necessidade de padronização e a criação do comitê ECMA-262"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "JavaScript não tem relação direta com Java além de uma jogada de marketing conjunta da Netscape com a Sun Microsystems.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "O paradigma prototípico e as funções de primeira classe estavam no DNA da linguagem desde o primeiro protótipo.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "// O JavaScript nasceu com funções como cidadãs de primeira classe (herança de Scheme)\n// e orientação a objetos baseada em protótipos (herança de Self).\nconst linguagem = {\n  nome: \"JavaScript\",\n  criador: \"Brendan Eich\",\n  ano: 1995,\n  padronizacao: \"ECMA-262\"\n};\nconsole.log(linguagem);",
+    "caption": "Identidade histórica da linguagem concebida na Netscape"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 2: Instruções",
+      "href": "/java-script/cursos/java-script-masterclass/instrucoes"
+    },
+    "next": {
+      "label": "Aula 4: Evolução das Versões",
+      "href": "/java-script/cursos/java-script-masterclass/evolucao-das-versoes"
+    }
+  }
+}

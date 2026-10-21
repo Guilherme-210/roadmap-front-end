@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "Aula 6: Tipos de Dados • JavaScript MasterClass",
+    "description": "O sistema de tipagem dinâmico e fraco do JavaScript. A distinção fundamental entre valores primitivos (armazenados diretamente na stack por valor) e objetos (armazenados no heap por referência), e o comportamento do operador typeof."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/java-script/cursos/java-script-masterclass"
+    },
+    {
+      "label": "Aula 6: Tipos de Dados",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 03: Tipos & Semântica • Vídeo Aula",
+    "title": "Aula 6: Tipos de Dados",
+    "description": "O sistema de tipagem dinâmico e fraco do JavaScript. A distinção fundamental entre valores primitivos (armazenados diretamente na stack por valor) e objetos (armazenados no heap por referência), e o comportamento do operador typeof."
+  },
+  "topics": [
+    "Tipagem dinâmica: variáveis têm tipos dinâmicos associados aos valores",
+    "Os 7 tipos primitivos: string, number, bigint, boolean, symbol, undefined e null",
+    "O tipo estrutural: Object (e subtipos como Function, Array, Date, RegExp)",
+    "Passagem por valor (primitivos) vs Passagem por referência (objetos)",
+    "Uso e idiossincrasias do operador typeof (como typeof null === 'object')"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "Primitivos são imutáveis e passados por valor.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "Objetos são mutáveis e manipulados através de referências na memória.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "// Primitivos são copiados por valor:\nlet a = 10;\nlet b = a;\nb = 20;\nconsole.log(a); // 10 (permanece intacto)\n\n// Objetos são copiados por referência:\nlet obj1 = { valor: 10 };\nlet obj2 = obj1;\nobj2.valor = 20;\nconsole.log(obj1.valor); // 20 (compartilham a mesma referência em memória)",
+    "caption": "Cópia por valor versus cópia por referência"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 5: Variáveis",
+      "href": "/java-script/cursos/java-script-masterclass/variaveis"
+    },
+    "next": {
+      "label": "Aula 7: Number",
+      "href": "/java-script/cursos/java-script-masterclass/number"
+    }
+  }
+}

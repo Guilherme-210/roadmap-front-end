@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "title": "Documentação de JavaScript | JS MasterClass",
+    "description": "Índice de tópicos e métodos da linguagem JavaScript com resumos conceituais e laboratórios interativos."
+  },
+  "breadcrumbs": [
+    { "label": "Início", "href": "/" },
+    { "label": "Documentação", "href": "/documentacao" },
+    { "label": "JavaScript", "current": true }
+  ],
+  "header": {
+    "badge": "JavaScript Core & Standard Library",
+    "title": "Documentação de JavaScript",
+    "description": "Referência dos métodos nativos, estruturas e padrões fundamentais de JavaScript moderno (ESNext), acompanhados de resumos técnicos e playgrounds executáveis."
+  },
+  "topics": [
+    {
+      "id": "array-map",
+      "title": "Array.prototype.map()",
+      "badge": "Array • Funcional",
+      "category": "Coleções & Iteração",
+      "summary": "Transformação declarativa e imutável de coleções, gerando um novo array através de uma função de projeção.",
+      "href": "/documentacao/java-script/array-map",
+      "cta": "Ver Resumo & Playground",
+      "tags": ["Imutabilidade", "Transformação", "Funcional", "O(n)"],
+      "signature": "array.map(callback(elemento, indice, array))"
+    },
+    {
+      "id": "array-filter",
+      "title": "Array.prototype.filter()",
+      "badge": "Array • Predicado",
+      "category": "Coleções & Iteração",
+      "summary": "Criação de subconjunto de elementos que satisfazem um critério lógico determinado por uma função predicado.",
+      "href": "/documentacao/java-script/array-filter",
+      "cta": "Ver Resumo & Playground",
+      "tags": ["Filtro", "Predicado", "Imutabilidade", "O(n)"],
+      "signature": "array.filter(callback(elemento, indice, array))"
+    }
+  ],
+  "quickActions": {
+    "courseLink": {
+      "label": "Ir para Curso JavaScript MasterClass (28 Aulas)",
+      "href": "/java-script/cursos/java-script-masterclass"
+    },
+    "playgroundLink": {
+      "label": "Abrir Playground Livre",
+      "href": "/playground"
+    }
+  }
+}

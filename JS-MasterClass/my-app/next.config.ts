@@ -28,7 +28,22 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/aulas/java-script/boolean",
-        destination: "/aulas/java-script/java-script-masterclass/boolean",
+        destination: "/java-script/cursos/java-script-masterclass/boolean",
+        permanent: true,
+      },
+      {
+        source: "/aulas/java-script/java-script-masterclass/:slug*",
+        destination: "/java-script/cursos/java-script-masterclass/:slug*",
+        permanent: true,
+      },
+      {
+        source: "/aulas/java-script",
+        destination: "/java-script",
+        permanent: true,
+      },
+      {
+        source: "/javascript",
+        destination: "/documentacao",
         permanent: true,
       },
     ];

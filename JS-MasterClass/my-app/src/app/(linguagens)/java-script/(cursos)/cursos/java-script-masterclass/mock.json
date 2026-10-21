@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "title": "JavaScript MasterClass • Prof. Rodrigo Branas | Grade Completa",
+    "description": "Grade de aulas completa do curso JavaScript MasterClass com Rodrigo Branas: história da linguagem, tipos primitivos, objetos, herança e exercícios."
+  },
+  "breadcrumbs": [
+    { "label": "Início", "href": "/" },
+    { "label": "JavaScript", "href": "/java-script" },
+    { "label": "JavaScript MasterClass", "current": true }
+  ],
+  "header": {
+    "badge": "Curso Completo • Prof. Rodrigo Branas",
+    "title": "JavaScript MasterClass",
+    "description": "Aprenda JavaScript profundamente, compreendendo os mecanismos internos da engine, a especificação ECMAScript e padrões da linguagem com exemplos práticos, exercícios e ambiente interativo."
+  },
+  "courseStats": [
+    { "label": "Aulas Totais", "value": "28" },
+    { "label": "Módulos", "value": "6" },
+    { "label": "Videoaulas", "value": "25" },
+    { "label": "Materiais PDF", "value": "3" }
+  ],
+  "startCourseLink": {
+    "label": "Iniciar Aula 01: Abertura",
+    "href": "/java-script/cursos/java-script-masterclass/abertura"
+  },
+  "studyTips": [
+    {
+      "title": "Acompanhamento Ativo",
+      "description": "Cada aula possui introdução teórica, tópicos principais e ambiente para testar códigos no playground.",
+      "variant": "amber",
+      "icon": "zap"
+    },
+    {
+      "title": "Conteúdo em Markdown (.md)",
+      "description": "Você pode anexar anotações e resumos em arquivos markdown específicos para cada lição.",
+      "variant": "emerald",
+      "icon": "check"
+    },
+    {
+      "title": "Exercícios Práticos",
+      "description": "Pratique com o Exercício 1 e assista à correção detalhada passo a passo com o professor.",
+      "variant": "default",
+      "icon": "shield"
+    }
+  ]
+}
+

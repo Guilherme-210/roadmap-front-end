@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "Aula 7.4: Math API • JavaScript MasterClass",
+    "description": "O objeto embutido Math da linguagem JavaScript. Constantes fundamentais e métodos estáticos essenciais para arredondamento, funções trigonométricas, exponenciais, mínimo/máximo e geração de números aleatórios."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/java-script/cursos/java-script-masterclass"
+    },
+    {
+      "label": "Aula 7.4: Math API",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 03: Tipos & Semântica • Vídeo Aula",
+    "title": "Aula 7.4: Math API",
+    "description": "O objeto embutido Math da linguagem JavaScript. Constantes fundamentais e métodos estáticos essenciais para arredondamento, funções trigonométricas, exponenciais, mínimo/máximo e geração de números aleatórios."
+  },
+  "topics": [
+    "Constantes matemáticas: Math.PI, Math.E, Math.SQRT2",
+    "Métodos de arredondamento: Math.round, Math.floor, Math.ceil e Math.trunc",
+    "Obtenção de valores absolutos e sinais: Math.abs, Math.sign",
+    "Cálculo de extremos: Math.min e Math.max com spread operator",
+    "Geração de valores pseudoaleatórios com Math.random() e criação de geradores de intervalo"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "`Math.trunc` descarta a parte decimal sem arredondar, sendo mais previsível para números negativos do que `Math.floor`.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "`Math.random()` não é criptograficamente seguro; para segurança use `crypto.getRandomValues()`.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "// Arredondamentos:\nconsole.log(Math.floor(4.9)); // 4 (para baixo)\nconsole.log(Math.ceil(4.1)); // 5 (para cima)\nconsole.log(Math.trunc(4.9)); // 4 (remove a parte fracionária)\n\n// Gerador de número inteiro entre min e max inclusivos:\nfunction randomInt(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\nconsole.log(\"Número sorteado (1 a 10):\", randomInt(1, 10));",
+    "caption": "Exemplos dos principais métodos do objeto Math"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 7.3: IEEE 754",
+      "href": "/java-script/cursos/java-script-masterclass/ieee-754"
+    },
+    "next": {
+      "label": "Aula 8: String",
+      "href": "/java-script/cursos/java-script-masterclass/string"
+    }
+  }
+}
