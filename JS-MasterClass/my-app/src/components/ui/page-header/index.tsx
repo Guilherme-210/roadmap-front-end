@@ -48,7 +48,7 @@ export function PageHeader({
       )}
 
       {typeof title === "string" ? (
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--foreground)]">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground">
           {title}
         </h1>
       ) : (
@@ -56,7 +56,7 @@ export function PageHeader({
       )}
 
       {description && (
-        <div className="text-sm sm:text-base text-[var(--text-muted)] leading-relaxed max-w-3xl">
+        <div className="text-sm sm:text-base text-text-muted leading-relaxed max-w-3xl">
           {description}
         </div>
       )}
@@ -74,7 +74,7 @@ export function PageHeader({
             return (
               <span
                 key={`${tag.label}-${tag.value}`}
-                className="px-2.5 py-1 rounded-md bg-[var(--card-bg)] text-[var(--foreground)] border border-[var(--border-subtle)] font-medium"
+                className="px-2.5 py-1 rounded-md bg-card text-foreground border border-border-subtle font-medium"
               >
                 {tag.label}: <strong className={colorClass}>{tag.value}</strong>
               </span>

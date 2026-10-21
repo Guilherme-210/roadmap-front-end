@@ -69,13 +69,13 @@ export function FeatureCard({ card, className = "" }: FeatureCardProps) {
       titleColorClass = "text-emerald-400";
       break;
     case "amber":
-      containerClasses += " border-[var(--border-subtle)] bg-[var(--card-bg)]";
+      containerClasses += " border-border-subtle bg-card";
       titleColorClass = "text-amber-500";
       break;
     case "default":
     default:
-      containerClasses += " border-[var(--border-subtle)] bg-[var(--card-bg)]";
-      titleColorClass = "text-[var(--foreground)] font-bold";
+      containerClasses += " border-border-subtle bg-card";
+      titleColorClass = "text-foreground font-bold";
       break;
   }
 
@@ -85,7 +85,7 @@ export function FeatureCard({ card, className = "" }: FeatureCardProps) {
         {renderCardIcon(card.icon)}
         <span>{card.title}</span>
       </div>
-      <div className="text-xs text-[var(--text-muted)] leading-relaxed">
+      <div className="text-xs text-text-muted leading-relaxed">
         {card.description}
       </div>
     </div>

@@ -14,7 +14,7 @@ export default function JavaScriptTopicsPage() {
       <Breadcrumbs items={breadcrumbs} />
 
       {/* Cabeçalho da Documentação de JavaScript */}
-      <div className="w-full rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-6 sm:p-8 shadow-sm">
+      <div className="w-full rounded-2xl border border-border-subtle bg-card p-6 sm:p-8 shadow-sm">
         <PageHeader
           badge={header.badge}
           title={header.title}
@@ -26,10 +26,10 @@ export default function JavaScriptTopicsPage() {
       <section className="space-y-4">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-[var(--foreground)]">
+            <h2 className="text-xl font-bold text-foreground">
               Tópicos &amp; Métodos Documentados
             </h2>
-            <p className="text-xs sm:text-sm text-[var(--text-muted)] mt-0.5">
+            <p className="text-xs sm:text-sm text-text-muted mt-0.5">
               Cada tópico contém o resumo conceitual, assinatura, boas práticas e laboratório com colapse no topo.
             </p>
           </div>
@@ -42,28 +42,28 @@ export default function JavaScriptTopicsPage() {
           {topics.map((topic) => (
             <div
               key={topic.id}
-              className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-6 space-y-4 transition-all hover:border-amber-500/50 hover:shadow-md flex flex-col justify-between"
+              className="rounded-2xl border border-border-subtle bg-card p-6 space-y-4 transition-all hover:border-amber-500/50 hover:shadow-md flex flex-col justify-between"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between gap-2">
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/20">
                     {topic.badge}
                   </span>
-                  <span className="text-[11px] font-mono text-[var(--text-muted)]">
+                  <span className="text-[11px] font-mono text-text-muted">
                     {topic.category}
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-[var(--foreground)] font-mono">
+                  <h3 className="text-xl font-bold text-foreground font-mono">
                     {topic.title}
                   </h3>
-                  <p className="mt-1.5 text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
+                  <p className="mt-1.5 text-xs sm:text-sm text-text-muted leading-relaxed">
                     {topic.summary}
                   </p>
                 </div>
 
-                <div className="p-2.5 rounded-lg bg-[var(--muted)]/60 font-mono text-xs text-[var(--foreground)] overflow-x-auto border border-[var(--border-subtle)]">
+                <div className="p-2.5 rounded-lg bg-muted/60 font-mono text-xs text-foreground overflow-x-auto border border-border-subtle">
                   {topic.signature}
                 </div>
 
@@ -71,7 +71,7 @@ export default function JavaScriptTopicsPage() {
                   {topic.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="text-[11px] px-2 py-0.5 rounded bg-[var(--muted)] text-[var(--text-muted)]"
+                      className="text-[11px] px-2 py-0.5 rounded bg-muted text-text-muted"
                     >
                       #{tag}
                     </span>
@@ -79,7 +79,7 @@ export default function JavaScriptTopicsPage() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-[var(--border-subtle)]">
+              <div className="pt-4 border-t border-border-subtle">
                 <Link
                   href={topic.href}
                   className="inline-flex w-full items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm shadow-sm transition-all hover:scale-[1.01]"
@@ -106,19 +106,19 @@ export default function JavaScriptTopicsPage() {
       </section>
 
       {/* Ações Rápidas de Navegação */}
-      <section className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)]/60 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <section className="rounded-2xl border border-border-subtle bg-card/60 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
-          <h4 className="text-sm font-semibold text-[var(--foreground)]">
+          <h4 className="text-sm font-semibold text-foreground">
             Aprofunde seus estudos teóricos e práticos
           </h4>
-          <p className="text-xs text-[var(--text-muted)] mt-0.5">
+          <p className="text-xs text-text-muted mt-0.5">
             Acompanhe a grade curricular com 28 aulas ou utilize o editor livre.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
           <Link
             href={quickActions.courseLink.href}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold bg-[var(--muted)] hover:bg-[var(--muted)]/80 text-[var(--foreground)] border border-[var(--border-subtle)] transition-colors"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold bg-muted hover:bg-muted/80 text-foreground border border-border-subtle transition-colors"
           >
             <span>{quickActions.courseLink.label}</span>
           </Link>

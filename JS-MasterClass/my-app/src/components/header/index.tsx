@@ -20,7 +20,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 w-full transition-colors duration-200">
       {/* 1. Barra Superior: Logo + MainNavigation Desktop + ThemeToggle + Mobile Hamburger */}
-      <div className="w-full border-b border-[var(--border-subtle)] bg-[var(--header-bg)] backdrop-blur-md">
+      <div className="w-full border-b border-border-subtle bg-[var(--header-bg)] backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 gap-4">
           {/* Logo da Marca */}
           <div className="flex-shrink-0 flex items-center">
@@ -43,7 +43,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMainDrawerOpen(true)}
-              className="md:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-[var(--border-subtle)] bg-[var(--card-bg)] text-[var(--foreground)] hover:bg-[var(--muted)] transition-colors cursor-pointer"
+              className="md:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-border-subtle bg-card text-foreground hover:bg-muted transition-colors cursor-pointer"
               aria-label="Abrir menu principal"
               aria-expanded={mainDrawerOpen}
             >

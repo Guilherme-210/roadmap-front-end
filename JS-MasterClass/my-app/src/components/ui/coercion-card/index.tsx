@@ -20,12 +20,12 @@ export function CoercionCard({
   const resultColor = variant === "rose" ? "text-blue-400" : "text-blue-400";
 
   return (
-    <div className={`rounded-xl border border-[var(--border-subtle)] bg-[var(--muted)]/40 p-4 font-mono text-xs sm:text-sm space-y-2 ${className}`}>
+    <div className={`rounded-xl border border-border-subtle bg-muted/40 p-4 font-mono text-xs sm:text-sm space-y-2 ${className}`}>
       <div className={`font-semibold font-sans uppercase text-[11px] tracking-wider ${titleColor}`}>
         {title}
       </div>
       {items.map((item, idx) => (
-        <div key={`${item.expression}-${idx}`} className="text-[var(--foreground)]">
+        <div key={`${item.expression}-${idx}`} className="text-foreground">
           <span className="text-purple-400">{item.expression}</span> ==={" "}
           <span className={resultColor}>{item.result}</span>
         </div>

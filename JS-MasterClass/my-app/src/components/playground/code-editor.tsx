@@ -10,7 +10,7 @@ function EditorSkeleton({ height }: { height: string | number }) {
   return (
     <div
       style={{ height }}
-      className="flex flex-col items-center justify-center w-full bg-[var(--card-bg)] border border-[var(--border-subtle)] rounded-xl animate-pulse p-4 text-[var(--text-muted)] text-sm"
+      className="flex flex-col items-center justify-center w-full bg-card border border-border-subtle rounded-xl animate-pulse p-4 text-text-muted text-sm"
       aria-label="Carregando editor de código..."
       role="status"
     >
@@ -37,7 +37,7 @@ function EditorSkeleton({ height }: { height: string | number }) {
         </svg>
         <span className="font-medium">Carregando editor Monaco...</span>
       </div>
-      <div className="text-xs text-[var(--text-muted)]">
+      <div className="text-xs text-text-muted">
         Preparando realce de sintaxe e ambiente de edição
       </div>
     </div>
@@ -101,7 +101,7 @@ export function CodeEditor({
 
   return (
     <div
-      className={`relative w-full overflow-hidden rounded-xl border border-[var(--border-subtle)] bg-[var(--card-bg)] shadow-xs transition-colors duration-200 ${className}`}
+      className={`relative w-full overflow-hidden rounded-xl border border-border-subtle bg-card shadow-xs transition-colors duration-200 ${className}`}
       aria-label={`Editor de código para ${language}`}
     >
       <MonacoEditor

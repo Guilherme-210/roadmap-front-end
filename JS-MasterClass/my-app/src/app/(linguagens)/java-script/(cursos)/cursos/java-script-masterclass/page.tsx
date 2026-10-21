@@ -16,7 +16,7 @@ export default function JavaScriptMasterClassHubPage() {
       <Breadcrumbs items={breadcrumbs} />
 
       {/* Cabeçalho do Curso */}
-      <div className="w-full rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-6 sm:p-8 shadow-sm space-y-6">
+      <div className="w-full rounded-2xl border border-border-subtle bg-card p-6 sm:p-8 shadow-sm space-y-6">
         <PageHeader
           badge={header.badge}
           title={header.title}
@@ -28,12 +28,12 @@ export default function JavaScriptMasterClassHubPage() {
           {courseStats.map((stat, idx) => (
             <div
               key={idx}
-              className="p-3.5 rounded-xl bg-[var(--muted)]/50 border border-[var(--border-subtle)]"
+              className="p-3.5 rounded-xl bg-muted/50 border border-border-subtle"
             >
-              <span className="block text-[11px] text-[var(--text-muted)] font-medium">
+              <span className="block text-[11px] text-text-muted font-medium">
                 {stat.label}
               </span>
-              <span className="block text-base sm:text-lg font-bold text-[var(--foreground)] mt-0.5">
+              <span className="block text-base sm:text-lg font-bold text-foreground mt-0.5">
                 {stat.value}
               </span>
             </div>
@@ -51,8 +51,8 @@ export default function JavaScriptMasterClassHubPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </Link>
-          <span className="text-xs text-[var(--text-muted)]">
-            Instrutor: <strong className="text-[var(--foreground)]">{JS_MASTERCLASS_COURSE.instructor}</strong>
+          <span className="text-xs text-text-muted">
+            Instrutor: <strong className="text-foreground">{JS_MASTERCLASS_COURSE.instructor}</strong>
           </span>
         </div>
       </div>
@@ -65,10 +65,10 @@ export default function JavaScriptMasterClassHubPage() {
       {/* Grade de Módulos e Lições */}
       <section className="space-y-6 pt-4">
         <div>
-          <h2 className="text-2xl font-bold text-[var(--foreground)]">
+          <h2 className="text-2xl font-bold text-foreground">
             Grade Curricular do Curso
           </h2>
-          <p className="text-xs sm:text-sm text-[var(--text-muted)] mt-1">
+          <p className="text-xs sm:text-sm text-text-muted mt-1">
             {JS_MASTERCLASS_COURSE.totalLessons} lições organizadas por módulos sequenciais do curso ministrado por Rodrigo Branas.
           </p>
         </div>
@@ -77,22 +77,22 @@ export default function JavaScriptMasterClassHubPage() {
           {modules.map((mod, modIdx) => (
             <div
               key={mod.id}
-              className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] overflow-hidden shadow-sm"
+              className="rounded-2xl border border-border-subtle bg-card overflow-hidden shadow-sm"
             >
               {/* Cabeçalho do Módulo */}
-              <div className="p-5 sm:p-6 border-b border-[var(--border-subtle)] bg-[var(--muted)]/30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <div className="p-5 sm:p-6 border-b border-border-subtle bg-muted/30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div>
                   <span className="text-xs font-semibold text-amber-500 uppercase tracking-wider">
                     Módulo 0{modIdx + 1}
                   </span>
-                  <h3 className="text-lg font-bold text-[var(--foreground)]">
+                  <h3 className="text-lg font-bold text-foreground">
                     {mod.title.replace(/^Módulo \d+:\s*/, "")}
                   </h3>
-                  <p className="text-xs text-[var(--text-muted)] mt-0.5">
+                  <p className="text-xs text-text-muted mt-0.5">
                     {mod.description}
                   </p>
                 </div>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[var(--card-bg)] border border-[var(--border-subtle)] text-[var(--foreground)] self-start sm:self-center">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-card border border-border-subtle text-foreground self-start sm:self-center">
                   {mod.lessons.length} {mod.lessons.length === 1 ? "aula" : "aulas"}
                 </span>
               </div>
@@ -107,18 +107,18 @@ export default function JavaScriptMasterClassHubPage() {
                     <Link
                       key={lesson.id}
                       href={lessonUrl}
-                      className="group flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:px-6 gap-3 hover:bg-[var(--muted)]/40 transition-colors"
+                      className="group flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:px-6 gap-3 hover:bg-muted/40 transition-colors"
                     >
                       <div className="flex items-start sm:items-center gap-3.5">
                         {/* Indicador de Número */}
-                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[var(--muted)] border border-[var(--border-subtle)] flex items-center justify-center text-xs font-bold font-mono text-[var(--foreground)] group-hover:border-amber-500/50 group-hover:text-amber-500 transition-colors">
+                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-muted border border-border-subtle flex items-center justify-center text-xs font-bold font-mono text-foreground group-hover:border-amber-500/50 group-hover:text-amber-500 transition-colors">
                           {lesson.number}
                         </div>
 
                         {/* Título e Introdução Resumida */}
                         <div className="space-y-0.5">
                           <div className="flex items-center gap-2">
-                            <span className="font-semibold text-sm sm:text-base text-[var(--foreground)] group-hover:text-amber-500 transition-colors">
+                            <span className="font-semibold text-sm sm:text-base text-foreground group-hover:text-amber-500 transition-colors">
                               {lesson.title}
                             </span>
                             {/* Tag do Tipo: Vídeo ou PDF */}
@@ -142,7 +142,7 @@ export default function JavaScriptMasterClassHubPage() {
                               {lesson.type}
                             </span>
                           </div>
-                          <p className="text-xs text-[var(--text-muted)] line-clamp-1">
+                          <p className="text-xs text-text-muted line-clamp-1">
                             {lesson.introduction}
                           </p>
                         </div>

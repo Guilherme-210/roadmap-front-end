@@ -94,8 +94,8 @@ export function NavigationCarousel({
           className={`flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-md transition-all cursor-pointer ${
             variant === "main"
               ? canPrev
-                ? "bg-[var(--muted)] text-[var(--foreground)] hover:bg-amber-500/20 hover:text-amber-500"
-                : "opacity-25 text-[var(--text-muted)] cursor-not-allowed"
+                ? "bg-muted text-foreground hover:bg-amber-500/20 hover:text-amber-500"
+                : "opacity-25 text-text-muted cursor-not-allowed"
               : canPrev
               ? "bg-white/10 text-white hover:bg-white/20 hover:text-amber-300"
               : "opacity-25 text-slate-400 cursor-not-allowed"
@@ -127,7 +127,7 @@ export function NavigationCarousel({
                 className={`relative flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-semibold transition-all whitespace-nowrap rounded-t-md ${
                   isActive
                     ? "bg-amber-500 text-slate-950 font-bold shadow-sm"
-                    : "text-[var(--nav-link-color)] hover:text-[var(--nav-link-hover)] hover:bg-[var(--muted)]/60"
+                    : "text-[var(--nav-link-color)] hover:text-[var(--nav-link-hover)] hover:bg-muted/60"
                 }`}
                 aria-current={isActive ? "page" : undefined}
               >
@@ -181,8 +181,8 @@ export function NavigationCarousel({
           className={`flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-md transition-all cursor-pointer ${
             variant === "main"
               ? canNext
-                ? "bg-[var(--muted)] text-[var(--foreground)] hover:bg-amber-500/20 hover:text-amber-500"
-                : "opacity-25 text-[var(--text-muted)] cursor-not-allowed"
+                ? "bg-muted text-foreground hover:bg-amber-500/20 hover:text-amber-500"
+                : "opacity-25 text-text-muted cursor-not-allowed"
               : canNext
               ? "bg-white/10 text-white hover:bg-white/20 hover:text-amber-300"
               : "opacity-25 text-slate-400 cursor-not-allowed"
@@ -202,7 +202,7 @@ export function NavigationCarousel({
 
       {/* Indicador de Paginação discreto quando há mais itens */}
       {isPaginable && (
-        <span className="hidden xl:inline-block ml-1 text-[10px] font-mono text-[var(--text-muted)] opacity-70">
+        <span className="hidden xl:inline-block ml-1 text-[10px] font-mono text-text-muted opacity-70">
           {effectiveStartIndex + 1}-{Math.min(effectiveStartIndex + maxVisible, total)}/{total}
         </span>
       )}

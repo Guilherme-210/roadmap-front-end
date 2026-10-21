@@ -14,7 +14,7 @@ export default function DocumentationLanguagesPage() {
       <Breadcrumbs items={breadcrumbs} />
 
       {/* Cabeçalho da Documentação Geral */}
-      <div className="w-full rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-6 sm:p-8 shadow-sm">
+      <div className="w-full rounded-2xl border border-border-subtle bg-card p-6 sm:p-8 shadow-sm">
         <PageHeader
           badge={header.badge}
           title={header.title}
@@ -25,10 +25,10 @@ export default function DocumentationLanguagesPage() {
       {/* Seção 1: Listagem de Linguagens Documentadas */}
       <section className="space-y-6">
         <div>
-          <h2 className="text-xl font-bold text-[var(--foreground)]">
+          <h2 className="text-xl font-bold text-foreground">
             Linguagens Documentadas
           </h2>
-          <p className="text-xs sm:text-sm text-[var(--text-muted)] mt-1">
+          <p className="text-xs sm:text-sm text-text-muted mt-1">
             Selecione uma linguagem para acessar sua árvore de tópicos, guias conceituais e exemplos executáveis.
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function DocumentationLanguagesPage() {
                 className={`relative rounded-2xl border transition-all flex flex-col justify-between p-6 sm:p-7 ${
                   isAvailable
                     ? "border-amber-500/30 bg-gradient-to-br from-amber-500/5 via-[var(--card-bg)] to-transparent hover:border-amber-500/60 shadow-sm"
-                    : "border-[var(--border-subtle)] bg-[var(--card-bg)]/60 opacity-80"
+                    : "border-border-subtle bg-card/60 opacity-80"
                 }`}
               >
                 <div className="space-y-4">
@@ -60,30 +60,30 @@ export default function DocumentationLanguagesPage() {
                       )}
                       {lang.badge}
                     </span>
-                    <span className="text-xs font-mono text-[var(--text-muted)]">
+                    <span className="text-xs font-mono text-text-muted">
                       {lang.id}
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-bold text-[var(--foreground)]">
+                    <h3 className="text-2xl font-bold text-foreground">
                       {lang.name}
                     </h3>
-                    <p className="mt-2 text-sm text-[var(--text-muted)] leading-relaxed">
+                    <p className="mt-2 text-sm text-text-muted leading-relaxed">
                       {lang.description}
                     </p>
                   </div>
 
                   {/* Tópicos em Destaque */}
                   <div className="space-y-2 pt-2">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-text-muted">
                       Tópicos em Destaque:
                     </span>
                     <div className="flex flex-wrap gap-1.5">
                       {lang.featuredTopics.map((topic, i) => (
                         <span
                           key={i}
-                          className="px-2.5 py-1 rounded-md text-xs font-medium bg-[var(--muted)]/70 text-[var(--foreground)] border border-[var(--border-subtle)]"
+                          className="px-2.5 py-1 rounded-md text-xs font-medium bg-muted/70 text-foreground border border-border-subtle"
                         >
                           {topic}
                         </span>
@@ -96,12 +96,12 @@ export default function DocumentationLanguagesPage() {
                     {lang.stats.map((stat, idx) => (
                       <div
                         key={idx}
-                        className="p-2.5 rounded-lg bg-[var(--muted)]/40 border border-[var(--border-subtle)]"
+                        className="p-2.5 rounded-lg bg-muted/40 border border-border-subtle"
                       >
-                        <span className="block text-[10px] text-[var(--text-muted)]">
+                        <span className="block text-[10px] text-text-muted">
                           {stat.label}
                         </span>
-                        <span className="block text-xs font-semibold text-[var(--foreground)] mt-0.5">
+                        <span className="block text-xs font-semibold text-foreground mt-0.5">
                           {stat.value}
                         </span>
                       </div>
@@ -110,7 +110,7 @@ export default function DocumentationLanguagesPage() {
                 </div>
 
                 {/* Botão de Ação */}
-                <div className="pt-6 mt-4 border-t border-[var(--border-subtle)]">
+                <div className="pt-6 mt-4 border-t border-border-subtle">
                   {isAvailable ? (
                     <Link
                       href={lang.href}
@@ -135,7 +135,7 @@ export default function DocumentationLanguagesPage() {
                     <button
                       type="button"
                       disabled
-                      className="w-full py-2.5 rounded-xl bg-[var(--muted)] text-[var(--text-muted)] text-sm font-medium cursor-not-allowed border border-[var(--border-subtle)]"
+                      className="w-full py-2.5 rounded-xl bg-muted text-text-muted text-sm font-medium cursor-not-allowed border border-border-subtle"
                     >
                       {lang.cta}
                     </button>
@@ -148,8 +148,8 @@ export default function DocumentationLanguagesPage() {
       </section>
 
       {/* Seção 2: Recursos e Diretrizes da Documentação */}
-      <section className="space-y-4 pt-4 border-t border-[var(--border-subtle)]">
-        <h2 className="text-xl font-bold text-[var(--foreground)]">
+      <section className="space-y-4 pt-4 border-t border-border-subtle">
+        <h2 className="text-xl font-bold text-foreground">
           Como a documentação está estruturada
         </h2>
         <FeatureCardsGrid

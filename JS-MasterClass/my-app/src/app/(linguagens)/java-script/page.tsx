@@ -14,7 +14,7 @@ export default function JavaScriptCoursesPage() {
       <Breadcrumbs items={breadcrumbs} />
 
       {/* Cabeçalho da Trilha de JavaScript */}
-      <div className="w-full rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-6 sm:p-8 shadow-sm">
+      <div className="w-full rounded-2xl border border-border-subtle bg-card p-6 sm:p-8 shadow-sm">
         <PageHeader
           badge={header.badge}
           title={header.title}
@@ -24,7 +24,7 @@ export default function JavaScriptCoursesPage() {
 
       {/* Cartão do Curso: JavaScript MasterClass do Rodrigo Branas */}
       <section className="space-y-4">
-        <h2 className="text-xl font-bold text-[var(--foreground)]">
+        <h2 className="text-xl font-bold text-foreground">
           Cursos Disponíveis
         </h2>
 
@@ -36,16 +36,16 @@ export default function JavaScriptCoursesPage() {
                   <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
                   {courseCard.badge}
                 </span>
-                <span className="text-xs text-[var(--text-muted)] font-medium">
+                <span className="text-xs text-text-muted font-medium">
                   {courseCard.instructor}
                 </span>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-[var(--foreground)]">
+                <h3 className="text-2xl font-bold text-foreground">
                   {courseCard.title}
                 </h3>
-                <p className="mt-2 text-sm text-[var(--text-muted)] leading-relaxed">
+                <p className="mt-2 text-sm text-text-muted leading-relaxed">
                   {courseCard.description}
                 </p>
               </div>
@@ -55,12 +55,12 @@ export default function JavaScriptCoursesPage() {
                 {courseCard.stats.map((stat, idx) => (
                   <div
                     key={idx}
-                    className="p-3 rounded-xl bg-[var(--muted)]/50 border border-[var(--border-subtle)]"
+                    className="p-3 rounded-xl bg-muted/50 border border-border-subtle"
                   >
-                    <span className="block text-[11px] text-[var(--text-muted)]">
+                    <span className="block text-[11px] text-text-muted">
                       {stat.label}
                     </span>
-                    <span className="block text-sm font-semibold text-[var(--foreground)] mt-0.5">
+                    <span className="block text-sm font-semibold text-foreground mt-0.5">
                       {stat.value}
                     </span>
                   </div>

@@ -35,7 +35,7 @@ export default function LessonPage() {
       <Breadcrumbs items={breadcrumbs} />
 
       {/* Cartão de Cabeçalho da Aula */}
-      <div className="w-full rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-6 sm:p-8 shadow-sm space-y-6">
+      <div className="w-full rounded-2xl border border-border-subtle bg-card p-6 sm:p-8 shadow-sm space-y-6">
         <PageHeader
           badge={header.badge}
           title={header.title}
@@ -44,7 +44,7 @@ export default function LessonPage() {
 
         {/* Tópicos Abordados */}
         {topics && topics.length > 0 && (
-          <div className="pt-2 border-t border-[var(--border-subtle)] space-y-3">
+          <div className="pt-2 border-t border-border-subtle space-y-3">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-amber-500">
               Tópicos Abordados na Aula
             </h3>
@@ -52,7 +52,7 @@ export default function LessonPage() {
               {topics.map((topic: string, idx: number) => (
                 <li
                   key={idx}
-                  className="flex items-start gap-2.5 text-xs sm:text-sm text-[var(--foreground)]"
+                  className="flex items-start gap-2.5 text-xs sm:text-sm text-foreground"
                 >
                   <span className="flex-shrink-0 mt-0.5 w-4 h-4 rounded-full bg-amber-500/10 text-amber-500 flex items-center justify-center text-[10px] font-bold">
                     ✓
@@ -68,7 +68,7 @@ export default function LessonPage() {
       {/* Pontos Chave da Aula (se houver) */}
       {keyTakeaways && keyTakeaways.length > 0 && (
         <section className="space-y-3">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-[var(--text-muted)]">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-text-muted">
             Conceitos Essenciais
           </h3>
           <FeatureCardsGrid
@@ -83,10 +83,10 @@ export default function LessonPage() {
         <section className="space-y-4">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-xl font-bold text-[var(--foreground)]">
+              <h2 className="text-xl font-bold text-foreground">
                 Laboratório Prático da Aula
               </h2>
-              <p className="text-xs sm:text-sm text-[var(--text-muted)]">
+              <p className="text-xs sm:text-sm text-text-muted">
                 {snippet.caption ||
                   "Experimente e modifique os trechos de código discutidos nesta aula."}
               </p>
@@ -107,21 +107,21 @@ export default function LessonPage() {
       )}
 
       {/* Espaço Preparado para Conteúdo em Markdown (.md) */}
-      <section className="w-full rounded-2xl border border-dashed border-[var(--border-subtle)] bg-[var(--muted)]/20 p-6 sm:p-8 space-y-4">
+      <section className="w-full rounded-2xl border border-dashed border-border-subtle bg-muted/20 p-6 sm:p-8 space-y-4">
         <div className="flex items-center gap-2">
           <span className="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/20">
             .md Slot
           </span>
-          <h3 className="text-sm sm:text-base font-bold text-[var(--foreground)]">
+          <h3 className="text-sm sm:text-base font-bold text-foreground">
             Anotações & Conteúdo Detalhado da Aula
           </h3>
         </div>
 
-        <p className="text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
+        <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
           Esta seção está estruturada para receber as notas em Markdown (<strong>.md</strong>) escritas durante o acompanhamento da aula de Rodrigo Branas.
         </p>
 
-        <div className="p-4 rounded-xl bg-[var(--card-bg)] border border-[var(--border-subtle)] text-xs text-[var(--text-muted)] font-mono space-y-1">
+        <div className="p-4 rounded-xl bg-card border border-border-subtle text-xs text-text-muted font-mono space-y-1">
           <p className="text-amber-500 font-semibold">{"// Estrutura da aula:"}</p>
           <p>- Título: {header.title}</p>
           <p>- Módulo: {header.badge}</p>

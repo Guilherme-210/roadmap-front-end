@@ -1,89 +1,118 @@
 {
   "metadata": {
     "title": "Aula 9: Boolean & Coerção de Tipos • JavaScript MasterClass",
-    "description": "Estudo prático e interativo sobre Booleans, valores Truthy/Falsy, coerção implícita e operadores lógicos em JavaScript com Rodrigo Branas."
+    "description": "Estudo aprofundado sobre o tipo primitivo booleano, a armadilha do construtor new Boolean, valores Truthy e Falsy, coerção implícita e testes práticos com Rodrigo Branas."
   },
   "breadcrumbs": [
-    {
-      "label": "Início",
-      "href": "/"
-    },
-    {
-      "label": "JavaScript",
-      "href": "/java-script"
-    },
-    {
-      "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
-    },
-    {
-      "label": "Aula 9: Boolean",
-      "current": true
-    }
+    { "label": "Início", "href": "/" },
+    { "label": "JavaScript", "href": "/java-script" },
+    { "label": "JavaScript MasterClass", "href": "/java-script/cursos/java-script-masterclass" },
+    { "label": "Aula 9: Boolean", "current": true }
   ],
   "header": {
-    "badge": "Módulo 03: Tipos & Semântica • Vídeo Aula",
+    "badge": "Módulo 03: Tipos & Semântica • Rodrigo Branas",
     "title": "Aula 9: Boolean & Coerção de Tipos",
-    "description": "Nesta aula exploramos os conceitos de truthy, falsy, operadores lógicos (&&, ||, ??) e as regras de conversão do motor JavaScript."
+    "description": "O tipo de dado booleano é um tipo primitivo e imutável que representa estritamente dois valores lógicos: true e false. Compreenda o funcionamento de condicionais, a armadilha do objeto wrapper new Boolean e as regras exatas de coerção truthy e falsy no JavaScript."
   },
-  "falsyCard": {
-    "title": "Valores Falsy (Convertem para false):",
-    "items": [
+  "primitiveIntro": {
+    "title": "O Tipo Primitivo Booleano",
+    "description": "O booleano é um dos tipos fundamentais do JavaScript. Ele existe primordialmente para suportar ramificações lógicas no fluxo de execução do programa, como instruções if/else, laços de repetição (while, for) e expressões ternárias.",
+    "points": [
+      "Representa apenas dois valores possíveis: true (verdadeiro) e false (falso).",
+      "É um tipo primitivo (typeof true === 'boolean'), copiado por valor e estritamente imutável.",
+      "Serve de base para as decisões booleanas de controle de fluxo e avaliação de predicados em coleções."
+    ]
+  },
+  "wrapperTrapSection": {
+    "title": "A Armadilha do Construtor: new Boolean()",
+    "subtitle": "Por que você NUNCA deve instanciar objetos Boolean em JavaScript?",
+    "description": "O JavaScript permite criar instâncias de objetos através da função construtora new Boolean(valor). Porém, ao fazer isso, você cria um objeto na memória heap, e NÃO um valor primitivo.",
+    "dangerExplanation": "No JavaScript, QUALQUER objeto é avaliado como TRUTHY em contextos condicionais! Isso significa que mesmo se você criar um new Boolean(false), o bloco condicional if será executado com sucesso, pois a verificação avalia a existência da referência do objeto e não o seu valor interno encapsulado.",
+    "examples": [
       {
-        "expression": "Boolean(\"\")",
-        "result": "false"
+        "code": "new Boolean(true);  // [Boolean: true]\nnew Boolean(false); // [Boolean: false]\ntypeof new Boolean(true); // 'object'",
+        "caption": "typeof retorna 'object' e não 'boolean'"
       },
       {
-        "expression": "Boolean(0)",
-        "result": "false"
-      },
-      {
-        "expression": "Boolean(null)",
-        "result": "false"
-      },
-      {
-        "expression": "Boolean(undefined)",
-        "result": "false"
+        "code": "let condicao = new Boolean(false);\n\nif (condicao) {\n  console.log('Executou!'); // ← O if EXECUTA mesmo o valor sendo false!\n} else {\n  console.log('Não executou');\n}",
+        "caption": "A armadilha: objetos são sempre avaliados como verdadeiros em condicionais"
       }
     ]
   },
-  "truthyCard": {
-    "title": "Pegadinhas Truthy (Convertem para true):",
-    "items": [
+  "coercionSection": {
+    "title": "Coerção de Tipos: Conversão para Booleano",
+    "description": "A coerção ocorre quando um valor de qualquer outro tipo de dado é convertido para booleano. Essa conversão pode ser explícita ou implícita.",
+    "methods": [
       {
-        "expression": "Boolean(\"0\")",
-        "result": "true"
+        "name": "Função Conversora Boolean(valor)",
+        "badge": "Explícita • Recomendada",
+        "description": "Invocada sem o operador new, a função Boolean() atua como conversora de tipos pura, convertendo o argumento para o primitivo booleano correspondente sem criar objetos wrapper.",
+        "example": "Boolean(0); // false\nBoolean(1); // true\nBoolean(''); // false\nBoolean('texto'); // true"
       },
       {
-        "expression": "Boolean(\"false\")",
-        "result": "true"
+        "name": "Operador Duplo NOT (!!valor)",
+        "badge": "Idiomático • Performático",
+        "description": "É a técnica mais comum e idiomática no ecossistema JavaScript. O primeiro operador (!) inverte e converte para booleano; o segundo operador (!) desinverte, entregando o valor primitivo real.",
+        "example": "!!0; // false\n!!null; // false\n!!'JavaScript'; // true\n!![]; // true"
       },
       {
-        "expression": "Boolean([])",
-        "result": "true"
-      },
-      {
-        "expression": "Boolean({})",
-        "result": "true"
+        "name": "Operadores Condicionais e Ternários",
+        "badge": "Controle de Fluxo",
+        "description": "Instruções como if (valor) e valor ? 'Sim' : 'Não' realizam coerção booleana implícita automática do predicado antes de tomar a decisão de ramificação.",
+        "example": "const resultado = Boolean(1) ? 'Verdadeiro' : 'Falso';\nconsole.log(resultado); // 'Verdadeiro'"
       }
+    ]
+  },
+  "falsyCard": {
+    "title": "Os 6 Valores Falsy Canônicos (Sempre convertem para false):",
+    "items": [
+      { "expression": "Boolean(0)", "result": "false" },
+      { "expression": "Boolean(-0)", "result": "false" },
+      { "expression": "Boolean(null)", "result": "false" },
+      { "expression": "Boolean(undefined)", "result": "false" },
+      { "expression": "Boolean(NaN)", "result": "false" },
+      { "expression": "Boolean(\"\")", "result": "false" },
+      { "expression": "Boolean(false)", "result": "false" }
+    ]
+  },
+  "truthyCard": {
+    "title": "Valores Truthy Notáveis (Todos os demais convertem para true):",
+    "items": [
+      { "expression": "Boolean(1)", "result": "true" },
+      { "expression": "Boolean(-1)", "result": "true" },
+      { "expression": "Boolean(\"texto\")", "result": "true" },
+      { "expression": "Boolean(\"0\")", "result": "true" },
+      { "expression": "Boolean(\"false\")", "result": "true" },
+      { "expression": "Boolean([])", "result": "true" },
+      { "expression": "Boolean({})", "result": "true" },
+      { "expression": "Boolean(new Boolean(false))", "result": "true" },
+      { "expression": "Boolean(function(){})", "result": "true" },
+      { "expression": "Boolean(Symbol())", "result": "true" }
     ]
   },
   "playgroundSection": {
     "title": "Playground Interativo da Aula",
-    "description": "Modifique o código abaixo e clique em Executar (ou use Ctrl + Enter) para testar os resultados no console."
+    "description": "Experimente os conceitos da aula diretamente no navegador. Teste a armadilha do new Boolean(false), a função conversora Boolean() e as regras de truthy/falsy."
   },
+  "playgroundCode": "// ============================================================================\n// Aula 9: Boolean & Coerção de Tipos - Rodrigo Branas\n// ============================================================================\n\nconsole.info('1. O TIPO PRIMITIVO BOOLEANO');\nconsole.log('typeof true:', typeof true);   // 'boolean'\nconsole.log('typeof false:', typeof false); // 'boolean'\n\nconsole.info('\\n2. A ARMADILHA DO CONSTRUTOR new Boolean()');\nconst objetoFalso = new Boolean(false);\nconsole.log('typeof new Boolean(false):', typeof objetoFalso); // 'object'\n\n// Por que isso é perigoso em condicionais?\nif (objetoFalso) {\n  console.warn('⚠️ ALERTA: new Boolean(false) entrou no IF porque todo OBJETO é truthy!');\n} else {\n  console.log('Não entra aqui!');\n}\n\nconsole.info('\\n3. CONVERSÃO SEGURA COM Boolean() e DUPLA NEGAÇÃO (!!)');\nconsole.log('Boolean(0):', Boolean(0));         // false\nconsole.log('Boolean(1):', Boolean(1));         // true\nconsole.log('!!\"\":', !!\"\");                     // false\nconsole.log('!!\"texto\":', !!\"texto\");           // true\n\nconsole.info('\\n4. OS 6 VALORES FALSY CANÔNICOS');\nconsole.log('0:', !!0);\nconsole.log('-0:', !!-0);\nconsole.log('null:', !!null);\nconsole.log('undefined:', !!undefined);\nconsole.log('NaN:', !!NaN);\nconsole.log('\"\":', !!\"\");\nconsole.log('false:', !!false);\n\nconsole.info('\\n5. VALORES TRUTHY SURPREENDENTES');\nconsole.log('Array vazio []:', !![]);           // true (objeto)\nconsole.log('Objeto vazio {}:', !!{});         // true (objeto)\nconsole.log('String \"0\":', !!\"0\");             // true (string não-vazia)\nconsole.log('String \"false\":', !!\"false\");     // true (string não-vazia)\nconsole.log('new Date():', !!new Date());       // true\n\nconsole.info('\\n6. OPERADOR TERNÁRIO');\nconst valor = 1;\nconst resultado = Boolean(valor) ? 'Verdadeiro' : 'Falso';\nconsole.log('Resultado do ternário para valor=1:', resultado);\n",
   "tips": [
     {
-      "title": "Coerção Estrita (===)",
-      "description": "Prefira sempre o comparador estrito === ao comparador frouxo == para evitar conversões implícitas imprevisíveis."
+      "title": "Nunca use new Boolean()",
+      "description": "A função construtora cria um objeto wrapper que é sempre avaliado como verdadeiro em if. Use o primitivo true/false ou a função conversora Boolean().",
+      "icon": "alert",
+      "variant": "rose"
     },
     {
-      "title": "Atalho Duplo NOT (!!)",
-      "description": "O operador !!valor é um atalho idiomático amplamente usado em JavaScript para converter qualquer valor em booleano estrito."
+      "title": "Atalho Idiomático Duplo NOT (!!)",
+      "description": "O operador !!valor é a forma padrão da indústria para converter qualquer dado em booleano estrito sem alocar objetos adicionais.",
+      "icon": "check",
+      "variant": "emerald"
     },
     {
-      "title": "Diferença entre || e ??",
-      "description": "O operador || avalia falsy (incluindo 0 e \"\"), enquanto ?? só considera null ou undefined."
+      "title": "Arrays e Objetos são Truthy",
+      "description": "Mesmo vazios, [] e {} convertem para true. Para checar se um array possui itens, verifique se arr.length > 0.",
+      "icon": "zap",
+      "variant": "amber"
     }
   ],
   "navigationFooter": {

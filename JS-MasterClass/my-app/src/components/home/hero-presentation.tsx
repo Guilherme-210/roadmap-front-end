@@ -39,22 +39,22 @@ export function HeroPresentation({
       </div>
 
       {/* Título Principal */}
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1]">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground leading-[1.1]">
         {title.prefix}{" "}
-        <span className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">
+        <span className="bg-linear-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">
           {title.highlight}
         </span>{" "}
         {title.suffix}
       </h1>
 
       {/* Subtítulo / Descrição */}
-      <p className="text-base sm:text-lg text-[var(--text-muted)] leading-relaxed max-w-2xl">
+      <p className="text-base sm:text-lg text-text-muted leading-relaxed max-w-2xl">
         {description}
       </p>
 
       {/* Destaques rápidos */}
       {highlights.length > 0 && (
-        <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-[var(--text-muted)] pt-2">
+        <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-text-muted pt-2">
           {highlights.map((item, index) => (
             <div key={`${item}-${index}`} className="flex items-center gap-2">
               <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -74,7 +74,7 @@ export function HeroPresentation({
               <Link
                 key={`${action.label}-${index}`}
                 href={action.href}
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/25 hover:from-amber-400 hover:to-amber-500 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-amber-500 to-amber-600 px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/25 hover:from-amber-400 hover:to-amber-500 transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>{action.label}</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -85,7 +85,7 @@ export function HeroPresentation({
               <Link
                 key={`${action.label}-${index}`}
                 href={action.href}
-                className="inline-flex items-center gap-2 rounded-xl border border-[var(--border-subtle)] bg-[var(--card-bg)] px-6 py-3.5 text-sm font-semibold text-[var(--foreground)] hover:bg-[var(--muted)] hover:border-amber-500/40 transition-all"
+                className="inline-flex items-center gap-2 rounded-xl border border-border-subtle bg-card px-6 py-3.5 text-sm font-semibold text-foreground hover:bg-muted hover:border-amber-500/40 transition-all"
               >
                 <span>{action.label}</span>
               </Link>

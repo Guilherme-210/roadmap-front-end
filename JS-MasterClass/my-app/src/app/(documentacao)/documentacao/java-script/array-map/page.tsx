@@ -35,29 +35,29 @@ export default function ArrayMapDocumentationPage() {
         badge={mockData.header.badge}
         title={mockData.header.title}
         description={mockData.header.description}
-        className="border-b border-[var(--border-subtle)] pb-8"
+        className="border-b border-border-subtle pb-8"
       />
 
       {/* Seção 1: Conceito e Assinatura */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-[var(--foreground)]">
+        <h2 className="text-2xl font-bold text-foreground">
           {conceptSection.title}
         </h2>
-        <p className="text-sm sm:text-base text-[var(--text-muted)] leading-relaxed">
+        <p className="text-sm sm:text-base text-text-muted leading-relaxed">
           {conceptSection.description}
         </p>
 
-        <div className="rounded-xl border border-[var(--border-subtle)] bg-[var(--card-bg)] p-5 space-y-3">
+        <div className="rounded-xl border border-border-subtle bg-card p-5 space-y-3">
           <h3 className="text-xs font-semibold uppercase tracking-wider text-amber-500">
             {conceptSection.signature.heading}
           </h3>
-          <div className="font-mono text-xs sm:text-sm bg-[var(--muted)]/60 p-3.5 rounded-lg overflow-x-auto text-[var(--foreground)]">
+          <div className="font-mono text-xs sm:text-sm bg-muted/60 p-3.5 rounded-lg overflow-x-auto text-foreground">
             {conceptSection.signature.code}
           </div>
-          <ul className="text-xs sm:text-sm text-[var(--text-muted)] space-y-1.5 list-disc list-inside">
+          <ul className="text-xs sm:text-sm text-text-muted space-y-1.5 list-disc list-inside">
             {conceptSection.signature.parameters.map((param) => (
               <li key={param.name}>
-                <strong className="text-[var(--foreground)]">{param.name}</strong>
+                <strong className="text-foreground">{param.name}</strong>
                 {param.optional && " (opcional)"}: {param.description}
               </li>
             ))}
@@ -68,10 +68,10 @@ export default function ArrayMapDocumentationPage() {
       {/* Seção 2: Playground Interativo com Colapse no Topo */}
       <section className="space-y-4">
         <div>
-          <h2 className="text-2xl font-bold text-[var(--foreground)]">
+          <h2 className="text-2xl font-bold text-foreground">
             {mockData.playgroundSection.title}
           </h2>
-          <p className="text-xs sm:text-sm text-[var(--text-muted)]">
+          <p className="text-xs sm:text-sm text-text-muted">
             {mockData.playgroundSection.description}
           </p>
         </div>
@@ -91,7 +91,7 @@ export default function ArrayMapDocumentationPage() {
 
       {/* Seção 3: Boas Práticas e Armadilhas Comuns Componentizadas */}
       <section className="space-y-4 pt-4">
-        <h2 className="text-2xl font-bold text-[var(--foreground)]">
+        <h2 className="text-2xl font-bold text-foreground">
           Boas Práticas &amp; Armadilhas Frequentes
         </h2>
 

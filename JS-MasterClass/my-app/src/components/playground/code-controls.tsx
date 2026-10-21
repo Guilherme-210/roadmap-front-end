@@ -16,7 +16,7 @@ export function CodeControls({
 }: CodeControlsProps) {
   return (
     <div
-      className={`flex flex-wrap items-center justify-between gap-3 p-3 bg-[var(--card-bg)] border border-[var(--border-subtle)] rounded-xl ${className}`}
+      className={`flex flex-wrap items-center justify-between gap-3 p-3 bg-card border border-border-subtle rounded-xl ${className}`}
       role="toolbar"
       aria-label="Controles de execução de código"
     >
@@ -46,8 +46,8 @@ export function CodeControls({
             disabled={!isExecutable}
             className={`inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg shadow-sm transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 cursor-pointer ${
               isExecutable
-                ? "bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 shadow-amber-500/20 active:scale-[0.98]"
-                : "bg-[var(--muted)] text-[var(--text-muted)] cursor-not-allowed opacity-60"
+                ? "bg-linear-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 shadow-amber-500/20 active:scale-[0.98]"
+                : "bg-muted text-text-muted cursor-not-allowed opacity-60"
             }`}
             aria-label={`Executar código (${isExecutable ? "Ctrl+Enter" : "Linguagem não executável"})`}
             title={
@@ -71,7 +71,7 @@ export function CodeControls({
         )}
 
         {/* Status Indicator */}
-        <div className="flex items-center gap-1.5 px-2.5 py-1 text-xs rounded-full bg-[var(--muted)] text-[var(--text-muted)] border border-[var(--border-subtle)]">
+        <div className="flex items-center gap-1.5 px-2.5 py-1 text-xs rounded-full bg-muted text-text-muted border border-border-subtle">
           <span
             className={`w-2 h-2 rounded-full ${
               isRunning
@@ -98,10 +98,10 @@ export function CodeControls({
             type="button"
             onClick={onReset}
             disabled={!canReset || isRunning}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border border-[var(--border-subtle)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border border-border-subtle transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
               canReset && !isRunning
-                ? "bg-[var(--card-bg)] text-[var(--foreground)] hover:bg-[var(--muted)] hover:text-amber-500 cursor-pointer"
-                : "opacity-40 cursor-not-allowed text-[var(--text-muted)]"
+                ? "bg-card text-foreground hover:bg-muted hover:text-amber-500 cursor-pointer"
+                : "opacity-40 cursor-not-allowed text-text-muted"
             }`}
             aria-label="Restaurar código original do exemplo"
             title="Restaurar código inicial"
@@ -127,7 +127,7 @@ export function CodeControls({
         <button
           type="button"
           onClick={onClear}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[var(--foreground)] hover:text-amber-500 bg-[var(--card-bg)] hover:bg-[var(--muted)] border border-[var(--border-subtle)] rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 cursor-pointer"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-foreground hover:text-amber-500 bg-card hover:bg-muted border border-border-subtle rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 cursor-pointer"
           aria-label="Limpar console de saída"
           title="Limpar saídas do console"
         >
