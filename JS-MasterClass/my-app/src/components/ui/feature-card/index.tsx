@@ -14,7 +14,7 @@ export interface FeatureCardProps {
   className?: string;
 }
 
-function renderCardIcon(icon?: string, variant: FeatureCardVariant = "default") {
+function renderCardIcon(icon?: string) {
   if (!icon) return null;
 
   switch (icon) {
@@ -69,23 +69,23 @@ export function FeatureCard({ card, className = "" }: FeatureCardProps) {
       titleColorClass = "text-emerald-400";
       break;
     case "amber":
-      containerClasses += " border-[var(--border-subtle)] bg-[var(--card-bg)]";
+      containerClasses += " border-border-subtle bg-card";
       titleColorClass = "text-amber-500";
       break;
     case "default":
     default:
-      containerClasses += " border-[var(--border-subtle)] bg-[var(--card-bg)]";
-      titleColorClass = "text-[var(--foreground)] font-bold";
+      containerClasses += " border-border-subtle bg-card";
+      titleColorClass = "text-foreground font-bold";
       break;
   }
 
   return (
     <div className={`${containerClasses} ${className}`}>
       <div className={`flex items-center gap-2 font-semibold text-sm ${titleColorClass}`}>
-        {renderCardIcon(card.icon, variant)}
+        {renderCardIcon(card.icon)}
         <span>{card.title}</span>
       </div>
-      <div className="text-xs text-[var(--text-muted)] leading-relaxed">
+      <div className="text-xs text-text-muted leading-relaxed">
         {card.description}
       </div>
     </div>

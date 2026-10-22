@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "title": "Aula 9.1: Operadores Booleanos • JavaScript MasterClass",
+    "description": "Comparações de igualdade estrita vs ampla, coerção com == e !=, operadores lógicos &&, || e !, avaliação em curto-circuito e operador ternário com Rodrigo Branas."
+  },
+  "breadcrumbs": [
+    { "label": "Início", "href": "/" },
+    { "label": "JavaScript", "href": "/java-script" },
+    { "label": "JavaScript MasterClass", "href": "/java-script/cursos/java-script-masterclass" },
+    { "label": "Aula 9.1: Operadores Booleanos", "current": true }
+  ],
+  "header": {
+    "badge": "Módulo 03: Tipos & Semântica • Rodrigo Branas",
+    "title": "Aula 9.1: Operadores Booleanos & Curto-Circuito",
+    "description": "Os operadores booleanos combinam, comparam ou invertem valores lógicos. Compreenda a diferença crucial entre igualdade ampla (==) e estrita (===), a mecânica de curto-circuito de && e || e a evolução dos valores default com o operador ternário e coalescência nula."
+  },
+  "equalitySection": {
+    "title": "Operadores de Comparação: Ampla vs Estrita",
+    "subtitle": "Por que a coerção implícita de == e != pode causar bugs graves em produção",
+    "description": "O operador de igualdade ampla (==) força a conversão implícita de tipos quando os operandos são de naturezas diferentes, seguindo regras complexas do algoritmo de comparação abstrata do ECMAScript. Já a igualdade estrita (===) compara valor e tipo sem nenhuma coerção.",
+    "looseCard": {
+      "title": "Igualdade Ampla (==) com Coerção:",
+      "items": [
+        { "expression": "5 == '5'", "result": "true" },
+        { "expression": "0 == ''", "result": "true" },
+        { "expression": "0 == '\\n'", "result": "true" },
+        { "expression": "false == ''", "result": "true" },
+        { "expression": "false == 0", "result": "true" },
+        { "expression": "1 == true", "result": "true" },
+        { "expression": "null == undefined", "result": "true" },
+        { "expression": "false == null", "result": "false" },
+        { "expression": "false == undefined", "result": "false" }
+      ]
+    },
+    "strictCard": {
+      "title": "Igualdade Estrita (===) Sem Coerção (Recomendado):",
+      "items": [
+        { "expression": "5 === '5'", "result": "false" },
+        { "expression": "0 === ''", "result": "false" },
+        { "expression": "false === ''", "result": "false" },
+        { "expression": "false === 0", "result": "false" },
+        { "expression": "1 === true", "result": "false" },
+        { "expression": "null === undefined", "result": "false" }
+      ]
+    },
+    "inequalityCard": {
+      "title": "Desigualdade: != (com coerção) vs !== (estrito):",
+      "items": [
+        { "expression": "5 != '5'", "result": "false" },
+        { "expression": "5 !== '5'", "result": "true" },
+        { "expression": "0 != ''", "result": "false" },
+        { "expression": "0 !== ''", "result": "true" },
+        { "expression": "null != undefined", "result": "false" },
+        { "expression": "null !== undefined", "result": "true" }
+      ]
+    }
+  },
+  "relationalSection": {
+    "title": "Operadores Relacionais (>, <, >=, <=)",
+    "description": "Comparam valores numéricos ou ordem lexicográfica de caracteres. Retornam sempre um booleano puro.",
+    "items": [
+      { "expression": "10 >= 5", "result": "true", "note": "10 é maior que 5" },
+      { "expression": "5 >= 5", "result": "true", "note": "Valores idênticos atendem ao operador >=" },
+      { "expression": "5 <= 10", "result": "true", "note": "5 é menor que 10" },
+      { "expression": "10 <= 5", "result": "false", "note": "10 não é menor nem igual a 5" }
+    ]
+  },
+  "logicalOperatorsSection": {
+    "title": "Operadores Lógicos & Curto-Circuito (Short-Circuit)",
+    "description": "Ao contrário de muitas outras linguagens de programação, em JavaScript os operadores lógicos NÃO retornam necessariamente um booleano (true/false). Eles retornam o valor do operando decisivo que encerrou a avaliação da expressão.",
+    "operators": [
+      {
+        "name": "Operador AND (&&)",
+        "symbol": "&&",
+        "rule": "Retorna o primeiro valor falsy encontrado. Se todos forem truthy, retorna o último valor.",
+        "examples": "1 && 2; // retorna 2\n0 && 2; // retorna 0 (curto-circuito no primeiro falsy)\ntrue && 'ativo'; // retorna 'ativo'\nfalse && 'ativo'; // retorna false"
+      },
+      {
+        "name": "Operador OR (||)",
+        "symbol": "||",
+        "rule": "Retorna o primeiro valor truthy encontrado. Se todos forem falsy, retorna o último valor.",
+        "examples": "0 || 2; // retorna 2 (primeiro truthy)\n1 || 0; // retorna 1\n1 || 2; // retorna 1\n'' || 'padrão'; // retorna 'padrão'"
+      },
+      {
+        "name": "Operador NOT (!)",
+        "symbol": "!",
+        "rule": "Inverte o valor booleano do operando após forçar sua conversão para booleano.",
+        "examples": "!true;  // retorna false\n!false; // retorna true\n!0;     // retorna true\n!'texto'; // retorna false"
+      }
+    ]
+  },
+  "caseStudy": {
+    "title": "Estudo de Caso da Aula: A Função generateSerial(max)",
+    "subtitle": "Evolução do tratamento de parâmetros default e a armadilha do || com o valor zero",
+    "description": "O professor Rodrigo Branas demonstra como desenvolvedores costumavam definir valores padrão em funções antes dos parâmetros default do ES6 e por que a avaliação de curto-circuito com || pode falhar silenciosamente.",
+    "steps": [
+      {
+        "step": "1. Verificação Imperativa com if",
+        "code": "function generateSerial(max) {\n  if (!max) {\n    max = 1000;\n  }\n  return Math.floor(Math.random() * max);\n}\nconsole.log(generateSerial()); // Retorna serial entre 0 e 1000",
+        "note": "Funciona para undefined, mas se max = 0 for passado intencionalmente, !0 é verdadeiro e max vira 1000!"
+      },
+      {
+        "step": "2. Idioma Clássico com Curto-Circuito (||)",
+        "code": "function generateSerial(max) {\n  max = max || 1000; // Curto-circuito!\n  return Math.floor(Math.random() * max);\n}\nconsole.log(generateSerial(100)); // 0 a 100\nconsole.log(generateSerial());    // 0 a 1000 (default)",
+        "note": "Forma muito concisa, porém com a mesma armadilha: se max for 0, 0 é falsy e o fallback 1000 é aplicado indevidamente."
+      },
+      {
+        "step": "3. Solução Moderna com Coalescência Nula (??)",
+        "code": "function generateSerial(max) {\n  max = max ?? 1000; // Só aplica default se for null ou undefined!\n  return Math.floor(Math.random() * max);\n}\nconsole.log(generateSerial(0)); // Retorna 0 (respeita o valor zero!)",
+        "note": "A coalescência nula (??) preserva 0, false e strings vazias como valores legítimos."
+      }
+    ]
+  },
+  "ternarySection": {
+    "title": "Operador Condicional Ternário (? :)",
+    "description": "O operador ternário é a única operação em JavaScript que aceita três operandos. Ele é uma expressão (produz um valor que pode ser atribuído a uma variável ou retornado diretamente) e segue a sintaxe:",
+    "syntax": "condição ? expressãoSeVerdadeira : expressãoSeFalsa",
+    "examples": [
+      { "code": "(10 >= 18) ? 'good' : 'bad';", "result": "'bad'", "explanation": "10 não é maior ou igual a 18" },
+      { "code": "(10) ? 'good' : 'bad';", "result": "'good'", "explanation": "10 é número positivo (truthy)" },
+      { "code": "(0) ? 'good' : 'bad';", "result": "'bad'", "explanation": "0 é falsy" },
+      { "code": "const podeBeber = idade >= 18 ? 'Sim' : 'Não';", "result": "'Sim' ou 'Não'", "explanation": "Atribuição direta de variável baseada em predicado" }
+    ]
+  },
+  "playgroundSection": {
+    "title": "Playground Interativo da Aula",
+    "description": "Teste o comportamento de comparações amplas e estritas, avaliações em curto-circuito, a função generateSerial e o operador ternário em tempo real."
+  },
+  "playgroundCode": "// ============================================================================\n// Aula 9.1: Operadores Booleanos - Rodrigo Branas\n// ============================================================================\n\nconsole.info('1. IGUALDADE AMPLA (==) VS ESTRITA (===)');\nconsole.log('5 == \"5\":', 5 == \"5\");         // true (converte string para number)\nconsole.log('5 === \"5\":', 5 === \"5\");       // false (tipos diferentes!)\nconsole.log('0 == \"\":', 0 == \"\");           // true (coerção oculta)\nconsole.log('0 === \"\":', 0 === \"\");         // false\nconsole.log('null == undefined:', null == undefined);   // true\nconsole.log('null === undefined:', null === undefined); // false\n\nconsole.info('\\n2. OPERADORES LÓGICOS E CURTO-CIRCUITO');\n// AND (&&): retorna o primeiro falsy ou o último operando\nconsole.log('1 && 2:', 1 && 2);             // 2\nconsole.log('0 && 2:', 0 && 2);             // 0\nconsole.log('\"user\" && \"autenticado\":', \"user\" && \"autenticado\"); // \"autenticado\"\n\n// OR (||): retorna o primeiro truthy ou o último operando\nconsole.log('0 || 2:', 0 || 2);             // 2\nconsole.log('1 || 0:', 1 || 0);             // 1\nconsole.log('\"\" || \"visitante\":', \"\" || \"visitante\"); // \"visitante\"\n\nconsole.info('\\n3. ESTUDO DE CASO: generateSerial(max)');\nfunction generateSerial(max) {\n  max = max || 1000;\n  return Math.floor(Math.random() * max);\n}\nconsole.log('generateSerial(100):', generateSerial(100));\nconsole.log('generateSerial():', generateSerial()); // assume 1000\n\n// Comparação com Coalescência Nula (??):\nconst estoque = 0;\nconsole.log('estoque || 10:', estoque || 10); // 10 (inesperado! 0 virou falsy)\nconsole.log('estoque ?? 10:', estoque ?? 10); // 0 (correto! preserva o zero)\n\nconsole.info('\\n4. OPERADOR TERNÁRIO');\nconst idade = 20;\nconst podeDirigir = idade >= 18 ? 'Habilitado' : 'Não habilitado';\nconsole.log('Status para idade 20:', podeDirigir);\nconsole.log('(10 >= 18) ? \"good\" : \"bad\":', (10 >= 18) ? 'good' : 'bad');\nconsole.log('(0) ? \"good\" : \"bad\":', (0) ? 'good' : 'bad');\n",
+  "keyTakeaways": [
+    {
+      "title": "Sempre use === e !==",
+      "description": "Evite o comparador frouxo ==. Ele realiza coerções implícitas bizarras como 0 == '' ou false == 0 que geram brechas de segurança e bugs difíceis de rastrear.",
+      "icon": "shield",
+      "variant": "rose"
+    },
+    {
+      "title": "Curto-circuito Retorna Operando",
+      "description": "&& e || não retornam necessariamente true ou false. Eles retornam o próprio valor do operando decisivo, permitindo criação de pipelines de fallback expressivos.",
+      "icon": "zap",
+      "variant": "amber"
+    },
+    {
+      "title": "Diferença Crítica entre || e ??",
+      "description": "O operador || avalia falsy (substituindo 0, '' e false). Se 0 for um valor válido (como estoque ou temperatura), prefira sempre o operador ?? (Nullish Coalescing).",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 9: Boolean",
+      "href": "/java-script/cursos/java-script-masterclass/boolean"
+    },
+    "next": {
+      "label": "Aula 10: Symbol",
+      "href": "/java-script/cursos/java-script-masterclass/symbol"
+    }
+  }
+}

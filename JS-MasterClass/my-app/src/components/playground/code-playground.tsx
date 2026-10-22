@@ -153,17 +153,17 @@ export function CodePlayground({
   return (
     <section
       aria-labelledby={`playground-title-${playgroundId}`}
-      className={`flex flex-col w-full rounded-2xl border border-[var(--border-subtle)] bg-[var(--card-bg)] shadow-md overflow-hidden ${className}`}
+      className={`flex flex-col w-full rounded-2xl border border-subtle bg-card shadow-md overflow-hidden ${className}`}
     >
       {/* Cabeçalho do Playground (Suporta modo Colapsável quando requisitado em páginas de estudo) */}
       {collapsible ? (
-        <header className="border-b border-[var(--border-subtle)] bg-[var(--card-bg)]">
+        <header className="border-b border-border-subtle bg-card">
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
             aria-expanded={isOpen}
             aria-controls={`playground-content-${playgroundId}`}
-            className="w-full px-5 py-3.5 flex items-center justify-between text-left hover:bg-[var(--muted)]/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 cursor-pointer"
+            className="w-full px-5 py-3.5 flex items-center justify-between text-left hover:bg-muted/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 cursor-pointer"
           >
             <div className="flex flex-col sm:flex-row sm:items-center gap-2">
               <div className="flex items-center gap-2.5">
@@ -174,7 +174,7 @@ export function CodePlayground({
                 </span>
                 <h3
                   id={`playground-title-${playgroundId}`}
-                  className="text-sm sm:text-base font-bold text-[var(--foreground)] tracking-tight"
+                  className="text-sm sm:text-base font-bold text-foreground tracking-tight"
                 >
                   {title || "Playground de Código Interativo"}
                 </h3>
@@ -183,7 +183,7 @@ export function CodePlayground({
                 </span>
               </div>
               {description && (
-                <span className="text-xs text-[var(--text-muted)] hidden md:inline-block">
+                <span className="text-xs text-text-muted hidden md:inline-block">
                   &bull; {description}
                 </span>
               )}
@@ -206,11 +206,11 @@ export function CodePlayground({
         </header>
       ) : (
         (title || description) && (
-          <header className="px-5 py-4 border-b border-[var(--border-subtle)] bg-[var(--card-bg)]">
+          <header className="px-5 py-4 border-b border-border-subtle bg-card">
             {title && (
               <h3
                 id={`playground-title-${playgroundId}`}
-                className="text-base sm:text-lg font-bold text-[var(--foreground)] tracking-tight flex items-center gap-2"
+                className="text-base sm:text-lg font-bold text-foreground tracking-tight flex items-center gap-2"
               >
                 <span>{title}</span>
                 <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20">
@@ -219,7 +219,7 @@ export function CodePlayground({
               </h3>
             )}
             {description && (
-              <p className="text-xs sm:text-sm text-[var(--text-muted)] mt-1">
+              <p className="text-xs sm:text-sm text-text-muted mt-1">
                 {description}
               </p>
             )}
@@ -232,7 +232,7 @@ export function CodePlayground({
         <div id={`playground-content-${playgroundId}`}>
           {/* Barra de Controles de Execução */}
           {showControls && (
-            <div className="p-3 border-b border-[var(--border-subtle)] bg-[var(--background)]/50">
+            <div className="p-3 border-b border-border-subtle bg-background/50">
               <CodeControls
                 isRunning={isRunning}
                 onRun={handleRun}

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "title": "Aula 15: Exercício 2 • JavaScript MasterClass",
+    "description": "Caderno de exercícios práticos número 2 do curso JavaScript MasterClass. Desafios envolvendo criação de objetos, manipulação de protótipos, proteção de propriedades, herança e serialização com JSON."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/java-script/cursos/java-script-masterclass"
+    },
+    {
+      "label": "Aula 15: Exercício 2",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 06: Serialização & Prática Avançada • Material PDF",
+    "title": "Aula 15: Exercício 2",
+    "description": "Caderno de exercícios práticos número 2 do curso JavaScript MasterClass. Desafios envolvendo criação de objetos, manipulação de protótipos, proteção de propriedades, herança e serialização com JSON."
+  },
+  "topics": [
+    "Enunciado completo do Desafio 2 proposto por Rodrigo Branas",
+    "Criação e modelagem de entidades com protótipos e Object API",
+    "Implementação de métodos de busca e manipulação de coleções",
+    "Regras de integridade com Object.freeze ou Object.seal",
+    "Testes automatizados esperados para validar o exercício"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "Pratique a modelagem sem auxílio de bibliotecas externas para fixar a herança prototípica pura.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "Analise as asserções de teste propostas no PDF antes de iniciar a codificação da solução.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": null,
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 14: JSON",
+      "href": "/java-script/cursos/java-script-masterclass/json"
+    },
+    "next": {
+      "label": "Aula 15.1: Correção Exercício 2",
+      "href": "/java-script/cursos/java-script-masterclass/correcao-do-exercicio-2"
+    }
+  }
+}

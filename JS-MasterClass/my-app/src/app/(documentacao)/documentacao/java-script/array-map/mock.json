@@ -1,11 +1,12 @@
 {
   "metadata": {
-    "title": "Documentação: Array.prototype.map()",
-    "description": "Guia prático e interativo sobre Array.prototype.map() em JavaScript, com exemplos executáveis no navegador."
+    "title": "Documentação: Array.prototype.map() | JS MasterClass",
+    "description": "Guia prático e interativo sobre Array.prototype.map() em JavaScript, com assinatura, boas práticas e playground executável com colapse."
   },
   "breadcrumbs": [
     { "label": "Início", "href": "/" },
-    { "label": "Documentação" },
+    { "label": "Documentação", "href": "/documentacao" },
+    { "label": "JavaScript", "href": "/documentacao/java-script" },
     { "label": "Array.prototype.map()", "current": true }
   ],
   "header": {
@@ -28,30 +29,30 @@
   },
   "playgroundSection": {
     "title": "Laboratório Interativo",
-    "description": "Você pode editar os dados, alterar a função de transformação e clicar em Executar para ver a saída imediata no console."
+    "description": "O editor pode ser recolhido ou expandido através do botão no topo. Altere os dados e execute para inspecionar os logs no console."
   },
   "bestPractices": [
     {
       "title": "Não use map() sem retornar valor",
-      "description": "Se você precisa apenas iterar para gerar efeitos colaterais (como salvar no banco ou emitir alertas) sem coletar um novo array, prefira forEach() ou um loop for...of. O uso indevido de map() criará um array desnecessário de valores undefined na memória.",
+      "description": "Se você precisa apenas iterar para gerar efeitos colaterais sem coletar um novo array, prefira forEach() ou um loop for...of. O uso indevido de map() criará um array desnecessário de undefined.",
       "variant": "rose",
       "icon": "alert"
     },
     {
       "title": "Preserve a Imutabilidade dos Itens",
-      "description": "Ao mapear arrays contendo objetos, retorne uma cópia superficial com spread ({ ...item, novaPropriedade }) em vez de fazer mutações diretas em item.propriedade = valor, garantindo que o array original permaneça inalterado.",
+      "description": "Ao mapear arrays contendo objetos, retorne uma cópia superficial com spread ({ ...item, novaPropriedade }) em vez de fazer mutações diretas em item.prop = valor.",
       "variant": "emerald",
       "icon": "check"
     }
   ],
   "navigationFooter": {
     "previous": {
-      "label": "Abrir Playground Livre",
-      "href": "/playground"
+      "label": "Tópicos de JavaScript",
+      "href": "/documentacao/java-script"
     },
     "next": {
-      "label": "Próxima Aula: Booleans & Coerção",
-      "href": "/aulas/java-script/boolean"
+      "label": "Array.prototype.filter()",
+      "href": "/documentacao/java-script/array-filter"
     }
   }
 }

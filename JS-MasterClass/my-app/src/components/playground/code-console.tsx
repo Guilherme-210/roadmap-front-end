@@ -14,8 +14,8 @@ const LEVEL_STYLES: Record<
   }
 > = {
   log: {
-    container: "text-[var(--foreground)] border-l-2 border-slate-400/30 pl-3",
-    badge: "bg-slate-500/10 text-[var(--text-muted)] border-slate-500/20",
+    container: "text-foreground border-l-2 border-slate-400/30 pl-3",
+    badge: "bg-slate-500/10 text-text-muted border-slate-500/20",
     icon: "log",
     label: "LOG",
   },
@@ -84,12 +84,12 @@ export function CodeConsole({
 
   return (
     <div
-      className={`flex flex-col w-full rounded-xl border border-[var(--border-subtle)] bg-[var(--card-bg)] shadow-xs overflow-hidden transition-colors duration-200 ${className}`}
+      className={`flex flex-col w-full rounded-xl border border-border-subtle bg-card shadow-xs overflow-hidden transition-colors duration-200 ${className}`}
       role="region"
       aria-label="Console de saída de código"
     >
       {/* Barra de Cabeçalho do Console */}
-      <div className="flex items-center justify-between px-4 py-2.5 bg-[var(--muted)]/50 border-b border-[var(--border-subtle)]">
+      <div className="flex items-center justify-between px-4 py-2.5 bg-muted/50 border-b border-border-subtle">
         <div className="flex items-center gap-2">
           {/* Ícone de Terminal */}
           <svg
@@ -106,12 +106,12 @@ export function CodeConsole({
               d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
             />
           </svg>
-          <span className="text-xs font-semibold tracking-wide uppercase text-[var(--foreground)]">
+          <span className="text-xs font-semibold tracking-wide uppercase text-foreground">
             Console
           </span>
 
           {logs.length > 0 && (
-            <span className="px-1.5 py-0.5 text-[10px] font-mono font-medium rounded-full bg-[var(--card-bg)] text-[var(--text-muted)] border border-[var(--border-subtle)]">
+            <span className="px-1.5 py-0.5 text-[10px] font-mono font-medium rounded-full bg-card text-text-muted border border-border-subtle">
               {logs.length} {logs.length === 1 ? "saída" : "saídas"}
             </span>
           )}
@@ -140,7 +140,7 @@ export function CodeConsole({
             <button
               type="button"
               onClick={handleCopy}
-              className="inline-flex items-center gap-1 px-2 py-1 text-xs text-[var(--text-muted)] hover:text-[var(--foreground)] rounded hover:bg-[var(--card-bg)] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber-500 cursor-pointer"
+              className="inline-flex items-center gap-1 px-2 py-1 text-xs text-text-muted hover:text-foreground rounded hover:bg-card transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber-500 cursor-pointer"
               title="Copiar todas as saídas"
               aria-label="Copiar saídas do console"
             >
@@ -167,7 +167,7 @@ export function CodeConsole({
               type="button"
               onClick={onClear}
               disabled={logs.length === 0}
-              className={`p-1 rounded text-[var(--text-muted)] hover:text-[var(--foreground)] hover:bg-[var(--card-bg)] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber-500 ${
+              className={`p-1 rounded text-text-muted hover:text-foreground hover:bg-card transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber-500 ${
                 logs.length === 0 ? "opacity-30 cursor-not-allowed" : "cursor-pointer"
               }`}
               title="Limpar console"
@@ -195,13 +195,13 @@ export function CodeConsole({
       {/* Área de Visualização dos Logs */}
       <div
         style={{ minHeight: "180px", maxHeight }}
-        className="p-4 overflow-y-auto font-mono text-xs leading-relaxed space-y-2 bg-[var(--card-bg)]"
+        className="p-4 overflow-y-auto font-mono text-xs leading-relaxed space-y-2 bg-card"
         role="log"
         aria-live="polite"
       >
         {/* Estado Vazio */}
         {logs.length === 0 && !isRunning && !error && (
-          <div className="flex flex-col items-center justify-center h-full min-h-[160px] text-center text-[var(--text-muted)]">
+          <div className="flex flex-col items-center justify-center h-full min-h-[160px] text-center text-text-muted">
             <svg
               className="w-8 h-8 mb-2 text-[var(--border-subtle)] stroke-[1.5]"
               fill="none"
@@ -215,12 +215,12 @@ export function CodeConsole({
                 d="M4 17l6-6-6-6m8 14h8"
               />
             </svg>
-            <p className="font-medium text-xs text-[var(--foreground)]/80">
+            <p className="font-medium text-xs text-foreground/80">
               Nenhuma saída gerada ainda
             </p>
-            <p className="text-[11px] mt-1 max-w-xs text-[var(--text-muted)]">
+            <p className="text-[11px] mt-1 max-w-xs text-text-muted">
               Clique no botão <span className="font-semibold text-amber-500">Executar</span> ou pressione{" "}
-              <kbd className="px-1 py-0.5 rounded bg-[var(--muted)] border border-[var(--border-subtle)] text-[10px]">
+              <kbd className="px-1 py-0.5 rounded bg-muted border border-border-subtle text-[10px]">
                 Ctrl+Enter
               </kbd>{" "}
               para testar o código.
@@ -267,7 +267,7 @@ export function CodeConsole({
               className={`flex flex-col sm:flex-row items-start sm:items-baseline gap-2 transition-opacity ${style.container}`}
             >
               <div className="flex items-center gap-1.5 shrink-0 select-none">
-                <span className="text-[10px] text-[var(--text-muted)] opacity-60">
+                <span className="text-[10px] text-text-muted opacity-60">
                   {formatTimestamp(entry.timestamp)}
                 </span>
                 <span

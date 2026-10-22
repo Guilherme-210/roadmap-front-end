@@ -21,7 +21,7 @@ export function LessonNavigation({
   return (
     <nav
       aria-label="Navegação entre lições"
-      className={`pt-8 border-t border-[var(--border-subtle)] flex flex-wrap items-center justify-between gap-4 ${className}`}
+      className={`pt-8 border-t border-border-subtle flex flex-wrap items-center justify-between gap-4 ${className}`}
     >
       {previous ? (
         <Link
@@ -40,7 +40,7 @@ export function LessonNavigation({
       {next ? (
         <Link
           href={next.href}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--card-bg)] border border-[var(--border-subtle)] text-xs sm:text-sm font-semibold text-[var(--foreground)] hover:bg-[var(--muted)] transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border-subtle text-xs sm:text-sm font-semibold text-foreground hover:bg-muted transition-colors"
         >
           <span>{next.label}</span>
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

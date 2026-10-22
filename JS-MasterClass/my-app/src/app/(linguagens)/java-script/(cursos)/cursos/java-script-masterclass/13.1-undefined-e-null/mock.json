@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "Aula 13.1: Undefined e Null • JavaScript MasterClass",
+    "description": "A distinção conceitual e prática entre os tipos primitivos undefined e null. Quando usar cada um, tratamento de propriedades inexistentes, o comportamento do Optional Chaining (?.) e a explicação histórica de typeof null === 'object'."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/java-script/cursos/java-script-masterclass"
+    },
+    {
+      "label": "Aula 13.1: Undefined e Null",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 05: Objetos & Herança • Vídeo Aula",
+    "title": "Aula 13.1: Undefined e Null",
+    "description": "A distinção conceitual e prática entre os tipos primitivos undefined e null. Quando usar cada um, tratamento de propriedades inexistentes, o comportamento do Optional Chaining (?.) e a explicação histórica de typeof null === 'object'."
+  },
+  "topics": [
+    "undefined: ausência involuntária de valor (declarado mas não inicializado)",
+    "null: ausência intencional de valor ou objeto",
+    "Comparações de igualdade solta (null == undefined) vs estrita (null === undefined)",
+    "Acesso seguro a propriedades encadeadas com Optional Chaining (?.)",
+    "O bug histórico da linguagem: typeof null retornando 'object'"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "Use `null` para indicar explicitamente que uma variável ou propriedade de objeto não aponta para nenhum valor.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "`Optional Chaining (?.)` evita erros fatais de `Cannot read properties of undefined`.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "let naoDefinido;\nconsole.log(naoDefinido); // undefined (automático)\n\nlet vazio = null;\nconsole.log(vazio); // null (intencional)\n\nconsole.log(null == undefined); // true (coerção solta)\nconsole.log(null === undefined); // false (tipos distintos!)\n\n// Optional Chaining seguro:\nconst config = {};\nconsole.log(config.database?.connection?.port); // undefined (sem lançar erro)",
+    "caption": "Diferença semântica entre undefined e null e uso de Optional Chaining"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 13: Object",
+      "href": "/java-script/cursos/java-script-masterclass/object"
+    },
+    "next": {
+      "label": "Aula 13.2: Comparação de Objetos",
+      "href": "/java-script/cursos/java-script-masterclass/comparacao-de-objetos"
+    }
+  }
+}

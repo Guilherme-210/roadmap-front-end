@@ -48,7 +48,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)] transition-colors duration-200"
+        className="min-h-full flex flex-col bg-background text-foreground transition-colors duration-200"
       >
         <Header />
         <main className="flex-1 flex flex-col">{children}</main>

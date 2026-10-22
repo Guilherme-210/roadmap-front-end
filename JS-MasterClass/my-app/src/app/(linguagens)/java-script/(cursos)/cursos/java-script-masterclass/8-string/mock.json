@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "Aula 8: String • JavaScript MasterClass",
+    "description": "O tipo primitivo String para representação de texto em JavaScript. Codificação em unidades UTF-16, imutabilidade intrínseca de cadeias de caracteres, caracteres de escape e medição de comprimento com a propriedade length."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "JavaScript",
+      "href": "/java-script"
+    },
+    {
+      "label": "JavaScript MasterClass",
+      "href": "/java-script/cursos/java-script-masterclass"
+    },
+    {
+      "label": "Aula 8: String",
+      "current": true
+    }
+  ],
+  "header": {
+    "badge": "Módulo 03: Tipos & Semântica • Vídeo Aula",
+    "title": "Aula 8: String",
+    "description": "O tipo primitivo String para representação de texto em JavaScript. Codificação em unidades UTF-16, imutabilidade intrínseca de cadeias de caracteres, caracteres de escape e medição de comprimento com a propriedade length."
+  },
+  "topics": [
+    "Delimitadores literais: aspas simples, aspas duplas",
+    "Imutabilidade: métodos que manipulam strings sempre retornam novas instâncias",
+    "Codificação UTF-16 e pares substitutos (surrogate pairs)",
+    "Acesso a caracteres individuais via colchetes ou charAt()",
+    "Sequências de escape especiais (quebra de linha, tabulação, Unicode)"
+  ],
+  "keyTakeaways": [
+    {
+      "title": "Ponto Chave 1",
+      "description": "Strings em JavaScript são sequências indexadas e 100% imutáveis.",
+      "icon": "check",
+      "variant": "emerald"
+    },
+    {
+      "title": "Ponto Chave 2",
+      "description": "A propriedade length conta unidades de código UTF-16 de 16 bits, não necessariamente grafemas visuais.",
+      "icon": "check",
+      "variant": "emerald"
+    }
+  ],
+  "codeSnippet": {
+    "language": "javascript",
+    "code": "const curso = \"JavaScript MasterClass\";\nconsole.log(curso.length); // 21\nconsole.log(curso[0]); // \"J\"\n\n// Imutabilidade comprovada:\ncurso[0] = \"X\"; // Silenciosamente ignorado (ou TypeError em strict mode)\nconsole.log(curso); // \"JavaScript MasterClass\" (permanece inalterado)",
+    "caption": "Propriedade length e garantia de imutabilidade das strings"
+  },
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 7.4: Math API",
+      "href": "/java-script/cursos/java-script-masterclass/math-api"
+    },
+    "next": {
+      "label": "Aula 8.1: Template Literal",
+      "href": "/java-script/cursos/java-script-masterclass/template-literal"
+    }
+  }
+}

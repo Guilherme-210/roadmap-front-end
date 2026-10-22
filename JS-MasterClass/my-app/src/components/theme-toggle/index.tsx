@@ -53,7 +53,7 @@ export function ThemeToggle() {
       type="button"
       suppressHydrationWarning
       onClick={toggleTheme}
-      className="relative flex items-center justify-center w-9 h-9 rounded-lg border border-[var(--border-subtle)] bg-[var(--card-bg)] text-[var(--foreground)] hover:text-amber-500 hover:border-amber-500/50 hover:bg-[var(--muted)] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50 cursor-pointer shadow-xs"
+      className="relative flex items-center justify-center w-9 h-9 rounded-lg border border-border-subtle bg-card text-foreground hover:text-amber-500 hover:border-amber-500/50 hover:bg-muted transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50 cursor-pointer shadow-xs"
       title={isDark ? "Mudar para modo claro" : "Mudar para modo escuro"}
       aria-label={isDark ? "Mudar para modo claro" : "Mudar para modo escuro"}
     >

@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "title": "Documentação: Array.prototype.filter() | JS MasterClass",
+    "description": "Guia prático e interativo sobre Array.prototype.filter() em JavaScript, com predicados lógicos, boas práticas e playground executável com colapse."
+  },
+  "breadcrumbs": [
+    { "label": "Início", "href": "/" },
+    { "label": "Documentação", "href": "/documentacao" },
+    { "label": "JavaScript", "href": "/documentacao/java-script" },
+    { "label": "Array.prototype.filter()", "current": true }
+  ],
+  "header": {
+    "badge": "JavaScript Core • Métodos Funcionais",
+    "title": "Array.prototype.filter()",
+    "description": "O método filter() é utilizado para selecionar um subconjunto de elementos de uma coleção que atendem a uma condição booleana, sem modificar o array original."
+  },
+  "conceptSection": {
+    "title": "Como o método funciona?",
+    "description": "O filter() itera sobre cada elemento do array e invoca uma função de teste (predicado). Se a função retornar um valor verdadeiro (truthy), o elemento é incluído no novo array resultante; caso contrário, é descartado.",
+    "signature": {
+      "heading": "Assinatura do Método",
+      "code": "array.filter(function(elementoAtual, indice, arrayOriginal) { /* retorna booleano */ })",
+      "parameters": [
+        { "name": "elementoAtual", "description": "O item que está sendo testado na iteração atual." },
+        { "name": "indice", "optional": true, "description": "A posição indexada do elemento atual no array." },
+        { "name": "arrayOriginal", "optional": true, "description": "A referência ao array original submetido ao filtro." }
+      ]
+    }
+  },
+  "playgroundSection": {
+    "title": "Laboratório Interativo",
+    "description": "O editor pode ser recolhido ou expandido através do botão no topo. Teste critérios de filtragem e veja os resultados filtrados no console."
+  },
+  "bestPractices": [
+    {
+      "title": "Mantenha o Predicado Puro",
+      "description": "A função de teste passada ao filter() deve ser uma função pura (sem efeitos colaterais). Evite alterar variáveis externas ou fazer mutações dentro do callback do filtro.",
+      "variant": "emerald",
+      "icon": "check"
+    },
+    {
+      "title": "Não use filter() apenas para encontrar o primeiro item",
+      "description": "Se você precisa apenas do primeiro elemento que satisfaz a condição, use find() ou findIndex() em vez de filter(). O filter() sempre percorrerá todo o array desnecessariamente.",
+      "variant": "rose",
+      "icon": "alert"
+    }
+  ],
+  "navigationFooter": {
+    "previous": {
+      "label": "Array.prototype.map()",
+      "href": "/documentacao/java-script/array-map"
+    },
+    "next": {
+      "label": "Playground Aberto",
+      "href": "/playground"
+    }
+  }
+}
+

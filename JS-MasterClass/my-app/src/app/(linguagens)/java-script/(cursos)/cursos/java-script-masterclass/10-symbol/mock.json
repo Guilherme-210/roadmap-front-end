@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "title": "Aula 10: Symbol • JavaScript MasterClass",
+    "description": "Estudo completo sobre o tipo primitivo Symbol, unicidade de chaves em objetos, metaprogramação com Well-Known Symbols (Symbol.iterator, Symbol.match) e registro global com Rodrigo Branas."
+  },
+  "breadcrumbs": [
+    { "label": "Início", "href": "/" },
+    { "label": "JavaScript", "href": "/java-script" },
+    { "label": "JavaScript MasterClass", "href": "/java-script/cursos/java-script-masterclass" },
+    { "label": "Aula 10: Symbol", "current": true }
+  ],
+  "header": {
+    "badge": "Módulo 03: Tipos & Semântica • Rodrigo Branas",
+    "title": "Aula 10: Symbol & Well-Known Symbols",
+    "description": "O Symbol é um tipo primitivo, único e imutável introduzido no ECMAScript 2015. Atua como chave protegida em objetos contra colisões de propriedades e possibilita metaprogramação profunda através dos Well-Known Symbols reconhecidos nativamente pelo interpretador."
+  },
+  "conceptSection": {
+    "title": "O Tipo Primitivo Symbol",
+    "description": "Diferente de strings e numbers, todo Symbol retornado pela função Symbol() é garantidamente único em toda a runtime. Ele não possui sintaxe literal (como as aspas para strings) e não permite o uso do operador new.",
+    "points": [
+      {
+        "title": "Unicidade Absoluta",
+        "description": "Dois símbolos criados com a mesma descrição textual nunca são iguais. Symbol('id') === Symbol('id') sempre avalia para false."
+      },
+      {
+        "title": "Sem Construtor de Objeto",
+        "description": "Symbol é uma função construtora primitiva especial. Chamar new Symbol() lança um TypeError para prevenir a criação de instâncias de objetos wrapper."
+      },
+      {
+        "title": "Imunidade a Colisão",
+        "description": "Ideal para bibliotecas e frameworks adicionarem metadados ou funcionalidades a objetos sem o risco de sobrescrever propriedades existentes do usuário."
+      }
+    ]
+  },
+  "objectKeysSection": {
+    "title": "Symbols como Chaves de Propriedades",
+    "description": "Quando utilizado como identificador de propriedade em um objeto, o Symbol não é enumerado pelos métodos tradicionais de inspeção, conferindo um nível de ocultação muito útil na modelagem de software.",
+    "behaviorPoints": [
+      { "label": "Object.keys(obj)", "result": "Ignora chaves Symbol (retorna apenas strings)" },
+      { "label": "for...in", "result": "Ignora chaves Symbol durante a iteração" },
+      { "label": "JSON.stringify(obj)", "result": "Omite completamente propriedades com chaves Symbol" },
+      { "label": "Object.getOwnPropertySymbols(obj)", "result": "Retorna o array com todos os símbolos do objeto" },
+      { "label": "Reflect.ownKeys(obj)", "result": "Retorna tanto chaves em string quanto Symbols" }
+    ],
+    "exampleCode": "const id = Symbol('id');\nconst usuario = {\n  nome: 'Rodrigo',\n  [id]: 1001 // Chave dinâmica calculada\n};\n\nconsole.log(Object.keys(usuario)); // ['nome']\nconsole.log(usuario[id]); // 1001\nconsole.log(JSON.stringify(usuario)); // '{\"nome\":\"Rodrigo\"}'\nconsole.log(Object.getOwnPropertySymbols(usuario)); // [Symbol(id)]"
+  },
+  "wellKnownSymbolsSection": {
+    "title": "Well-Known Symbols: Metaprogramação no Motor JS",
+    "description": "O interpretador do JavaScript reconhece uma coleção de símbolos embutidos na função Symbol. Esses símbolos atuam como 'ganchos' (hooks) internos que permitem interceptar e redefinir o comportamento padrão da linguagem:",
+    "symbols": [
+      {
+        "name": "Symbol.iterator",
+        "purpose": "Protocolo de Iteração",
+        "description": "Define a função geradora de iteradores consumida por laços for...of, operador spread (...) e desestruturação de arrays."
+      },
+      {
+        "name": "Symbol.match",
+        "purpose": "String API & RegExp",
+        "description": "Controla se o interpretador deve tratar um objeto como expressão regular em métodos como String.prototype.match() e startsWith()."
+      },
+      {
+        "name": "Symbol.toPrimitive",
+        "purpose": "Coerção de Tipos",
+        "description": "Função customizada que determina o valor primitivo retornado quando o objeto sofre coerção numérica ('number'), textual ('string') ou padrão ('default')."
+      },
+      {
+        "name": "Symbol.hasInstance",
+        "purpose": "Operador instanceof",
+        "description": "Método que determina se um objeto construtor reconhece uma instância como sua, customizando o resultado de obj instanceof Classe."
+      },
+      {
+        "name": "Symbol.isConcatSpreadable",
+        "purpose": "Array Flattening",
+        "description": "Booleano que configura se o objeto deve ter seus elementos concatenados individualmente ao invés de inserido como item único em Array.prototype.concat()."
+      },
+      {
+        "name": "Symbol.toStringTag",
+        "purpose": "Identificação de Tipo",
+        "description": "String customizada retornada no formato '[object MinhaTag]' ao executar Object.prototype.toString.call(objeto)."
+      },
+      {
+        "name": "Symbol.replace / Symbol.search / Symbol.split",
+        "purpose": "Operações Textuais Avançadas",
+        "description": "Permite que objetos arbitrários implementem algoritmos próprios de busca, substituição e particionamento invocados pela String API."
+      }
+    ]
+  },
+  "caseStudySection": {
+    "title": "Estudo de Caso da Aula: Manipulação do Symbol.match",
+    "subtitle": "Como o interpretador decide se o argumento de startsWith() é uma RegExp",
+    "description": "Na aula de Rodrigo Branas, é demonstrado que o método startsWith() lança uma exceção se passarmos uma RegExp. O interpretador faz essa verificação inspecionando exatamente a propriedade Symbol.match do objeto recebido.",
+    "steps": [
+      {
+        "step": "1. Comportamento Nativo Restritivo",
+        "code": "let regexp = /JavaScript/;\n\n// Lança TypeError:\n// 'First argument to startsWith must not be a regular expression'\n'/JavaScript/'.startsWith(regexp);",
+        "note": "startsWith consulta regexp[Symbol.match]. Como expressões regulares possuem esse símbolo por padrão, o motor recusa a operação."
+      },
+      {
+        "step": "2. Modificação via Metaprogramação",
+        "code": "let regexp = /JavaScript/;\n\n// Desativamos a identificação de match:\nregexp[Symbol.match] = false;\n\n// Agora a execução é permitida e retorna true:\nconsole.log('/JavaScript/'.startsWith(regexp)); // true!",
+        "note": "Ao alterar Symbol.match para false, o interpretador ignora a natureza de RegExp e executa a verificação normalmente."
+      }
+    ]
+  },
+  "globalRegistrySection": {
+    "title": "Registro Global de Símbolos: Symbol.for() & Symbol.keyFor()",
+    "description": "Quando você precisa que múltiplos módulos, arquivos ou até iframes compartilhem exatamente a mesma referência de Symbol, você pode registrar o símbolo no registro global da runtime.",
+    "items": [
+      {
+        "method": "Symbol.for(chave)",
+        "explanation": "Pesquisa no registro global por um símbolo associado à chave em string. Se existir, retorna a referência existente; se não existir, cria e cadastra um novo símbolo global.",
+        "example": "const s1 = Symbol.for('app.id');\nconst s2 = Symbol.for('app.id');\nconsole.log(s1 === s2); // true! (mesma referência compartilhada)"
+      },
+      {
+        "method": "Symbol.keyFor(simbolo)",
+        "explanation": "Retorna o nome da chave em string sob a qual o símbolo foi registrado globalmente. Retorna undefined para símbolos criados localmente com Symbol().",
+        "example": "const globalSym = Symbol.for('tema');\nconsole.log(Symbol.keyFor(globalSym)); // 'tema'\n\nconst localSym = Symbol('tema');\nconsole.log(Symbol.keyFor(localSym)); // undefined"
+      }
+    ]
+  },
+  "playgroundSection": {
+    "title": "Playground Interativo da Aula",
+    "description": "Experimente a unicidade de Symbols, o isolamento em chaves de objetos, o hack de metaprogramação com Symbol.match e o registro global Symbol.for()."
+  },
+  "playgroundCode": "// ============================================================================\n// Aula 10: Symbol & Well-Known Symbols - Rodrigo Branas\n// ============================================================================\n\nconsole.info('1. UNICIDADE DO TIPO PRIMITIVO SYMBOL');\nconst s1 = Symbol('descricao');\nconst s2 = Symbol('descricao');\n\nconsole.log('s1:', s1);\nconsole.log('s2:', s2);\nconsole.log('s1 === s2:', s1 === s2); // false (garantidamente únicos!)\nconsole.log('typeof s1:', typeof s1); // 'symbol'\n\nconsole.info('\\n2. CHAVE ÚNICA EM OBJETOS E ENUMERAÇÃO');\nconst chaveId = Symbol('id');\nconst usuario = {\n  nome: 'Rodrigo Branas',\n  papel: 'Instrutor',\n  [chaveId]: 9876\n};\n\nconsole.log('Object.keys(usuario):', Object.keys(usuario)); // ['nome', 'papel']\nconsole.log('Valor acessado via Symbol:', usuario[chaveId]);   // 9876\nconsole.log('Object.getOwnPropertySymbols:', Object.getOwnPropertySymbols(usuario));\n\nconsole.info('\\n3. ESTUDO DE CASO: METAPROGRAMAÇÃO COM Symbol.match');\nconst texto = '/JavaScript MasterClass/';\nconst regex = /JavaScript/;\n\ntry {\n  // Lança erro por padrão:\n  texto.startsWith(regex);\n} catch (err) {\n  console.warn('Erro padrão capturado:', err.message);\n}\n\n// Hack de metaprogramação demonstrado na aula:\nregex[Symbol.match] = false;\nconsole.log('Após regex[Symbol.match] = false:');\nconsole.log('texto.startsWith(regex):', texto.startsWith(regex)); // true!\n\nconsole.info('\\n4. REGISTRO GLOBAL: Symbol.for() vs Symbol()');\nconst g1 = Symbol.for('config.ambiente');\nconst g2 = Symbol.for('config.ambiente');\nconsole.log('g1 === g2 (Symbol.for):', g1 === g2); // true (compartilhado)\nconsole.log('Symbol.keyFor(g1):', Symbol.keyFor(g1)); // 'config.ambiente'\nconsole.log('Symbol.keyFor(s1 local):', Symbol.keyFor(s1)); // undefined\n",
+  "keyTakeaways": [
+    {
+      "title": "Chaves Protegidas em Objetos",
+      "description": "Symbols não colidem com propriedades de string e não são listados por for...in ou Object.keys(), sendo ideais para armazenar estados internos protegidos.",
+      "icon": "shield",
+      "variant": "emerald"
+    },
+    {
+      "title": "Well-Known Symbols e Metaprogramação",
+      "description": "Símbolos nativos como Symbol.iterator, Symbol.match e Symbol.toPrimitive permitem plugar comportamentos customizados diretamente no interpretador do JavaScript.",
+      "icon": "zap",
+      "variant": "amber"
+    },
+    {
+      "title": "Compartilhamento com Symbol.for()",
+      "description": "Para símbolos que precisam ser compartilhados entre diferentes módulos ou escopos da aplicação, utilize o registro global via Symbol.for(chave).",
+      "icon": "check",
+      "variant": "default"
+    }
+  ],
+  "navigationFooter": {
+    "previous": {
+      "label": "Aula 9.1: Operadores Booleanos",
+      "href": "/java-script/cursos/java-script-masterclass/operadores-booleanos"
+    },
+    "next": {
+      "label": "Aula 11: RegExp",
+      "href": "/java-script/cursos/java-script-masterclass/regexp"
+    }
+  }
+}

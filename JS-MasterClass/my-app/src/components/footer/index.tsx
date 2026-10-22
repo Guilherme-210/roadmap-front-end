@@ -45,14 +45,14 @@ function SocialIcon({ icon }: { icon: string }) {
 
 export function Footer() {
   return (
-    <footer className="w-full border-t border-[var(--border-subtle)] bg-[var(--footer-bg)] text-[var(--foreground)] transition-colors duration-200">
+    <footer className="w-full border-t border-border-subtle bg-[var(--footer-bg)] text-foreground transition-colors duration-200">
       <div className="mx-auto max-w-7xl px-4 pt-16 pb-12 sm:px-6 lg:px-8">
         {/* Grid Principal: Brand info + Colunas configuradas + Redes Sociais */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
           {/* Coluna 1: Marca & Descrição */}
           <div className="lg:col-span-1 space-y-4">
             <BrandLogo showTagline={false} />
-            <p className="text-sm text-[var(--text-muted)] leading-relaxed max-w-xs">
+            <p className="text-sm text-text-muted leading-relaxed max-w-xs">
               {SITE_CONFIG.description}
             </p>
             <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-500">
@@ -64,7 +64,7 @@ export function Footer() {
           {/* Colunas 2, 3, 4: FORMAÇÕES, SITE, LEGAL (conforme referência) */}
           {FOOTER_COLUMNS.map((column) => (
             <div key={column.title} className="space-y-4">
-              <h3 className="text-xs font-semibold tracking-wider text-[var(--text-muted)] uppercase">
+              <h3 className="text-xs font-semibold tracking-wider text-text-muted uppercase">
                 {column.title}
               </h3>
               <ul className="space-y-2.5">
@@ -89,10 +89,10 @@ export function Footer() {
 
           {/* Coluna 5: SOCIAL */}
           <div className="space-y-4">
-            <h3 className="text-xs font-semibold tracking-wider text-[var(--text-muted)] uppercase">
+            <h3 className="text-xs font-semibold tracking-wider text-text-muted uppercase">
               SOCIAL
             </h3>
-            <p className="text-xs text-[var(--text-muted)]">
+            <p className="text-xs text-text-muted">
               Acompanhe as atualizações, novidades e aulas semanais:
             </p>
             <div className="flex flex-wrap items-center gap-2 pt-1">
@@ -102,7 +102,7 @@ export function Footer() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-9 h-9 rounded-full border border-[var(--border-subtle)] bg-[var(--card-bg)] text-[var(--text-muted)] hover:text-amber-500 hover:border-amber-500/40 hover:bg-[var(--muted)] transition-all duration-200"
+                  className="flex items-center justify-center w-9 h-9 rounded-full border border-border-subtle bg-card text-text-muted hover:text-amber-500 hover:border-amber-500/40 hover:bg-muted transition-all duration-200"
                   aria-label={item.label}
                   title={item.label}
                 >
@@ -114,7 +114,7 @@ export function Footer() {
         </div>
 
         {/* Linha Divisória Inferior & Copyright */}
-        <div className="mt-12 pt-8 border-t border-[var(--border-subtle)] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--text-muted)]">
+        <div className="mt-12 pt-8 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-muted">
           <div>
             &copy; {SITE_CONFIG.currentYear} {SITE_CONFIG.name}. Todos os direitos reservados.
           </div>
