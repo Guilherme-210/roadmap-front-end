@@ -4,8 +4,8 @@
     "description": "Índice de tópicos e métodos da linguagem JavaScript com resumos conceituais e laboratórios interativos."
   },
   "breadcrumbs": [
-    { "label": "Início", "href": "/" },
-    { "label": "Documentação", "href": "/documentacao" },
+    { "label": "Início", "href": "HOME" },
+    { "label": "Documentação", "href": "DOCUMENTATION" },
     { "label": "JavaScript", "current": true }
   ],
   "header": {
@@ -20,7 +20,7 @@
       "badge": "Array • Funcional",
       "category": "Coleções & Iteração",
       "summary": "Transformação declarativa e imutável de coleções, gerando um novo array através de uma função de projeção.",
-      "href": "/documentacao/java-script/array-map",
+      "href": "DOCUMENTATION_ARRAY_MAP",
       "cta": "Ver Resumo & Playground",
       "tags": ["Imutabilidade", "Transformação", "Funcional", "O(n)"],
       "signature": "array.map(callback(elemento, indice, array))"
@@ -31,7 +31,7 @@
       "badge": "Array • Predicado",
       "category": "Coleções & Iteração",
       "summary": "Criação de subconjunto de elementos que satisfazem um critério lógico determinado por uma função predicado.",
-      "href": "/documentacao/java-script/array-filter",
+      "href": "DOCUMENTATION_ARRAY_FILTER",
       "cta": "Ver Resumo & Playground",
       "tags": ["Filtro", "Predicado", "Imutabilidade", "O(n)"],
       "signature": "array.filter(callback(elemento, indice, array))"
@@ -40,11 +40,11 @@
   "quickActions": {
     "courseLink": {
       "label": "Ir para Curso JavaScript MasterClass (28 Aulas)",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     "playgroundLink": {
       "label": "Abrir Playground Livre",
-      "href": "/playground"
+      "href": "PLAYGROUND"
     }
   }
 }

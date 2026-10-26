@@ -13,12 +13,12 @@
   "actions": [
     {
       "label": "Abrir Playground Interativo",
-      "href": "/playground",
+      "href": "PLAYGROUND",
       "primary": true
     },
     {
       "label": "Documentação: Array.map()",
-      "href": "/documentacao",
+      "href": "DOCUMENTATION",
       "primary": false
     }
   ],

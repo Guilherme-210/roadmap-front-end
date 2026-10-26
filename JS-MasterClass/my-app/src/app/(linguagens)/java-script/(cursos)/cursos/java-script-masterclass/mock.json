@@ -4,8 +4,8 @@
     "description": "Grade de aulas completa do curso JavaScript MasterClass com Rodrigo Branas: história da linguagem, tipos primitivos, objetos, herança e exercícios."
   },
   "breadcrumbs": [
-    { "label": "Início", "href": "/" },
-    { "label": "JavaScript", "href": "/java-script" },
+    { "label": "Início", "href": "HOME" },
+    { "label": "JavaScript", "href": "JAVA_SCRIPT" },
     { "label": "JavaScript MasterClass", "current": true }
   ],
   "header": {
@@ -21,7 +21,7 @@
   ],
   "startCourseLink": {
     "label": "Iniciar Aula 01: Abertura",
-    "href": "/java-script/cursos/java-script-masterclass/abertura"
+    "href": "MASTERCLASS_LESSON:abertura"
   },
   "studyTips": [
     {

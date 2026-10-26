@@ -4,9 +4,9 @@
     "description": "Comparações de igualdade estrita vs ampla, coerção com == e !=, operadores lógicos &&, || e !, avaliação em curto-circuito e operador ternário com Rodrigo Branas."
   },
   "breadcrumbs": [
-    { "label": "Início", "href": "/" },
-    { "label": "JavaScript", "href": "/java-script" },
-    { "label": "JavaScript MasterClass", "href": "/java-script/cursos/java-script-masterclass" },
+    { "label": "Início", "href": "HOME" },
+    { "label": "JavaScript", "href": "JAVA_SCRIPT" },
+    { "label": "JavaScript MasterClass", "href": "JAVA_SCRIPT_MASTERCLASS" },
     { "label": "Aula 9.1: Operadores Booleanos", "current": true }
   ],
   "header": {
@@ -150,11 +150,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 9: Boolean",
-      "href": "/java-script/cursos/java-script-masterclass/boolean"
+      "href": "MASTERCLASS_LESSON:boolean"
     },
     "next": {
       "label": "Aula 10: Symbol",
-      "href": "/java-script/cursos/java-script-masterclass/symbol"
+      "href": "MASTERCLASS_LESSON:symbol"
     }
   }
 }

@@ -4,7 +4,7 @@
     "description": "Explore as formações especializadas em JavaScript, do básico aos mecanismos internos da engine V8 e arquitetura moderna."
   },
   "breadcrumbs": [
-    { "label": "Início", "href": "/" },
+    { "label": "Início", "href": "HOME" },
     { "label": "JavaScript", "current": true }
   ],
   "header": {
@@ -24,6 +24,6 @@
       { "label": "Nível", "value": "Fundamentos ao Avançado" }
     ],
     "cta": "Acessar Curso Completo",
-    "href": "/java-script/cursos/java-script-masterclass"
+    "href": "JAVA_SCRIPT_MASTERCLASS"
   }
 }

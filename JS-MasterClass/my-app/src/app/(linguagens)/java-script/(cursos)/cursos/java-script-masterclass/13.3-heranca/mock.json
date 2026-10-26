@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 13.3: Herança",
@@ -55,11 +55,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 13.2: Comparação de Objetos",
-      "href": "/java-script/cursos/java-script-masterclass/comparacao-de-objetos"
+      "href": "MASTERCLASS_LESSON:comparacao-de-objetos"
     },
     "next": {
       "label": "Aula 13.4: Object API",
-      "href": "/java-script/cursos/java-script-masterclass/object-api"
+      "href": "MASTERCLASS_LESSON:object-api"
     }
   }
 }

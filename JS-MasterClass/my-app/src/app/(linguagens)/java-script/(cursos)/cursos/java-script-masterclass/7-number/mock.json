@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 7: Number",
@@ -55,11 +55,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 6: Tipos de Dados",
-      "href": "/java-script/cursos/java-script-masterclass/tipos-de-dados"
+      "href": "MASTERCLASS_LESSON:tipos-de-dados"
     },
     "next": {
       "label": "Aula 7.1: Operadores Numéricos",
-      "href": "/java-script/cursos/java-script-masterclass/operadores-numericos"
+      "href": "MASTERCLASS_LESSON:operadores-numericos"
     }
   }
 }

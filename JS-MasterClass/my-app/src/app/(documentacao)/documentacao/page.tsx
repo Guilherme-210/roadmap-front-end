@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs, PageHeader, FeatureCardsGrid, type FeatureCardItem } from "@/components/ui";
+import { resolveAppRoute } from "@/shared/constants/app-routes";
 import mockData from "./mock.json";
 
 export const metadata: Metadata = mockData.metadata;
@@ -113,7 +114,7 @@ export default function DocumentationLanguagesPage() {
                 <div className="pt-6 mt-4 border-t border-border-subtle">
                   {isAvailable ? (
                     <Link
-                      href={lang.href}
+                      href={resolveAppRoute(lang.href)}
                       className="inline-flex w-full items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-md transition-all hover:scale-[1.01]"
                     >
                       <span>{lang.cta}</span>

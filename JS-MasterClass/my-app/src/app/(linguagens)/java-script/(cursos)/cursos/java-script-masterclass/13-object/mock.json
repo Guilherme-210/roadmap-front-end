@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 13: Object",
@@ -55,11 +55,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 12.1: Correção do Exercício 1",
-      "href": "/java-script/cursos/java-script-masterclass/correcao-do-exercicio-1"
+      "href": "MASTERCLASS_LESSON:correcao-do-exercicio-1"
     },
     "next": {
       "label": "Aula 13.1: Undefined e Null",
-      "href": "/java-script/cursos/java-script-masterclass/undefined-e-null"
+      "href": "MASTERCLASS_LESSON:undefined-e-null"
     }
   }
 }

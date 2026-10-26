@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 1: Abertura",
@@ -50,11 +50,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Visão Geral do Curso",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     "next": {
       "label": "Aula 2: Instruções",
-      "href": "/java-script/cursos/java-script-masterclass/instrucoes"
+      "href": "MASTERCLASS_LESSON:instrucoes"
     }
   }
 }

@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 13.2: Comparação de Objetos",
@@ -55,11 +55,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 13.1: Undefined e Null",
-      "href": "/java-script/cursos/java-script-masterclass/undefined-e-null"
+      "href": "MASTERCLASS_LESSON:undefined-e-null"
     },
     "next": {
       "label": "Aula 13.3: Herança",
-      "href": "/java-script/cursos/java-script-masterclass/heranca"
+      "href": "MASTERCLASS_LESSON:heranca"
     }
   }
 }

@@ -1,65 +1,231 @@
 {
   "metadata": {
     "title": "Aula 11: RegExp • JavaScript MasterClass",
-    "description": "Expressões Regulares em JavaScript. Definição com sintaxe literal /padrao/flags versus construtor new RegExp, flags fundamentais (g, i, m, u, s), grupos de captura, quantificadores e os métodos test(), exec() e replace()."
+    "description": "Expressões Regulares em JavaScript com Rodrigo Branas: notação literal vs construtor RegExp, metacaracteres, classes de caracteres, quantificadores, grupos de captura e métodos test, exec e replace."
   },
   "breadcrumbs": [
-    {
-      "label": "Início",
-      "href": "/"
-    },
-    {
-      "label": "JavaScript",
-      "href": "/java-script"
-    },
-    {
-      "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
-    },
-    {
-      "label": "Aula 11: RegExp",
-      "current": true
-    }
+    { "label": "Início", "href": "HOME" },
+    { "label": "JavaScript", "href": "JAVA_SCRIPT" },
+    { "label": "JavaScript MasterClass", "href": "JAVA_SCRIPT_MASTERCLASS" },
+    { "label": "Aula 11: RegExp", "current": true }
   ],
   "header": {
-    "badge": "Módulo 03: Tipos & Semântica • Vídeo Aula",
-    "title": "Aula 11: RegExp",
-    "description": "Expressões Regulares em JavaScript. Definição com sintaxe literal /padrao/flags versus construtor new RegExp, flags fundamentais (g, i, m, u, s), grupos de captura, quantificadores e os métodos test(), exec() e replace()."
+    "badge": "Módulo 03: Tipos & Semântica • Rodrigo Branas",
+    "title": "Aula 11: Expressões Regulares (RegExp)",
+    "description": "As expressões regulares são estruturas formadas por uma sequência de caracteres que especificam um padrão formal. São indispensáveis para validar entradas, extrair fragmentos específicos e substituir dados em strings de forma expressiva e performática."
   },
-  "topics": [
-    "Sintaxe literal (/abc/) vs Construtor dinâmico (new RegExp('abc', 'g'))",
-    "Flags: g (global), i (case-insensitive), m (multiline), u (unicode)",
-    "Metacaracteres, classes de caracteres (\\d, \\w, \\s) e âncoras (^, $)",
-    "Grupos de captura () e grupos de não captura (?:)",
-    "Métodos: RegExp.prototype.test(), RegExp.prototype.exec() e integração com String API"
-  ],
+  "creationSection": {
+    "title": "Criação de Expressões Regulares & Tipagem",
+    "description": "No JavaScript, expressões regulares são instâncias de objetos do tipo RegExp (typeof /padrão/ === 'object'). Existem duas formas principais de instanciá-las:",
+    "types": [
+      {
+        "name": "Sintaxe Literal: /padrão/flags",
+        "badge": "Recomendada • Pré-compilada",
+        "description": "Ideal quando o padrão da expressão regular permanece constante em tempo de desenvolvimento. É compilada na inicialização do script pelo motor V8/JavaScript.",
+        "example": "const regex = /john@gmail\\.com/;\nconsole.log(regex.test('john@gmail.com')); // true\nconsole.log(typeof regex); // 'object'"
+      },
+      {
+        "name": "Função Construtora: new RegExp('padrão', 'flags')",
+        "badge": "Dinâmica • Tempo de Execução",
+        "description": "Essencial quando o padrão precisa ser construído dinamicamente a partir de variáveis ou entradas do usuário. Exige escapar a barra invertida com dupla barra (\\\\).",
+        "example": "const padrao = 'john@gmail\\\\.com';\nconst regex = new RegExp(padrao);\nconsole.log(regex.test('john@gmail.com')); // true"
+      }
+    ]
+  },
+  "methodsSection": {
+    "title": "Métodos da RegExp API & Integração com String API",
+    "description": "O ecossistema JavaScript oferece métodos nativos tanto no protótipo de RegExp quanto na String API para executar buscas, validações e substituições:",
+    "items": [
+      {
+        "method": "RegExp.prototype.test(str)",
+        "returnType": "boolean",
+        "description": "Verifica se a string atende ao padrão da expressão regular. Retorna true se houver correspondência, false caso contrário.",
+        "code": "/[a-z]+/.test('javascript'); // true"
+      },
+      {
+        "method": "RegExp.prototype.exec(str)",
+        "returnType": "Array | null",
+        "description": "Executa a busca e retorna um array contendo o texto casado, grupos de captura, índice inicial e string de entrada, ou null.",
+        "code": "/(\\d{2})\\/(\\d{2})/.exec('16/10'); // ['16/10', '16', '10', index: 0]"
+      },
+      {
+        "method": "String.prototype.match(regexp)",
+        "returnType": "Array | null",
+        "description": "Método de string que delega a busca para a RegExp. Com a flag global 'g', retorna todas as ocorrências encontradas.",
+        "code": "'john@gmail.com'.match(/\\w+/g); // ['john', 'gmail', 'com']"
+      },
+      {
+        "method": "String.prototype.replace(regexp, novoValor)",
+        "returnType": "string",
+        "description": "Substitui as partes da string que casam com a expressão regular por um novo texto ou pelo retorno de uma função de callback.",
+        "code": "'john@gmail.com'.replace(/john/, 'jane'); // 'jane@gmail.com'"
+      },
+      {
+        "method": "String.prototype.search(regexp)",
+        "returnType": "number",
+        "description": "Retorna o índice da primeira ocorrência do padrão na string ou -1 se não houver nenhuma correspondência.",
+        "code": "'contato: john@gmail.com'.search(/john/); // 9"
+      },
+      {
+        "method": "String.prototype.split(regexp)",
+        "returnType": "string[]",
+        "description": "Divide a string em um array de substrings utilizando a expressão regular como padrão de delimitador.",
+        "code": "'item1, item2; item3'.split(/[,;]\\s*/); // ['item1', 'item2', 'item3']"
+      }
+    ]
+  },
+  "metacharsSection": {
+    "title": "Metacaracteres de Posição & Escapes",
+    "description": "Metacaracteres são caracteres especiais reservados que possuem significado semântico em expressões regulares:",
+    "items": [
+      {
+        "symbol": "^",
+        "name": "Início da String",
+        "rule": "Exige que o padrão corresponda exatamente a partir do primeiro caractere da string.",
+        "example": "/^john/.test('john@gmail.com'); // true\n/^john/.test('e-mail: john'); // false"
+      },
+      {
+        "symbol": "$",
+        "name": "Fim da String",
+        "rule": "Exige que o padrão corresponda exatamente até o último caractere da string.",
+        "example": "/com$/.test('john@gmail.com'); // true\n/com$/.test('john@gmail.com.br'); // false"
+      },
+      {
+        "symbol": ".",
+        "name": "Qualquer Caractere",
+        "rule": "Corresponde a qualquer caractere individual, exceto caracteres de quebra de linha (\\n, \\r).",
+        "example": "/j.hn/.test('john'); // true\n/j.hn/.test('jahn'); // true"
+      },
+      {
+        "symbol": "\\",
+        "name": "Caractere de Escape",
+        "rule": "Anula o significado especial de um metactactere, tratando-o como caractere literal puro.",
+        "example": "/gmail\\.com/.test('gmail.com'); // true (ponto literal)\n/gmail.com/.test('gmailXcom');  // true (ponto livre)"
+      }
+    ]
+  },
+  "characterClassesSection": {
+    "title": "Conjuntos, Intervalos e Classes Pré-definidas",
+    "description": "Permitem especificar conjuntos de caracteres permitidos através de colchetes [...] ou atalhos com barra invertida:",
+    "ranges": [
+      { "syntax": "[abc]", "description": "Qualquer um dos caracteres listados: 'a', 'b' ou 'c'" },
+      { "syntax": "[0-9]", "description": "Qualquer dígito numérico decimal de 0 até 9" },
+      { "syntax": "[a-z]", "description": "Qualquer letra minúscula no intervalo alfabético de 'a' até 'z'" },
+      { "syntax": "[A-Z]", "description": "Qualquer letra maiúscula no intervalo de 'A' até 'Z'" },
+      { "syntax": "[a-zA-Z0-9_]", "description": "Combinação alfanumérica abrangendo letras, números e underscore" },
+      { "syntax": "[^0-9]", "description": "Negação: qualquer caractere que NÃO seja um dígito numérico" }
+    ],
+    "shortcuts": [
+      { "symbol": "\\w", "name": "Alfanumérico (Word)", "equivalent": "[a-zA-Z0-9_]" },
+      { "symbol": "\\W", "name": "Não-alfanumérico", "equivalent": "[^a-zA-Z0-9_]" },
+      { "symbol": "\\d", "name": "Dígito Numérico", "equivalent": "[0-9]" },
+      { "symbol": "\\D", "name": "Não-dígito", "equivalent": "[^0-9]" },
+      { "symbol": "\\s", "name": "Espaço em Branco", "equivalent": "Espaço, \\t, \\n, \\r, \\f" },
+      { "symbol": "\\S", "name": "Não-espaço", "equivalent": "[^\\s]" }
+    ]
+  },
+  "quantifiersSection": {
+    "title": "Quantificadores: Frequência & Ocorrências",
+    "description": "Quantificadores especificam quantas vezes o caractere, conjunto ou grupo anterior deve ocorrer para casar com o padrão:",
+    "items": [
+      {
+        "quantifier": "{n}",
+        "type": "Explícito",
+        "rule": "Exatamente n ocorrências do padrão anterior.",
+        "example": "/[a-z]{4}/.test('john'); // true (4 letras)\n/[a-z]{4}/.test('joe');  // false (3 letras)"
+      },
+      {
+        "quantifier": "{n,}",
+        "type": "Explícito Mínimo",
+        "rule": "No mínimo n ocorrências do padrão anterior, sem limite superior.",
+        "example": "/\\d{2,}/.test('123'); // true (2 ou mais dígitos)"
+      },
+      {
+        "quantifier": "{n,m}",
+        "type": "Faixa Controlada",
+        "rule": "Pelo menos n e no máximo m ocorrências do padrão anterior.",
+        "example": "/[a-z]{4,8}/.test('john'); // true\n/[a-z]{4,8}/.test('guilherme'); // true (até 8)"
+      },
+      {
+        "quantifier": "?",
+        "type": "Abreviação",
+        "rule": "Zero ou uma ocorrência (torna o elemento opcional: {0,1}).",
+        "example": "/https?/.test('http');  // true\n/https?/.test('https'); // true"
+      },
+      {
+        "quantifier": "*",
+        "type": "Abreviação",
+        "rule": "Zero ou mais ocorrências ({0,}).",
+        "example": "/ab*c/.test('ac');   // true (zero 'b')\n/ab*c/.test('abbc'); // true (dois 'b')"
+      },
+      {
+        "quantifier": "+",
+        "type": "Abreviação",
+        "rule": "Uma ou mais ocorrências obrigatórias ({1,}).",
+        "example": "/[a-z]+@gmail\\.com/.test('john@gmail.com'); // true\n/[a-z]+@gmail\\.com/.test('@gmail.com');     // false"
+      }
+    ]
+  },
+  "caseStudySection": {
+    "title": "Estudo de Caso da Aula: Validação e Captura Progressiva de E-mail",
+    "subtitle": "A evolução didática passo a passo apresentada pelo professor Rodrigo Branas",
+    "description": "Na aula, o professor demonstra como construir uma expressão regular robusta para validação de e-mails, saindo de um padrão fixo frágil até uma expressão flexível com grupos de captura estruturados.",
+    "steps": [
+      {
+        "step": "Etapa 1: Padrão Literal com Escape",
+        "code": "let regex = /john@gmail\\.com/;\nregex.test('e-mail: john@gmail.com ...'); // true",
+        "note": "Sem âncoras, a regex casa qualquer trecho de texto contendo o e-mail, mesmo no meio de uma frase."
+      },
+      {
+        "step": "Etapa 2: Âncoras de Início (^) e Fim ($)",
+        "code": "let regex = /^john@gmail\\.com$/;\nregex.test('e-mail: john@gmail.com'); // false\nregex.test('john@gmail.com');        // true",
+        "note": "Com ^ e $, garantimos que a string inteira deve conter estritamente apenas o endereço de e-mail."
+      },
+      {
+        "step": "Etapa 3: Generalização com Classes (\\w+) e Domínios Compostos",
+        "code": "let regex = /^\\w+@\\w+(\\.\\w{2,3})+$/;\nregex.test('john@gmail.com');    // true\nregex.test('john@gmail.com.br'); // true\nregex.test('jo_hn123@empresa.io'); // true",
+        "note": "O quantificador + em (\\.\\w{2,3})+ permite suportar domínios simples (.com) e domínios compostos (.com.br)."
+      },
+      {
+        "step": "Etapa 4: Grupos de Captura () para Extração Estruturada",
+        "code": "let regex = /^(\\w+)@(\\w+(\\.\\w{2,3})+)$/;\nlet resultado = regex.exec('john@gmail.com.br');\n\nconsole.log(resultado[0]); // 'john@gmail.com.br' (Match total)\nconsole.log(resultado[1]); // 'john' (Usuário)\nconsole.log(resultado[2]); // 'gmail.com.br' (Domínio completo)\nconsole.log(resultado[3]); // '.br' (Última extensão)",
+        "note": "Parênteses criam grupos de captura numerados, permitindo extrair facilmente dados específicos da correspondência."
+      }
+    ]
+  },
+  "playgroundSection": {
+    "title": "Playground Interativo da Aula",
+    "description": "Experimente a validação com test(), a extração de grupos com exec(), a substituição com replace() e a divisão de strings com split() no editor abaixo."
+  },
+  "playgroundCode": "// ============================================================================\n// Aula 11: Expressões Regulares (RegExp) - Rodrigo Branas\n// ============================================================================\n\nconsole.info('1. CRIAÇÃO E VERIFICAÇÃO DE TIPO');\nconst regexLiteral = /john@gmail\\.com/;\nconst regexConstrutor = new RegExp('john@gmail\\\\.com');\n\nconsole.log('typeof /.../:', typeof regexLiteral);       // 'object'\nconsole.log('teste literal:', regexLiteral.test('john@gmail.com')); // true\nconsole.log('teste construtor:', regexConstrutor.test('john@gmail.com')); // true\n\nconsole.info('\\n2. MÉTODOS NATIVOS: exec(), match(), replace(), split()');\nconst emailExemplo = 'john@gmail.com';\nconst resultadoExec = regexLiteral.exec(emailExemplo);\nconsole.log('resultado exec():', resultadoExec[0]);\n\nconst substituicao = emailExemplo.replace(/john/, 'jane');\nconsole.log('replace(\"john\" -> \"jane\"):', substituicao);\n\nconst palavras = 'JavaScript,TypeScript;NodeJS'.split(/[,;]\\s*/);\nconsole.log('split com regex:', palavras);\n\nconsole.info('\\n3. EVOLUÇÃO DO REGEX DE E-MAIL (ESTUDO DE CASO)');\n// Validando nome de usuário alfanumérico e domínio com 2 a 3 caracteres\nconst regexEmailFlexivel = /^\\w+@\\w+(\\.\\w{2,3})+$/;\n\nconsole.log('john@gmail.com:', regexEmailFlexivel.test('john@gmail.com'));       // true\nconsole.log('john@gmail.com.br:', regexEmailFlexivel.test('john@gmail.com.br')); // true\nconsole.log('email inválido:', regexEmailFlexivel.test('invalido@@gmail'));     // false\n\nconsole.info('\\n4. EXTRAÇÃO DE GRUPOS DE CAPTURA COM exec()');\nconst regexComGrupos = /^(\\w+)@(\\w+(\\.\\w{2,3})+)$/;\nconst matchCompleto = regexComGrupos.exec('john@gmail.com.br');\n\nif (matchCompleto) {\n  console.log('Match Completo (resultado[0]):', matchCompleto[0]);\n  console.log('Nome de Usuário (resultado[1]):', matchCompleto[1]);\n  console.log('Domínio Total   (resultado[2]):', matchCompleto[2]);\n  console.log('Última Extensão (resultado[3]):', matchCompleto[3]);\n}\n",
   "keyTakeaways": [
     {
-      "title": "Ponto Chave 1",
-      "description": "Atenção com a flag global `g` em `RegExp.test()`: ela mantém estado interno (`lastIndex`), podendo alternar entre true e false em chamadas repetidas.",
-      "icon": "check",
+      "title": "Cuidado com o Estado da Flag 'g'",
+      "description": "Ao usar a flag global 'g' com RegExp.test() ou exec(), a instância armazena o índice da última busca na propriedade lastIndex, o que pode causar alternância de true e false em chamadas repetidas.",
+      "icon": "alert",
+      "variant": "rose"
+    },
+    {
+      "title": "Use Âncoras para Validações Estritas",
+      "description": "Em formulários e validações de dados (como e-mail e CPF), use sempre ^ (início) e $ (fim). Sem as âncoras, a regex casará mesmo se o texto contiver caracteres inválidos antes ou depois.",
+      "icon": "shield",
       "variant": "emerald"
     },
     {
-      "title": "Ponto Chave 2",
-      "description": "Prefira a sintaxe literal quando o padrão for estático para permitir pré-compilação pelo motor JS.",
-      "icon": "check",
-      "variant": "emerald"
+      "title": "Grupos de Captura Agilizam Extrações",
+      "description": "Utilize parênteses () para separar partes semânticas (como código de área e telefone) e recuperar os fragmentos diretamente pelos índices do array retornado por exec() ou match().",
+      "icon": "zap",
+      "variant": "amber"
     }
   ],
-  "codeSnippet": {
-    "language": "javascript",
-    "code": "// Validação simples de formato de e-mail:\nconst emailRegex = /^[\\w.-]+@[\\w.-]+\\.[a-z]{2,}$/i;\nconsole.log(emailRegex.test(\"contato@rodrigobranas.com.br\")); // true\nconsole.log(emailRegex.test(\"invalido@\")); // false\n\n// Extração de grupos de data:\nconst dataRegex = /(\\d{2})\\/(\\d{2})\\/(\\d{4})/;\nconst match = \"Data: 16/10/2026\".match(dataRegex);\nconsole.log(`Dia: ${match[1]}, Mês: ${match[2]}, Ano: ${match[3]}`);",
-    "caption": "Validação e captura de grupos com Expressões Regulares"
-  },
   "navigationFooter": {
     "previous": {
       "label": "Aula 10: Symbol",
-      "href": "/java-script/cursos/java-script-masterclass/symbol"
+      "href": "MASTERCLASS_LESSON:symbol"
     },
     "next": {
       "label": "Aula 12: Exercício 1",
-      "href": "/java-script/cursos/java-script-masterclass/exercicio-1"
+      "href": "MASTERCLASS_LESSON:exercicio-1"
     }
   }
 }

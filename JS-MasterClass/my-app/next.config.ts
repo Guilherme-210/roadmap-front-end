@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { APP_ROUTES } from "./src/shared/constants/app-routes";
 
 const nextConfig: NextConfig = {
   async headers() {
@@ -27,23 +28,23 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/aulas/java-script/boolean",
-        destination: "/java-script/cursos/java-script-masterclass/boolean",
+        source: APP_ROUTES.legacy.javaScriptBoolean.path,
+        destination: APP_ROUTES.public.javaScript.masterclass.lessons.boolean.path,
         permanent: true,
       },
       {
-        source: "/aulas/java-script/java-script-masterclass/:slug*",
-        destination: "/java-script/cursos/java-script-masterclass/:slug*",
+        source: APP_ROUTES.legacy.javaScriptLessons.path,
+        destination: `${APP_ROUTES.public.javaScript.masterclass.path}/:slug*`,
         permanent: true,
       },
       {
-        source: "/aulas/java-script",
-        destination: "/java-script",
+        source: APP_ROUTES.legacy.javaScript.path,
+        destination: APP_ROUTES.public.javaScript.path,
         permanent: true,
       },
       {
-        source: "/javascript",
-        destination: "/documentacao",
+        source: APP_ROUTES.legacy.documentation.path,
+        destination: APP_ROUTES.public.documentation.path,
         permanent: true,
       },
     ];

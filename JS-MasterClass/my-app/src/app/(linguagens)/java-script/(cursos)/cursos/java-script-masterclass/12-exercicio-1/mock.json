@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 12: Exercício 1",
@@ -50,11 +50,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 11: RegExp",
-      "href": "/java-script/cursos/java-script-masterclass/regexp"
+      "href": "MASTERCLASS_LESSON:regexp"
     },
     "next": {
       "label": "Aula 12.1: Correção do Exercício 1",
-      "href": "/java-script/cursos/java-script-masterclass/correcao-do-exercicio-1"
+      "href": "MASTERCLASS_LESSON:correcao-do-exercicio-1"
     }
   }
 }

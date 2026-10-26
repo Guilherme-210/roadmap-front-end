@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs, PageHeader, FeatureCardsGrid, type FeatureCardItem } from "@/components/ui";
 import { JS_MASTERCLASS_COURSE } from "@/data/courses/javascript-masterclass";
+import { APP_ROUTES, resolveAppRoute } from "@/shared/constants/app-routes";
 import mockData from "./mock.json";
 
 export const metadata: Metadata = mockData.metadata;
@@ -43,7 +44,7 @@ export default function JavaScriptMasterClassHubPage() {
         {/* Botão de Início Rápido */}
         <div className="pt-2 flex flex-wrap gap-4 items-center">
           <Link
-            href={startCourseLink.href}
+            href={resolveAppRoute(startCourseLink.href)}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-md transition-all hover:scale-[1.02]"
           >
             <span>{startCourseLink.label}</span>
@@ -100,13 +101,13 @@ export default function JavaScriptMasterClassHubPage() {
               {/* Lista de Aulas do Módulo */}
               <div className="divide-y divide-[var(--border-subtle)]">
                 {mod.lessons.map((lesson) => {
-                  const lessonUrl = `/java-script/cursos/java-script-masterclass/${lesson.slug}`;
+                  const lessonRoute = APP_ROUTES.public.javaScript.masterclass.lesson(lesson.slug);
                   const isPdf = lesson.type === "pdf";
 
                   return (
                     <Link
                       key={lesson.id}
-                      href={lessonUrl}
+                      href={lessonRoute.path}
                       className="group flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:px-6 gap-3 hover:bg-muted/40 transition-colors"
                     >
                       <div className="flex items-start sm:items-center gap-3.5">
@@ -119,7 +120,7 @@ export default function JavaScriptMasterClassHubPage() {
                         <div className="space-y-0.5">
                           <div className="flex items-center gap-2">
                             <span className="font-semibold text-sm sm:text-base text-foreground group-hover:text-amber-500 transition-colors">
-                              {lesson.title}
+                              {lessonRoute.name}
                             </span>
                             {/* Tag do Tipo: Vídeo ou PDF */}
                             <span

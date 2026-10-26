@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { resolveAppRoute } from "@/shared/constants/app-routes";
 
 export interface HeroAction {
   label: string;
@@ -73,7 +74,7 @@ export function HeroPresentation({
             action.primary ? (
               <Link
                 key={`${action.label}-${index}`}
-                href={action.href}
+                href={resolveAppRoute(action.href)}
                 className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-amber-500 to-amber-600 px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/25 hover:from-amber-400 hover:to-amber-500 transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>{action.label}</span>
@@ -84,7 +85,7 @@ export function HeroPresentation({
             ) : (
               <Link
                 key={`${action.label}-${index}`}
-                href={action.href}
+                href={resolveAppRoute(action.href)}
                 className="inline-flex items-center gap-2 rounded-xl border border-border-subtle bg-card px-6 py-3.5 text-sm font-semibold text-foreground hover:bg-muted hover:border-amber-500/40 transition-all"
               >
                 <span>{action.label}</span>

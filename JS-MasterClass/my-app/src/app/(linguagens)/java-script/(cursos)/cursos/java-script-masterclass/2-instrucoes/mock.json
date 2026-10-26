@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 2: Instruções",
@@ -50,11 +50,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 1: Abertura",
-      "href": "/java-script/cursos/java-script-masterclass/abertura"
+      "href": "MASTERCLASS_LESSON:abertura"
     },
     "next": {
       "label": "Aula 3: História da Linguagem",
-      "href": "/java-script/cursos/java-script-masterclass/historia-da-linguagem"
+      "href": "MASTERCLASS_LESSON:historia-da-linguagem"
     }
   }
 }

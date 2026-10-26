@@ -4,9 +4,9 @@
     "description": "Estudo completo sobre o tipo primitivo Symbol, unicidade de chaves em objetos, metaprogramação com Well-Known Symbols (Symbol.iterator, Symbol.match) e registro global com Rodrigo Branas."
   },
   "breadcrumbs": [
-    { "label": "Início", "href": "/" },
-    { "label": "JavaScript", "href": "/java-script" },
-    { "label": "JavaScript MasterClass", "href": "/java-script/cursos/java-script-masterclass" },
+    { "label": "Início", "href": "HOME" },
+    { "label": "JavaScript", "href": "JAVA_SCRIPT" },
+    { "label": "JavaScript MasterClass", "href": "JAVA_SCRIPT_MASTERCLASS" },
     { "label": "Aula 10: Symbol", "current": true }
   ],
   "header": {
@@ -146,11 +146,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 9.1: Operadores Booleanos",
-      "href": "/java-script/cursos/java-script-masterclass/operadores-booleanos"
+      "href": "MASTERCLASS_LESSON:operadores-booleanos"
     },
     "next": {
       "label": "Aula 11: RegExp",
-      "href": "/java-script/cursos/java-script-masterclass/regexp"
+      "href": "MASTERCLASS_LESSON:regexp"
     }
   }
 }

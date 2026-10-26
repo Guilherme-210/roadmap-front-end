@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs, PageHeader } from "@/components/ui";
+import { resolveAppRoute } from "@/shared/constants/app-routes";
 import mockData from "./mock.json";
 
 export const metadata: Metadata = mockData.metadata;
@@ -81,7 +82,7 @@ export default function JavaScriptTopicsPage() {
 
               <div className="pt-4 border-t border-border-subtle">
                 <Link
-                  href={topic.href}
+                  href={resolveAppRoute(topic.href)}
                   className="inline-flex w-full items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm shadow-sm transition-all hover:scale-[1.01]"
                 >
                   <span>{topic.cta}</span>
@@ -117,13 +118,13 @@ export default function JavaScriptTopicsPage() {
         </div>
         <div className="flex flex-wrap gap-3">
           <Link
-            href={quickActions.courseLink.href}
+            href={resolveAppRoute(quickActions.courseLink.href)}
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold bg-muted hover:bg-muted/80 text-foreground border border-border-subtle transition-colors"
           >
             <span>{quickActions.courseLink.label}</span>
           </Link>
           <Link
-            href={quickActions.playgroundLink.href}
+            href={resolveAppRoute(quickActions.playgroundLink.href)}
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold bg-amber-500/10 text-amber-500 hover:bg-amber-500/20 border border-amber-500/30 transition-colors"
           >
             <span>{quickActions.playgroundLink.label}</span>

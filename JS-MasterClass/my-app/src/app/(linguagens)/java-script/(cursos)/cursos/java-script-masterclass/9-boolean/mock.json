@@ -4,9 +4,9 @@
     "description": "Estudo aprofundado sobre o tipo primitivo booleano, a armadilha do construtor new Boolean, valores Truthy e Falsy, coerção implícita e testes práticos com Rodrigo Branas."
   },
   "breadcrumbs": [
-    { "label": "Início", "href": "/" },
-    { "label": "JavaScript", "href": "/java-script" },
-    { "label": "JavaScript MasterClass", "href": "/java-script/cursos/java-script-masterclass" },
+    { "label": "Início", "href": "HOME" },
+    { "label": "JavaScript", "href": "JAVA_SCRIPT" },
+    { "label": "JavaScript MasterClass", "href": "JAVA_SCRIPT_MASTERCLASS" },
     { "label": "Aula 9: Boolean", "current": true }
   ],
   "header": {
@@ -118,11 +118,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 8.2: String API",
-      "href": "/java-script/cursos/java-script-masterclass/string-api"
+      "href": "MASTERCLASS_LESSON:string-api"
     },
     "next": {
       "label": "Aula 9.1: Operadores Booleanos",
-      "href": "/java-script/cursos/java-script-masterclass/operadores-booleanos"
+      "href": "MASTERCLASS_LESSON:operadores-booleanos"
     }
   }
 }

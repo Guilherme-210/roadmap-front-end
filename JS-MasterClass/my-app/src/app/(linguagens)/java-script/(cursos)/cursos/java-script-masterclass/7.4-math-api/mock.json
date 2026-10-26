@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 7.4: Math API",
@@ -55,11 +55,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 7.3: IEEE 754",
-      "href": "/java-script/cursos/java-script-masterclass/ieee-754"
+      "href": "MASTERCLASS_LESSON:ieee-754"
     },
     "next": {
       "label": "Aula 8: String",
-      "href": "/java-script/cursos/java-script-masterclass/string"
+      "href": "MASTERCLASS_LESSON:string"
     }
   }
 }

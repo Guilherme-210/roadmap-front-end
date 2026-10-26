@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs, PageHeader } from "@/components/ui";
+import { resolveAppRoute } from "@/shared/constants/app-routes";
 import mockData from "./mock.json";
 
 export const metadata: Metadata = mockData.metadata;
@@ -71,7 +72,7 @@ export default function JavaScriptCoursesPage() {
             {/* CTA de Acesso */}
             <div className="flex flex-col sm:flex-row md:flex-col gap-3 justify-center md:items-end">
               <Link
-                href={courseCard.href}
+                href={resolveAppRoute(courseCard.href)}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-md transition-all hover:scale-[1.02]"
               >
                 <span>{courseCard.cta}</span>

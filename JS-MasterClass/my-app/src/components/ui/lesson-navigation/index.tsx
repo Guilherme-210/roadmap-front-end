@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { resolveAppRoute } from "@/shared/constants/app-routes";
 
 export interface NavigationLink {
   label: string;
@@ -25,7 +26,7 @@ export function LessonNavigation({
     >
       {previous ? (
         <Link
-          href={previous.href}
+          href={resolveAppRoute(previous.href)}
           className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,7 +40,7 @@ export function LessonNavigation({
 
       {next ? (
         <Link
-          href={next.href}
+          href={resolveAppRoute(next.href)}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border-subtle text-xs sm:text-sm font-semibold text-foreground hover:bg-muted transition-colors"
         >
           <span>{next.label}</span>

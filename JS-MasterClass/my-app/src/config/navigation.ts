@@ -1,4 +1,5 @@
 import { JS_MASTERCLASS_LESSONS } from "@/data/courses/javascript-masterclass";
+import { APP_ROUTES } from "@/shared/constants/app-routes";
 
 export interface NavigationSubItem {
   id: string;
@@ -70,24 +71,28 @@ export const SITE_CONFIG: SiteConfig = {
 const COURSE_LESSON_SUBITEMS: NavigationSubItem[] = [
   {
     id: "hub-js",
-    label: "Visão Geral",
-    href: "/java-script",
+    label: APP_ROUTES.public.javaScript.name,
+    href: APP_ROUTES.public.javaScript.path,
     description: "Apresentação da trilha de JavaScript",
   },
   {
     id: "grade-curso",
-    label: "Grade do Curso",
-    href: "/java-script/cursos/java-script-masterclass",
+    label: APP_ROUTES.public.javaScript.masterclass.name,
+    href: APP_ROUTES.public.javaScript.masterclass.path,
     badge: "28 Aulas",
     description: "Grade curricular completa de Rodrigo Branas",
   },
-  ...JS_MASTERCLASS_LESSONS.map((lesson) => ({
-    id: `lesson-${lesson.slug}`,
-    label: `${lesson.number}. ${lesson.title}`,
-    href: `/java-script/cursos/java-script-masterclass/${lesson.slug}`,
-    badge: lesson.type === "pdf" ? "PDF" : undefined,
-    description: lesson.introduction,
-  })),
+  ...JS_MASTERCLASS_LESSONS.map((lesson) => {
+    const lessonRoute = APP_ROUTES.public.javaScript.masterclass.lesson(lesson.slug);
+
+    return {
+      id: `lesson-${lesson.slug}`,
+      label: lessonRoute.name,
+      href: lessonRoute.path,
+      badge: lesson.type === "pdf" ? "PDF" : undefined,
+      description: lesson.introduction,
+    };
+  }),
 ];
 
 /**
@@ -97,42 +102,42 @@ const COURSE_LESSON_SUBITEMS: NavigationSubItem[] = [
 export const SITE_MAP: NavigationSection[] = [
   {
     id: "java-script",
-    label: "JavaScript",
-    href: "/java-script",
+    label: APP_ROUTES.public.javaScript.name,
+    href: APP_ROUTES.public.javaScript.path,
     badge: "28 Aulas",
     description: "Curso completo JavaScript MasterClass ministrado por Rodrigo Branas",
     subItems: COURSE_LESSON_SUBITEMS,
   },
   {
     id: "documentacao",
-    label: "Documentação",
-    href: "/documentacao",
+    label: APP_ROUTES.public.documentation.name,
+    href: APP_ROUTES.public.documentation.path,
     badge: "Docs",
     description: "Documentação técnica e referências funcionais",
     subItems: [
       {
         id: "doc-geral",
-        label: "Linguagens",
-        href: "/documentacao",
+        label: APP_ROUTES.public.documentation.name,
+        href: APP_ROUTES.public.documentation.path,
         description: "Listagem geral de linguagens documentadas",
       },
       {
         id: "doc-js",
-        label: "JavaScript",
-        href: "/documentacao/java-script",
+        label: APP_ROUTES.public.documentation.javaScript.name,
+        href: APP_ROUTES.public.documentation.javaScript.path,
         description: "Tópicos e métodos da biblioteca padrão de JavaScript",
       },
       {
         id: "doc-array-map",
-        label: "Array.map()",
-        href: "/documentacao/java-script/array-map",
+        label: APP_ROUTES.public.documentation.arrayMap.name,
+        href: APP_ROUTES.public.documentation.arrayMap.path,
         badge: "Resumo",
         description: "Transformação declarativa e imutabilidade",
       },
       {
         id: "doc-array-filter",
-        label: "Array.filter()",
-        href: "/documentacao/java-script/array-filter",
+        label: APP_ROUTES.public.documentation.arrayFilter.name,
+        href: APP_ROUTES.public.documentation.arrayFilter.path,
         badge: "Resumo",
         description: "Seleção condicional e imutabilidade",
       },
@@ -140,15 +145,15 @@ export const SITE_MAP: NavigationSection[] = [
   },
   {
     id: "playground",
-    label: "Playground",
-    href: "/playground",
+    label: APP_ROUTES.public.playground.name,
+    href: APP_ROUTES.public.playground.path,
     badge: "Live",
     description: "Ambiente interativo de execução isolada em JavaScript",
     subItems: [
       {
         id: "playground-main",
-        label: "Editor & Console",
-        href: "/playground",
+        label: APP_ROUTES.public.playground.name,
+        href: APP_ROUTES.public.playground.path,
         description: "Editor Monaco com execução e console em tempo real",
       },
     ],
@@ -163,7 +168,9 @@ export function getActiveNavigation(pathname: string): {
   activeSubItem?: NavigationSubItem;
 } {
   // Tratar aliases como /javascript para a seção de documentacao
-  const normalizedPath = pathname === "/javascript" ? "/documentacao" : pathname;
+  const normalizedPath = pathname === APP_ROUTES.legacy.documentation.path
+    ? APP_ROUTES.public.documentation.path
+    : pathname;
 
   // 1. Tentar encontrar seção por correspondência direta de href
   let matchedSection = SITE_MAP.find((section) => {
@@ -223,20 +230,20 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "CURSO JAVASCRIPT",
     links: [
-      { label: "Visão Geral", href: "/java-script" },
-      { label: "Grade Completa (28 Aulas)", href: "/java-script/cursos/java-script-masterclass" },
-      { label: "Aula 9: Boolean", href: "/java-script/cursos/java-script-masterclass/boolean" },
-      { label: "Aula 14: JSON", href: "/java-script/cursos/java-script-masterclass/json" },
-      { label: "Aula 15.1: Correção Ex. 2", href: "/java-script/cursos/java-script-masterclass/correcao-do-exercicio-2" },
+      { label: APP_ROUTES.public.javaScript.name, href: APP_ROUTES.public.javaScript.path },
+      { label: APP_ROUTES.public.javaScript.masterclass.name, href: APP_ROUTES.public.javaScript.masterclass.path },
+      { label: APP_ROUTES.public.javaScript.masterclass.lessons.boolean.name, href: APP_ROUTES.public.javaScript.masterclass.lessons.boolean.path },
+      { label: APP_ROUTES.public.javaScript.masterclass.lessons.json.name, href: APP_ROUTES.public.javaScript.masterclass.lessons.json.path },
+      { label: APP_ROUTES.public.javaScript.masterclass.lessons["correcao-do-exercicio-2"].name, href: APP_ROUTES.public.javaScript.masterclass.lessons["correcao-do-exercicio-2"].path },
     ],
   },
   {
     title: "FERRAMENTAS & DOCS",
     links: [
-      { label: "Playground Interativo", href: "/playground", badge: "Live" },
-      { label: "Documentação Geral", href: "/documentacao" },
-      { label: "Documentação JavaScript", href: "/documentacao/java-script" },
-      { label: "Array.prototype.map()", href: "/documentacao/java-script/array-map" },
+      { label: APP_ROUTES.public.playground.name, href: APP_ROUTES.public.playground.path, badge: "Live" },
+      { label: APP_ROUTES.public.documentation.name, href: APP_ROUTES.public.documentation.path },
+      { label: APP_ROUTES.public.documentation.javaScript.name, href: APP_ROUTES.public.documentation.javaScript.path },
+      { label: APP_ROUTES.public.documentation.arrayMap.name, href: APP_ROUTES.public.documentation.arrayMap.path },
     ],
   },
 ];
@@ -244,32 +251,32 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
 export const SOCIAL_LINKS: SocialLinkItem[] = [
   {
     id: "github",
-    label: "GitHub",
-    href: "https://github.com",
+    label: APP_ROUTES.external.github.name,
+    href: APP_ROUTES.external.github.path,
     icon: "github",
   },
   {
     id: "youtube",
-    label: "YouTube",
-    href: "https://youtube.com",
+    label: APP_ROUTES.external.youtube.name,
+    href: APP_ROUTES.external.youtube.path,
     icon: "youtube",
   },
   {
     id: "x",
-    label: "X (Twitter)",
-    href: "https://x.com",
+    label: APP_ROUTES.external.x.name,
+    href: APP_ROUTES.external.x.path,
     icon: "x",
   },
   {
     id: "linkedin",
-    label: "LinkedIn",
-    href: "https://linkedin.com",
+    label: APP_ROUTES.external.linkedin.name,
+    href: APP_ROUTES.external.linkedin.path,
     icon: "linkedin",
   },
   {
     id: "discord",
-    label: "Discord",
-    href: "https://discord.com",
+    label: APP_ROUTES.external.discord.name,
+    href: APP_ROUTES.external.discord.path,
     icon: "discord",
   },
 ];

@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 7.1: Operadores Numéricos",
@@ -55,11 +55,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 7: Number",
-      "href": "/java-script/cursos/java-script-masterclass/number"
+      "href": "MASTERCLASS_LESSON:number"
     },
     "next": {
       "label": "Aula 7.2: Conversão Numérica",
-      "href": "/java-script/cursos/java-script-masterclass/conversao-numerica"
+      "href": "MASTERCLASS_LESSON:conversao-numerica"
     }
   }
 }

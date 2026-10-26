@@ -4,7 +4,7 @@
     "description": "Catálogo de documentação técnica, referências de métodos e guias práticos por linguagem de programação com ambiente de testes interativo."
   },
   "breadcrumbs": [
-    { "label": "Início", "href": "/" },
+    { "label": "Início", "href": "HOME" },
     { "label": "Documentação", "current": true }
   ],
   "header": {
@@ -19,7 +19,7 @@
       "badge": "Ativa • Referência Completa",
       "status": "active",
       "description": "Referência de métodos funcionais da Standard Library, tipos primitivos, coerção, escopo léxico, protótipos e execução assíncrona.",
-      "href": "/documentacao/java-script",
+      "href": "DOCUMENTATION_JAVA_SCRIPT",
       "cta": "Explorar Tópicos de JavaScript",
       "stats": [
         { "label": "Linguagem", "value": "ECMAScript" },
@@ -40,7 +40,7 @@
       "badge": "Em Breve",
       "status": "planned",
       "description": "Sistema de tipos estáticos, generics, type narrowing, interfaces e utilitários de tipo avançados para arquitetura escalável de aplicações.",
-      "href": "/documentacao",
+      "href": "DOCUMENTATION",
       "cta": "Em Desenvolvimento",
       "stats": [
         { "label": "Linguagem", "value": "TypeScript 5.x" },

@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 7.3: IEEE 754",
@@ -55,11 +55,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 7.2: Conversão Numérica",
-      "href": "/java-script/cursos/java-script-masterclass/conversao-numerica"
+      "href": "MASTERCLASS_LESSON:conversao-numerica"
     },
     "next": {
       "label": "Aula 7.4: Math API",
-      "href": "/java-script/cursos/java-script-masterclass/math-api"
+      "href": "MASTERCLASS_LESSON:math-api"
     }
   }
 }

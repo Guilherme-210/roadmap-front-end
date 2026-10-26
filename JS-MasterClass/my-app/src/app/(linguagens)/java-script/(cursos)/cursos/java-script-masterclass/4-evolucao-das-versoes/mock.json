@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 4: Evolução das Versões",
@@ -52,11 +52,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 3: História da Linguagem",
-      "href": "/java-script/cursos/java-script-masterclass/historia-da-linguagem"
+      "href": "MASTERCLASS_LESSON:historia-da-linguagem"
     },
     "next": {
       "label": "Aula 5: Variáveis",
-      "href": "/java-script/cursos/java-script-masterclass/variaveis"
+      "href": "MASTERCLASS_LESSON:variaveis"
     }
   }
 }

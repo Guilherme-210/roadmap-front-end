@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 14: JSON",
@@ -56,11 +56,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 13.4: Object API",
-      "href": "/java-script/cursos/java-script-masterclass/object-api"
+      "href": "MASTERCLASS_LESSON:object-api"
     },
     "next": {
       "label": "Aula 15: Exercício 2",
-      "href": "/java-script/cursos/java-script-masterclass/exercicio-2"
+      "href": "MASTERCLASS_LESSON:exercicio-2"
     }
   }
 }

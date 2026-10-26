@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BrandIcon } from "../brand-icon";
 import { SITE_CONFIG } from "@/config/navigation";
+import { APP_ROUTES } from "@/shared/constants/app-routes";
 
 interface BrandLogoProps {
   className?: string;
@@ -10,9 +11,9 @@ interface BrandLogoProps {
 export function BrandLogo({ className = "", showTagline = false }: BrandLogoProps) {
   return (
     <Link
-      href="/"
+      href={APP_ROUTES.public.home.path}
       className={`group inline-flex items-center gap-3 transition-opacity hover:opacity-90 ${className}`}
-      aria-label={`${SITE_CONFIG.name} - Página inicial`}
+      aria-label={`${SITE_CONFIG.name} - ${APP_ROUTES.public.home.name}`}
     >
       <div className="relative flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
         <BrandIcon size={34} />

@@ -4,9 +4,9 @@
     "description": "Guia prático e interativo sobre Array.prototype.filter() em JavaScript, com predicados lógicos, boas práticas e playground executável com colapse."
   },
   "breadcrumbs": [
-    { "label": "Início", "href": "/" },
-    { "label": "Documentação", "href": "/documentacao" },
-    { "label": "JavaScript", "href": "/documentacao/java-script" },
+    { "label": "Início", "href": "HOME" },
+    { "label": "Documentação", "href": "DOCUMENTATION" },
+    { "label": "JavaScript", "href": "DOCUMENTATION_JAVA_SCRIPT" },
     { "label": "Array.prototype.filter()", "current": true }
   ],
   "header": {
@@ -48,11 +48,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Array.prototype.map()",
-      "href": "/documentacao/java-script/array-map"
+      "href": "DOCUMENTATION_ARRAY_MAP"
     },
     "next": {
       "label": "Playground Aberto",
-      "href": "/playground"
+      "href": "PLAYGROUND"
     }
   }
 }

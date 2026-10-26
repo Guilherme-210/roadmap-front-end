@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { resolveAppRoute } from "@/shared/constants/app-routes";
 
 export interface BreadcrumbItem {
   label: string;
@@ -21,7 +22,7 @@ export function Breadcrumbs({ items, className = "" }: BreadcrumbsProps) {
           <div key={`${item.label}-${index}`} className="flex items-center gap-2">
             {index > 0 && <span className="text-text-muted/60">/</span>}
             {item.href && !isLast ? (
-              <Link href={item.href} className="hover:text-foreground transition-colors">
+              <Link href={resolveAppRoute(item.href)} className="hover:text-foreground transition-colors">
                 {item.label}
               </Link>
             ) : (

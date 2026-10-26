@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 5: Variáveis",
@@ -55,11 +55,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 4: Evolução das Versões",
-      "href": "/java-script/cursos/java-script-masterclass/evolucao-das-versoes"
+      "href": "MASTERCLASS_LESSON:evolucao-das-versoes"
     },
     "next": {
       "label": "Aula 6: Tipos de Dados",
-      "href": "/java-script/cursos/java-script-masterclass/tipos-de-dados"
+      "href": "MASTERCLASS_LESSON:tipos-de-dados"
     }
   }
 }

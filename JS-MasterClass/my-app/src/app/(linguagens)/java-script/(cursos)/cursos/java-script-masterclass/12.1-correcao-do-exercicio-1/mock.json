@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 12.1: Correção do Exercício 1",
@@ -50,11 +50,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 12: Exercício 1",
-      "href": "/java-script/cursos/java-script-masterclass/exercicio-1"
+      "href": "MASTERCLASS_LESSON:exercicio-1"
     },
     "next": {
       "label": "Aula 13: Object",
-      "href": "/java-script/cursos/java-script-masterclass/object"
+      "href": "MASTERCLASS_LESSON:object"
     }
   }
 }

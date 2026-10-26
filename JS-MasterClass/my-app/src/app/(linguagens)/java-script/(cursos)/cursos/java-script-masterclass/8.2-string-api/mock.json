@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 8.2: String API",
@@ -55,11 +55,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 8.1: Template Literal",
-      "href": "/java-script/cursos/java-script-masterclass/template-literal"
+      "href": "MASTERCLASS_LESSON:template-literal"
     },
     "next": {
       "label": "Aula 9: Boolean",
-      "href": "/java-script/cursos/java-script-masterclass/boolean"
+      "href": "MASTERCLASS_LESSON:boolean"
     }
   }
 }

@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 8: String",
@@ -55,11 +55,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 7.4: Math API",
-      "href": "/java-script/cursos/java-script-masterclass/math-api"
+      "href": "MASTERCLASS_LESSON:math-api"
     },
     "next": {
       "label": "Aula 8.1: Template Literal",
-      "href": "/java-script/cursos/java-script-masterclass/template-literal"
+      "href": "MASTERCLASS_LESSON:template-literal"
     }
   }
 }

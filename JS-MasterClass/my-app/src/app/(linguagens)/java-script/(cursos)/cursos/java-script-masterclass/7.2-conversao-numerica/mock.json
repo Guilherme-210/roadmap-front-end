@@ -6,15 +6,15 @@
   "breadcrumbs": [
     {
       "label": "Início",
-      "href": "/"
+      "href": "HOME"
     },
     {
       "label": "JavaScript",
-      "href": "/java-script"
+      "href": "JAVA_SCRIPT"
     },
     {
       "label": "JavaScript MasterClass",
-      "href": "/java-script/cursos/java-script-masterclass"
+      "href": "JAVA_SCRIPT_MASTERCLASS"
     },
     {
       "label": "Aula 7.2: Conversão Numérica",
@@ -55,11 +55,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Aula 7.1: Operadores Numéricos",
-      "href": "/java-script/cursos/java-script-masterclass/operadores-numericos"
+      "href": "MASTERCLASS_LESSON:operadores-numericos"
     },
     "next": {
       "label": "Aula 7.3: IEEE 754",
-      "href": "/java-script/cursos/java-script-masterclass/ieee-754"
+      "href": "MASTERCLASS_LESSON:ieee-754"
     }
   }
 }

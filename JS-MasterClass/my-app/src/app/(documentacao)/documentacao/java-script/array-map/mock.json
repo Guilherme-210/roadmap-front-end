@@ -4,9 +4,9 @@
     "description": "Guia prático e interativo sobre Array.prototype.map() em JavaScript, com assinatura, boas práticas e playground executável com colapse."
   },
   "breadcrumbs": [
-    { "label": "Início", "href": "/" },
-    { "label": "Documentação", "href": "/documentacao" },
-    { "label": "JavaScript", "href": "/documentacao/java-script" },
+    { "label": "Início", "href": "HOME" },
+    { "label": "Documentação", "href": "DOCUMENTATION" },
+    { "label": "JavaScript", "href": "DOCUMENTATION_JAVA_SCRIPT" },
     { "label": "Array.prototype.map()", "current": true }
   ],
   "header": {
@@ -48,11 +48,11 @@
   "navigationFooter": {
     "previous": {
       "label": "Tópicos de JavaScript",
-      "href": "/documentacao/java-script"
+      "href": "DOCUMENTATION_JAVA_SCRIPT"
     },
     "next": {
       "label": "Array.prototype.filter()",
-      "href": "/documentacao/java-script/array-filter"
+      "href": "DOCUMENTATION_ARRAY_FILTER"
     }
   }
 }
