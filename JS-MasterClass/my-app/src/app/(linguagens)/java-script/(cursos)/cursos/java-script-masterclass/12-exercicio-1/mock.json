@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Aula 12: Exercício 1 • JavaScript MasterClass",
-    "description": "Enunciado do primeiro grande exercício prático do curso. Um desafio integrador que exige a aplicação simultânea de variáveis, tipos primitivos, operadores lógicos e manipulação de strings em um algoritmo real."
+    "description": "Enunciado oficial, especificações do PDF e resoluções do Exercício 1: Extração e parsing de comando SQL (DDL create table) utilizando String API e RegExp com grupos de captura."
   },
   "breadcrumbs": [
     {
@@ -22,31 +22,191 @@
     }
   ],
   "header": {
-    "badge": "Módulo 04: Prática & Desafios • Material PDF",
-    "title": "Aula 12: Exercício 1",
-    "description": "Enunciado do primeiro grande exercício prático do curso. Um desafio integrador que exige a aplicação simultânea de variáveis, tipos primitivos, operadores lógicos e manipulação de strings em um algoritmo real."
+    "badge": "Módulo 04: Prática & Desafios • Material PDF & Resolução",
+    "title": "Aula 12: Exercício 1 — DDL Parser de Tabelas",
+    "description": "Primeiro desafio prático da formação JavaScript MasterClass por Rodrigo Branas. Desenvolva o analisador sintático de comandos DDL (create table), isolando o nome da tabela e os tipos das colunas com Expressões Regulares e métodos da String API."
   },
-  "topics": [
-    "Enunciado detalhado do problema e requisitos funcionais",
-    "Especificação das entradas e saídas esperadas",
-    "Tratamento de regras de negócio com tipos primitivos",
-    "Orientações para implementação independente antes de assistir à resolução"
+  "objective": {
+    "title": "Objetivo do Desafio",
+    "statement": "Extraia partes do comando como o nome da tabela e as colunas, armazenando-as em variáveis.",
+    "context": "Este exercício inicia a construção do núcleo de um banco de dados relacional em memória. Ao dominar a separação da instrução DDL, as próximas etapas avançarão para armazenamento de registros, inserções e consultas filtradas."
+  },
+  "inputCommand": "create table author (id number, name string, age number, city string, state string, country string)",
+  "instructions": [
+    {
+      "step": 1,
+      "title": "Extrair o nome da tabela",
+      "variable": "tableName",
+      "description": "Extraia o nome da tabela a partir da instrução e armazene em uma variável chamada \"tableName\".",
+      "targetOutput": "\"author\""
+    },
+    {
+      "step": 2,
+      "title": "Extrair as colunas da tabela",
+      "variable": "columns",
+      "description": "Extraia as declarações de colunas delimitadas pelos parênteses e armazene na variável \"columns\".",
+      "targetOutput": "\"id number, name string, age number, city string, state string, country string\""
+    },
+    {
+      "step": 3,
+      "title": "Manipular e separar as colunas em array",
+      "variable": "columns (array)",
+      "description": "Manipule a variável \"columns\", separando cada coluna com seu respectivo tipo, em uma string separada dentro de um array.",
+      "targetOutput": "[ 'id number', ' name string', ' age number', ' city string', ' state string', ' country string' ]"
+    }
   ],
+  "expectedResult": {
+    "tableName": "author",
+    "columnsRaw": [
+      "id number",
+      " name string",
+      " age number",
+      " city string",
+      " state string",
+      " country string"
+    ],
+    "columnsClean": [
+      "id number",
+      "name string",
+      "age number",
+      "city string",
+      "state string",
+      "country string"
+    ]
+  },
+  "tips": [
+    {
+      "title": "String API & RegExp Integradas",
+      "description": "Explore ao máximo as operações disponíveis na String API como: String.prototype.match, String.prototype.replace e String.prototype.split, juntamente com expressões regulares.",
+      "icon": "zap"
+    },
+    {
+      "title": "Retorno Nativo de Array",
+      "description": "A operação String.prototype.split retorna um array por padrão. Portanto, não é necessário instanciar manualmente estruturas ou loops para popular os elementos.",
+      "icon": "check"
+    },
+    {
+      "title": "Grupos de Captura na RegExp",
+      "description": "Utilize parênteses () na RegExp para definir grupos de captura. Ao casar com statement.match(regexp), os índices [1] e [2] do array conterão respectivamente o nome da tabela e as colunas.",
+      "icon": "zap"
+    },
+    {
+      "title": "Escape de Metacaracteres Reservados",
+      "description": "Como os parênteses são caracteres especiais reservados em RegExp para agrupar expressões, você deve escapá-los com contrabarra (\\( e \\)) para casar com os parênteses literais do comando SQL.",
+      "icon": "shield"
+    }
+  ],
+  "coveredTopics": [
+    {
+      "category": "String API",
+      "items": [
+        {
+          "name": "String",
+          "description": "Tipagem primitiva de texto, imutabilidade e métodos de instância no protótipo."
+        },
+        {
+          "name": "String.prototype.match",
+          "description": "Recupera as correspondências de uma RegExp, retornando array com grupos capturados."
+        },
+        {
+          "name": "String.prototype.split",
+          "description": "Divide a string de colunas em substrings a partir de um delimitador (como vírgula ou vírgula com espaço)."
+        },
+        {
+          "name": "String.prototype.trim",
+          "description": "Sanitização de espaços em branco excedentes no início e fim das strings de colunas."
+        }
+      ]
+    },
+    {
+      "category": "RegExp (Expressões Regulares)",
+      "items": [
+        {
+          "name": "RegExp & Notação Literal",
+          "description": "Padrão compilado /.../ para busca semântica na instrução DDL."
+        },
+        {
+          "name": "Groups & Capture Groups ()",
+          "description": "Agrupamento e captura de fragmentos específicos: ([a-z]+) e (.+)."
+        },
+        {
+          "name": "Quantifiers (+ e *)",
+          "description": "Correspondência de repetições: + (uma ou mais ocorrências) para nomes e tipos."
+        },
+        {
+          "name": "Metacharacters",
+          "description": "Metacaracteres como . (qualquer caractere), \\s (espaço) e \\w (caractere alfanumérico)."
+        },
+        {
+          "name": "Escape (\\)",
+          "description": "Neutralização de parênteses \\( e \\) para casar os caracteres sintáticos do SQL."
+        }
+      ]
+    }
+  ],
+  "solutions": {
+    "official": {
+      "title": "Solução Oficial do Instrutor (Rodrigo Branas)",
+      "badge": "Resolução Oficial • resolução.js",
+      "description": "Solução direta e concisa apresentada na resolução do curso. Utiliza uma única expressão regular com dois grupos de captura para extrair os componentes da tabela em um único passo.",
+      "code": "console.log(\"Inicio 🚀\")\n\nconst statement = \"Create table author (id number, name string, age number, city string, state string, country string)\"\nconst regexp = /Create table ([a-z]+) \\((.+)\\)/\n\nconst parseStatement = statement.match(regexp)\n\nconsole.log(parseStatement)\nconsole.log(\"======================\")\n\nconst tableName = parseStatement[1]\nlet columns = parseStatement[2]\n\nconsole.log(tableName)\nconsole.log(columns)\nconsole.log(\"======================\")\n\ncolumns = columns.split(\", \")\n\nconsole.log(columns)",
+      "steps": [
+        {
+          "label": "Definição do Padrão RegExp",
+          "code": "const regexp = /Create table ([a-z]+) \\((.+)\\)/",
+          "explanation": "O primeiro grupo ([a-z]+) captura o nome da tabela ('author'). Os parênteses literais \\( e \\) delimitam o segundo grupo (.+), que captura todas as colunas."
+        },
+        {
+          "label": "Execução com match()",
+          "code": "const parseStatement = statement.match(regexp)",
+          "explanation": "Retorna um array onde o índice [0] é o comando completo casado, [1] é o nome da tabela e [2] é a string bruta das colunas."
+        },
+        {
+          "label": "Atribuição das Variáveis",
+          "code": "const tableName = parseStatement[1];\nlet columns = parseStatement[2];",
+          "explanation": "Isola os valores diretamente nas variáveis especificadas pelo enunciado."
+        },
+        {
+          "label": "Divisão com split()",
+          "code": "columns = columns.split(\", \")",
+          "explanation": "Divide a string por vírgula seguida de espaço, gerando o array final de colunas limpas sem espaços residuais."
+        }
+      ]
+    },
+    "test1": {
+      "title": "Solução Teste 1: Extração de Campos & Objeto Autor",
+      "badge": "Prática Complementar • solução-1.md",
+      "description": "Exploração prática utilizando metacaracteres não-gananciosos (.+?) para extrair campos de um registro de autor e modelar um objeto estruturado em memória.",
+      "code": "console.log(\"test.js rodando\")\n\nlet tabela = []\nlet lines = {}\nlet line = {}\n\nconst regex = /autor: Guilherme (id: 65749324, name: Guilherme Luiz, age: 26, email: guilherme@example.com, city: Rio de Janeiro, state: Rio de Janeiro, country: Brazil)/\n\nlet author = regex.source.match(/autor: (.+?) \\(/)[1]\nlet id = regex.source.match(/id: (.+?),/)[1]\nlet name = regex.source.match(/name: (.+?),/)[1]\nlet age = regex.source.match(/age: (.+?),/)[1]\nlet email = regex.source.match(/email: (.+?),/)[1]\nlet city = regex.source.match(/city: (.+?),/)[1]\nlet state = regex.source.match(/state: (.+?),/)[1]\nlet country = regex.source.match(/country: (.+?)\\)/)[1]\n\nlines.id = id\nlines.name = name\nlines.age = age\nlines.email = email\nlines.city = city\nlines.state = state\nlines.country = country\n\nline.author = author\nline.details = lines\n\ntabela.push(line)\n\nconsole.log(tabela)"
+    },
+    "test2": {
+      "title": "Solução Teste 2: Parser em Lote & Validação de E-mail",
+      "badge": "Avançado • Mini Banco de Dados",
+      "description": "Evolução do algoritmo para processar múltiplos registros em lote através de um loop, com validação de formato de e-mail via expressão regular e coerção de tipo numérica com Number(age).",
+      "code": "console.log(\"test.js rodando\")\n\nlet tabela = []\n\nconst regex = /(autor: Guilherme (id: 65749324, name: Guilherme Luiz, age: 26, email: guilherme.example.com, city: Rio de Janeiro, state: Rio de Janeiro, country: Brazil)), (autor: Guilherme (id: 65749324, name: Douglas Falcão, age: 26, email: douglas@example.com, city: Rio de Janeiro, state: Rio de Janeiro, country: Brazil)), (autor: Guilherme (id: 65749324, name: Adrielli Nunes, age: 26, email: adrielli@example.com, city: Rio de Janeiro, state: Rio de Janeiro, country: Brazil))/\n\nfunction criatedTable(regex) {\n    let regexLines = regex.source.match(/\\(autor: (.+?)\\)/g)\n    \n    if (!regexLines) return [];\n    \n    for (let i = 0; i < regexLines.length; i++) {\n        const regexGlobal = /^(\\w+)@(\\w+(\\.\\w{2,3})+)$/;\n        const newRegex = regexLines[i]\n\n        const author = newRegex.match(/\\(autor: (.+?) \\(/)[1]\n        const id = newRegex.match(/id: (.+?),/)[1]\n        const name = newRegex.match(/name: (.+?),/)[1]\n        const age = newRegex.match(/age: (.+?),/)[1]\n        let email = newRegex.match(/email: (.+?),/)[1]\n        const city = newRegex.match(/city: (.+?),/)[1]\n        const state = newRegex.match(/state: (.+?),/)[1]\n        const country = newRegex.match(/country: (.+?)\\)/)[1]\n\n        const result = regexGlobal.exec(email)\n\n        if (result === null) {\n            email = \"email anexado e invalido\"\n        }\n        \n        const lines = {\n            id,\n            name,\n            age: Number(age),\n            email,\n            city,\n            state,\n            country\n        };\n\n        const line = {\n            author,\n            details: lines\n        };\n        \n        tabela.push(line)\n    }\n\n    console.log(tabela)\n}\n\ncriatedTable(regex)"
+    }
+  },
+  "playgroundInitialCode": "// =======================================================\n// JavaScript MasterClass • Exercício 1 (Rodrigo Branas)\n// =======================================================\n\nconsole.log(\"Inicio 🚀\");\n\n// 1. Comando SQL DDL fornecido:\nconst statement = \"Create table author (id number, name string, age number, city string, state string, country string)\";\n\n// 2. RegExp com Grupos de Captura:\n//    - Grupo 1: ([a-z]+) -> Nome da tabela\n//    - Grupo 2: (.+)     -> Colunas entre os parênteses \\( e \\)\nconst regexp = /Create table ([a-z]+) \\((.+)\\)/;\n\n// 3. Execução do casamento com match:\nconst parseStatement = statement.match(regexp);\n\nconsole.log(\"parseStatement:\", parseStatement);\nconsole.log(\"======================\");\n\n// 4. Extração para variáveis individuais:\nconst tableName = parseStatement ? parseStatement[1] : \"\";\nlet columns = parseStatement ? parseStatement[2] : \"\";\n\nconsole.log(\"tableName:\", tableName);\nconsole.log(\"columns (bruta):\", columns);\nconsole.log(\"======================\");\n\n// 5. Separação das colunas em array:\ncolumns = columns.split(\", \");\n\nconsole.log(\"columns (array):\", columns);\n\n// -------------------------------------------------------\n// Validação do Exercício:\n// -------------------------------------------------------\nconsole.log(\"\\n=== VALIDAÇÃO DO DESAFIO ===\");\nconst isTableValid = tableName === \"author\";\nconst isColumnsValid = Array.isArray(columns) && columns.length === 6;\n\nconsole.log(\"1. tableName correto:\", isTableValid ? \"✅ PASSOU ('author')\" : \"❌ FALHOU\");\nconsole.log(\"2. columns em array:\", isColumnsValid ? `✅ PASSOU (${columns.length} colunas)` : \"❌ FALHOU\");\n\nif (isTableValid && isColumnsValid) {\n  console.log(\"\\n🎉 Parabéns! Exercício 1 resolvido com sucesso!\");\n}\n",
   "keyTakeaways": [
     {
-      "title": "Ponto Chave 1",
-      "description": "Tente resolver o exercício por conta própria antes de conferir a aula de resolução para fixar os conceitos.",
+      "title": "Prática Autônoma",
+      "description": "Tente resolver o exercício por conta própria antes de conferir a aula de resolução 12.1 para fixar os conceitos.",
       "icon": "check",
       "variant": "emerald"
     },
     {
-      "title": "Ponto Chave 2",
-      "description": "Concentre-se em escrever código limpo e com nomes descritivos de variáveis.",
-      "icon": "check",
-      "variant": "emerald"
+      "title": "Grupos de Captura",
+      "description": "O uso de grupos de captura em RegExp evita manipulações manuais com indexOf e substring, tornando o código expressivo e conciso.",
+      "icon": "zap",
+      "variant": "amber"
+    },
+    {
+      "title": "Sanitização de Strings",
+      "description": "Usar split(', ') em vez de split(',') remove automaticamente os espaços após cada vírgula, gerando arrays já normalizados.",
+      "icon": "shield",
+      "variant": "default"
     }
   ],
-  "codeSnippet": null,
   "navigationFooter": {
     "previous": {
       "label": "Aula 11: RegExp",
